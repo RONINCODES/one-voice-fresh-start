@@ -1,0 +1,145 @@
+One Voice:  Empowering Students Everywhere!
+One Voice is a web based application that allows students to provide feedback to their instructors in Real Time.
+This is done throuhg a few core features: Firstly, One Voice provides students and instructors with a space to share
+thoughts, questions and comments in real time - during the class.  Secondly every student is prompted to fill out a survey,
+that rate the instructor's overall preformance, clarity, and pace - while also allowing a space for students to input
+questions, comments, or suggestions.  These surveys wuld be completed by students daily after the lesson/lecture.
+The end goal of this app, is to provide instructors with relevant data to better structure their lessons.  The data collected
+from students would be aggrigated and used to compile meaningful reports to instructors daily...
+In a world that changes every minute, it doesn't make sense to provide feedback on a monthly or quarterly time frame.
+Feedback should be instant, students should have an avenue to share their collective experience, and it is in the
+instructor's interest to empower their students.
+
+
+
+
+
+User Stories (Student)
+1) As a student I would like to be able to post a question or comment in real time for the teacher and class mates to see.
+2) As a student I would liek to be able to rate my teacher's helpfulness, clarity, and pace.
+3) As a student I would like to be able to see all other students that are currently logged in.
+4) As a student I would liek to see my fellow student's comments and posts
+5) As a student I would like to be able to reply to any comments or posts
+6) As a student I would like to have my own picture on my profile
+7) As a student I would like to see a list of my fellow classmates on my profile page
+8) As a student I would like to see my Instructors name, and Agenda for the day on the main "classRoom" page
+9) As a student I would like to be able to sign in and sign out, and sign up
+10) As a student I would like to navigate to the appropriate group(class)
+11) As a student I would like to have my teacher satings to be private
+12) As a student I dont want to be able to enter a class/group I do not belong to
+13) As a student I would like to get a daily report with class questions, teachers answers, and description of the day's lecture (agenda)
+14) As a student I would like to be able to post pictures to my profile
+15) As a student I would like to be able to share links to my FB and instagram accounts with fellow students
+16) As a student I would like to be able to use emojis
+17) As a student I would like to be able to log in using Facebook, google, linkedin
+18) As a student I would like to get an email report of each class.
+19) As a student I would like to have a school Bulliten/Alerts view on my profile page
+20) As a student I would like to be able to create a todo list on my profile page
+21) As a student I would like to interract live with the class via video.
+22) As a student I would like to be able to to create an anonymous survey to be seen by all class mates and then sent to the teacher as report
+23) As a student when I post comments my name and picture is present, however I can also post anonymously.
+
+24) As an instructor I would like to get a daily feedback report ratng the class material daily.
+25) As an instructor I would like to see the logged in student list - with contact information
+26) As an instructor I would like to be able to see student comments and questions and be able to respond live
+27) As an instructor i would like to be able to create the class agenda for the day
+28) As an instructor I would like to be able to login and log out
+29) As an instructor I would like to be able to post anouncements to the "classroom"
+30) As an instructor I would like to see all the classes that I teach and associated class list
+
+31) As an institution/Instructor/Student I would like to recieve anayltics reports about the class.
+32) as a user I would like to be able to post gifs to the comment section (not  annomymously)
+33) As an instructor i would like to be able to send an email  mail out to the entire class.
+
+
+
+Non Negotiable - Must Have
+9) As a student I would like to be able to sign in and sign out, and sign up
+10) As a student I would like to navigate to the appropriate group(class)
+11) As a student I would like to have my teacher ratings to be private
+28) As an instructor I would like to be able to login and log out
+
+
+
+
+
+MUST HAVE section:
+1) As a student I would like to be able to post a question or comment in real time for the teacher and class mates to see.
+2) As a student I would like to be able to rate my teacher's helpfulness, clarity, and pace.
+3) As a student I would like to be able to see all other students that are currently logged in.
+4) As a student I would like to see my fellow student's comments and posts
+6) As a student I would like to have my own picture on my profile
+7) As a student I would like to see a list of my fellow classmates on my profile page
+8) As a student I would like to see my Instructors name, and Agenda for the day on the main "classRoom" page
+24) As an instructor I would like to get a daily feedback report ratng the class material daily.
+25) As an instructor I would like to see the logged in student list on Class Room View
+26) As an instructor I would like to be able to see student comments and questions and be able to respond live
+27) As an instructor i would like to be able to create the class agenda for the day
+
+
+
+
+
+
+LIKE TO HAVE
+12) As a student I dont want to be able to enter a class/group I do not belong to
+13) As a student I would like to get a daily report with class questions, teachers answers, and description of the day's lecture (agenda)
+15) As a student I would like to be able to share links to my FB and instagram accounts with fellow students
+16) As a student I would like to be able to use emojis
+16) As a student I would like to be able to use emojis
+18) As a student I would like to get an email report of each class.
+20) As a student I would like to be able to create a to do list on my profile page
+29) As an instructor I would like to be able to post anouncements to the "classroom"
+30) As an instructor I would like to see all the classes that I teach and associated class list
+31) As an institution/Instructor/Student I would like to recieve anayltics reports about the class.
+32) as a user I would like to be able to post gifs to the comment section (not  annomymously)
+33) As an instructor i would like to be able to send an email  mail out to the entire class.
+19) As a student I would like to have a school Bulliten/Alerts view on my profile page
+17) As a student I would like to be able to log in using Facebook, google, linkedin
+23) As a student when I post comments my name and picture is present, however I can also post anonymously.
+5) As a student I would like to be able to reply to any comments or posts
+22) As a student I would like to be able to to create an anonymous survey to be seen by all class mates and then sent to the teacher as report
+
+
+
+
+
+AWESOME TO HAVE
+14) As a student I would like to be able to post pictures to my profile
+21) As a student I would like to interract live with the class via video.
+
+
+
+
+Internal WEB-APP ONE VOICE LANGUAGE
+
+
+Student:  One of the uesers of the app, is a participant, a viewer, the reciever of information - recieving end.
+Instructor:  Teacher, lecturer, speaker, imparting information to student.
+Institution:  School, university, conference sponsor.
+Landing Page: Sign-in page - page first seen by user/visitor
+Profile Page: inidvidual user profile, with information that is customized to the user.  Students, and instructors have a user profile page.
+Analytics page:  A view page shown to the instructor - with daily report of class lecuture
+Class Room Page:  The live environment where instructors and students interract.  Main features page.
+Sign Up Page:  New user sign up form
+
+
+
+
+INSTRUCTOR: KITTEN DEN FEEDBACK
+Many approaches to real time apps -modules is rails / fire base not rails, pull requests to server every x amount og seconds.
+Sean - rails - may be easier.
+Api - suggestion = IBMM watson - sentient analysis on comments to see if generally positive or not.
+live meter for pace - sean
+Students - instructor code to log into class room instead of registration system.  - Sean
+Only 3 ppl - skinny
+
+
+INITIAL TO DO LIST - FOR FRIDAY
+
+For Friday - research into APIs
+High level flow of app - user signs up ...then....then....
+How users interract
+model diagrams, what are the objects and classes of your system
+Time based Project Plan!
+Next Wednesday is interview Prep

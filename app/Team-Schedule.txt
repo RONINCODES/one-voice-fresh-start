@@ -1,0 +1,52 @@
+Team One Voice:  Ideal Schedule
+
+Friday July 14th - Sunday July 16th
+    Build out MVC for Users, ClassRooms, ClassSessions, (Join Table) and Sessions (login/log Out)
+
+Monday July 17th - Tuesday July 18th
+    Build out Basic Comments/ non live updating
+    Build out Survey Form
+
+Wednesday July 19th - Thursday July 20th
+    Upgrade Basic Comments with Action Cable for real time capabilities
+    ****reminder Interview carousel with Alyx and Instructors
+
+Friday July 21st
+    Begin Layout (HTML), Basic CSS, explore BOOTSTRAP OPTIONS
+    FOCUS: LANDING PAGE and MODALS
+
+Saturday July 22nd
+    Front End Continued (CSS, SASS, JavaScript, BOOTSTRAP)
+    FOCUS: PROFILE PAGE
+    Work on Resume and Business Cards, Start planning for the presentation
+
+Sunday July 23rd
+    FOCUS ON : CLASSROOM PAGE
+
+Monday July 24th - Tuesday July 25th
+    JavaScript Continued, front end polishing, and Ajax
+    FOCUS: CLASSROOM PAGE CONTINUED
+    FOCUS: ANALYTICS PAGE
+
+Wednesday July 26th
+    Meet with the Consigliere, for some feedback
+
+Thursday July 27th
+    Figure out Heroku and Launch the Web App
+
+Friday July 28th
+    Celebrate the end of our Bitmaker Experience
+
+Saturday July 29th - Sunday July 30th
+    Tackle any last minute issues
+    PRESENTATION PREP
+
+Monday August 1st
+    MEET THE MAKERS
+
+
+EXTRAS:
+EMOJIS
+WATSON
+COMMENT REPLYs
+Annon vs Named Comments

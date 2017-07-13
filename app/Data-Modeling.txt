@@ -1,0 +1,71 @@
+Users (1)
+1) ID
+2) First Name
+3) Last Name
+4) email
+5) password
+6) Type
+
+ClassRooms (2)
+1) ID
+2) Subject
+3) GroupCode
+4) user_id
+
+
+ClassSession (3)
+1) ID
+2) date
+3) classRoom_id
+4) Agenda
+
+JoinTable (4)
+1) user_id
+2) classroom_id
+
+
+Comments (5)
+1) ID
+2) DateTime
+3) user_id
+4) ClassSession_id
+5) comment
+
+
+Survey(6)
+1)ID
+2) classSession_id
+3) overaall
+4) helpfullness
+5) Pace
+6) Question
+7) user_id
+
+
+
+Relationships/Associations
+
+Instructors:
++ has many Classrooms
++ has many comments
+
+Students:
++ has an belongs to many Classrooms
++ has many comments
+
+ClassRooms
++ has and belongs to many Students
++ has many classSessions
+
+ClassSessions
++ has many comments
++ belongs to classroom
++ has many Surveys
+
+Comments:
++ belongs to classSesssion
++ belongs to users
+
+Survey:
++ belongs to classSession
++ belongs to user

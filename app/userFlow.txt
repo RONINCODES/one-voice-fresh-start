@@ -1,0 +1,39 @@
+1) When user navigates to the website's Landing Page they will find a SIGN IN button and a SIGN UP button
+
+2) if user is new, and clicks the SIGN UP button, then using JavaScript modal the SIGN UP
+   form appears.
+
+2b) After user successfuly submits form than they remain logged in , and will then be reidrected to USER's
+    profile page.
+
+3) if user already has an account, they will simply SIGN IN (a SIGN IN modal will appear), and will be
+  redirected to the USER's profile page upon successful submission.
+
+4) An instructor will be able to limit access to their ClassRoom page by creating a group code for each
+   ClassRoom from their profile page?????
+
+5) From the Users Profile Page, the USER will be able to navigate to the ClassSession (the CLASSROOM of the DAY)
+
+6) Once in the CLASS ROOM, a user will be able to post comments.
+
+7) Once in the ClassROOM, a user will be able to see all fellow logged in USERS for that ClassRoom
+
+7) A user must complete daily Survey before being able to log out -
+
+8) Once survey is submitted, the user will be able to navigate the website and log out when they
+   wish to do so.?????????
+
+9) When user logs out they will be redirected to the landing page
+
+10) ****Analytics page that agrigates data from Surveys, Questions, Comments will only be seen by
+   Instructor.
+
+
+
+Devon's Notes/Insight
+   Web Sockets - actionCable for rails - rails solution for websockets. Needed for real time comments
+   feature.
+
+   The survey is just a form, we should check if user submitted survey before logging out, if not
+   we should have the user submit survey upon re-logging in
+   - be careful of annoying the user.

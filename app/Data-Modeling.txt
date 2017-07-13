@@ -5,12 +5,15 @@ Users (1)
 4) email
 5) password
 6) Type
+*User model created without password field
+*will add password fields when creating sessions model.
 
 ClassRooms (2)
 1) ID
 2) Subject
 3) GroupCode
 4) user_id
+*created ClassRoom modeldate
 
 
 ClassSession (3)
@@ -18,10 +21,13 @@ ClassSession (3)
 2) date
 3) classRoom_id
 4) Agenda
+*model created - need to double check foreign id from
+classroom_id - just to make sure it works
 
 JoinTable (4)
 1) user_id
 2) classroom_id
+*join table classroom_user created.
 
 
 Comments (5)

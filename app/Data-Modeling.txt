@@ -56,7 +56,7 @@ Instructors:
 + has many comments
 
 Students:
-+ has an belongs to many Classrooms
++ has many belongs to many Classrooms
 + has many comments
 
 ClassRooms

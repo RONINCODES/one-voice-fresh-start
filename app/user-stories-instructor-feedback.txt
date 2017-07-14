@@ -55,7 +55,7 @@ User Stories (Student)
 
 Non Negotiable - Must Have
 9) As a student I would like to be able to sign in and sign out, and sign up
-10) As a student I would like to navigate to the appropriate group(class)
+10) As a student I would like to navigate to the appropriate group(class)  ###start with a single class(subject)
 11) As a student I would like to have my teacher ratings to be private
 28) As an instructor I would like to be able to login and log out
 
@@ -66,7 +66,7 @@ Non Negotiable - Must Have
 MUST HAVE section:
 1) As a student I would like to be able to post a question or comment in real time for the teacher and class mates to see.
 2) As a student I would like to be able to rate my teacher's helpfulness, clarity, and pace.
-3) As a student I would like to be able to see all other students that are currently logged in.
+3) As a student I would like to be able to see all other students that are currently logged in.  ####Allow students to check into a class belongs to a class belongs to a student.
 4) As a student I would like to see my fellow student's comments and posts
 6) As a student I would like to have my own picture on my profile
 7) As a student I would like to see a list of my fellow classmates on my profile page

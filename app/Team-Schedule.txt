@@ -7,7 +7,7 @@ Monday July 17th - Tuesday July 18th
     Build out Basic Comments/ non live updating
     Build out Survey Form
 
-Wednesday July 19th - Thursday July 20th
+Wednesday July 19th - Thursday July 20th  ADD A FEW DAYS
     Upgrade Basic Comments with Action Cable for real time capabilities
     ****reminder Interview carousel with Alyx and Instructors
 
@@ -41,7 +41,7 @@ Saturday July 29th - Sunday July 30th
     Tackle any last minute issues
     PRESENTATION PREP
 
-Monday August 1st
+Tuesday August 1st
     MEET THE MAKERS
 
 

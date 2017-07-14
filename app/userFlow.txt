@@ -10,7 +10,7 @@
   redirected to the USER's profile page upon successful submission.
 
 4) An instructor will be able to limit access to their ClassRoom page by creating a group code for each
-   ClassRoom from their profile page?????
+   ClassRoom from their profile page????? #####addd seed data
 
 5) From the Users Profile Page, the USER will be able to navigate to the ClassSession (the CLASSROOM of the DAY)
 

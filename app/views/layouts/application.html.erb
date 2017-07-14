@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>OneVoiceFreshStart</title>
+    <title>One Voice</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
   <body>
+    <% if current_user %>
+        <li class="logout">
+          <%= link_to "Welcome #{current_user.first_name}!", users_path %>|
+          <%= link_to "Logout", sessions_path, method: :delete %>
+        </li>
+      <% end %>
     <%= yield %>
   </body>
 </html>

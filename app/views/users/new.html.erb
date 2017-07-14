@@ -1,3 +1,13 @@
+<h1>Join One Voice</h1>
+
+<% if @user.errors.any? %>
+  <ul>
+    <% @user.errors.full_messages.each do |m| %>
+      <li class="error"><%= m %></li>
+    <% end %>
+  </ul>
+<% end %>
+
 <%= form_for @user do |f| %>
 
   <p>

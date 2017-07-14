@@ -19,7 +19,7 @@ class UsersController < ApplicationController
       #redirect_to @user
       flash[:notice] = 'Account successfully created!'
       session[:user_id] = @user.id
-      redirect_to users_path
+      redirect_to user_path(session[:user_id])
       #redirect_to root_url
     else
       flash.now[:error] = 'Sorry, try again!'
@@ -28,23 +28,15 @@ class UsersController < ApplicationController
   end
 
   def edit
-    unless @user
-      flash[:error] = "Must be logged in"
-      redirect_to root_url and return
-    end
+      @user = User.find(params[:id])
   end
 
   def update
-    unless @user
-      flash[:error] = "Must Be Logged In"
-      redirect_to root_url and return
-    end
+      @user = User.find(params[:id])
 
-    @user.assign_attributes(user_params)
-
-    if @user.save
+    if @user.update(user_params)
       flash[:notice] = 'Account Succesfully Updated!'
-      redirect_to edit_users_path
+      redirect_to user_path
     else
       flash.now[:error] = 'Sorry, please try again!'
       render 'edit'
@@ -56,9 +48,10 @@ class UsersController < ApplicationController
   end
 
   def destroy
+    session[:user_id] = nil
     @user = User.find(params[:id])
     @user.destroy
-    #redirect_to 'index'  -> not sure what to redirect to yet
+    redirect_to 'root_url'
   end
 
   private

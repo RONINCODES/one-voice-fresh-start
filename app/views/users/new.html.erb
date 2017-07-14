@@ -8,29 +8,4 @@
   </ul>
 <% end %>
 
-<%= form_for @user do |f| %>
-
-  <p>
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </p>
-
-  <p>
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </p>
-
-  <p>
-    <%= f.label :email %><br>
-    <%= f.email_field :email %>
-  </p>
-
-  <p>
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </p>
-
-
-  <%= f.submit %>
-
-<% end %>
+<%= render 'form' %>

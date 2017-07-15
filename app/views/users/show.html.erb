@@ -1,5 +1,13 @@
 <h1><%= ["Hello!", "Aloha!", "Salam!", "Bonjour!", "Bonjourno!", "Shalom!", "Ola!"].sample.upcase %> <%= @user.first_name.upcase + ' ' + @user.last_name.upcase %></h1>
 
-
-
-<%= link_to 'Edit', edit_user_path %> || <%= link_to 'Back', root_url %> || <%= link_to 'Delete', user_path, method: :delete %>
+ <% if @user['role'] == 'student' %>
+  <p>
+    <%= link_to 'Edit', edit_user_path %> || <%= link_to 'Back', root_url %> || <%= link_to 'Delete', user_path, method: :delete %>
+    <%= link_to 'Join Session' %>
+  </p>
+<% elsif @user['role'] == 'instructor' %>
+  <p>
+    <%= link_to 'Edit', edit_user_path %> || <%= link_to 'Back', root_url %> || <%= link_to 'Delete', user_path, method: :delete %>
+    <%= link_to 'Create Session', new_user_class_session_path(@user.id) %>
+  </p>
+<% end %>

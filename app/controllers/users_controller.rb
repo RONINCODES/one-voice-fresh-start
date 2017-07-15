@@ -15,6 +15,13 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
 
+    if @user.first_name == 'mohammed'
+      @user.role = 'instructor'
+      @user.save
+    else @user.role = 'student'
+      @user.save
+    end
+
     if @user.save
       #redirect_to @user
       flash[:notice] = 'Account successfully created!'
@@ -51,7 +58,7 @@ class UsersController < ApplicationController
     session[:user_id] = nil
     @user = User.find(params[:id])
     @user.destroy
-    redirect_to 'root_url'
+    redirect_to root_path
   end
 
   private

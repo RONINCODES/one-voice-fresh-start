@@ -1,0 +1,17 @@
+<h1>hi</h1>
+
+<%= form_for @class_session, url: user_class_sessions_path do |f| %>
+
+  <p>
+    <%= f.label :date %><br>
+    <%= f.date_field :date %>
+  </p>
+
+  <p>
+    <%= f.label :agenda %><br>
+    <%= f.text_field :agenda %>
+  </p>
+
+  <%= f.submit %>
+
+  <% end %>

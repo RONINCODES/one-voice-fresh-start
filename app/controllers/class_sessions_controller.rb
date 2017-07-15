@@ -4,7 +4,12 @@ class ClassSessionsController < ApplicationController
     @class_sessions = ClassSession.all
   end
 
+  def show
+
+  end
+
   def new
+    @user = User.find(session[:user_id])
     @class_session = ClassSession.new
   end
 

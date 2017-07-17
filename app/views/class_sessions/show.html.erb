@@ -1,5 +1,6 @@
 <h1>Class Session</h1>
 
+<%# Users who are logged in -- Left column %>
 <% @users.each do |u| %>
   <li><%= u.first_name %></li>
 <% end %>
@@ -8,8 +9,13 @@
 <br>
 
 
-<%= form_for([@user, @class_session, @survey]) do |f| %>
+<%# Live chat area -- Centre column %>
+<% render 'comments' %>
 
+
+<%# Survey -- right column %>
+
+<%= form_for([@user, @class_session, @survey]) do |f| %>
 
   <fieldset>
     <legend>Helpfulness</legend>

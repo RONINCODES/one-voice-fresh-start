@@ -2,10 +2,14 @@ class ClassSessionsController < ApplicationController
 
   def index
     @class_sessions = ClassSession.all
+    @user = current_user
   end
 
   def show
-
+    @class_session = ClassSession.find(params[:user_id])
+    @users = User.all
+    @user = User.find(params[:user_id])
+    @survey = Survey.new 
   end
 
   def new
@@ -17,7 +21,7 @@ class ClassSessionsController < ApplicationController
     @class_session = ClassSession.new(class_session_params)
 
     if @class_session.save
-      #redirect_to @class_session --> will probably want to redirect to the actual classroom - once the session has been created???
+      redirect_to user_path(session[:user_id])
     else
       render 'new'
     end
@@ -30,5 +34,9 @@ class ClassSessionsController < ApplicationController
     #redirect_to (probably Instructor's user profile )
   end
 
+private
+  def class_session_params
+    params.require(:class_session).permit(:date, :agenda)
+  end
 
 end

@@ -1,0 +1,14 @@
+<%= form_for([@user, @survey]) do |f| %>
+  <p>
+    <%= f.label :size, 'Size of Party' %><br>
+    <%= f.radio_button :size, max: 8, min: 1 %>
+  </p>
+  <p>
+    <%= f.label :date, 'Please Choose A Date' %><br>
+    <%= f.date_field :date, min: Date.today %>
+  </p>
+
+  <p>
+    <%= f.submit "Save" %>
+  </p>
+<% end %>

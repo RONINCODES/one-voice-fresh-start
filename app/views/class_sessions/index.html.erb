@@ -1,0 +1,5 @@
+<% @class_sessions.each do |s|  %>
+
+  <li><%= link_to s.agenda , user_class_session_path(@user.id, s.id) %> || <%= s.date %></li>
+
+<% end %>

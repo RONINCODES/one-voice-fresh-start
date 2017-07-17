@@ -3,7 +3,10 @@ Rails.application.routes.draw do
 
   root 'users#index'
   resources :users do
-    resources :class_sessions
+    resources :class_sessions do
+      resources :surveys
+    end
+
   end
 
   resource :sessions, only: [:new, :create, :destroy]

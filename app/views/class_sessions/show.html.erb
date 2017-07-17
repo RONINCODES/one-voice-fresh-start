@@ -1,0 +1,37 @@
+<h1>Class Session</h1>
+
+<% @users.each do |u| %>
+  <li><%= u.first_name %></li>
+<% end %>
+
+<br>
+<br>
+
+
+<%= form_for([@user, @class_session, @survey]) do |f| %>
+
+
+  <fieldset>
+    <legend>Helpfulness</legend>
+    <%= f.collection_radio_buttons(:helpfulness, survey_options, :first, :last)%>
+  </fieldset>
+
+  <fieldset>
+    <legend>Clarity</legend>
+    <%= f.collection_radio_buttons(:clarity, survey_options, :first, :last)%>
+  </fieldset>
+
+  <fieldset>
+    <legend>Pace</legend>
+    <%= f.collection_radio_buttons(:pace, survey_options, :first, :last)%>
+  </fieldset>
+
+  <p>
+    <%= f.label :suggestions %>
+    <%= f.text_area :suggestions %>
+  </p>
+
+  <p>
+    <%= f.submit 'Submit Survey' %>
+
+  <% end %>

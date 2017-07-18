@@ -14,11 +14,8 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-
-    if @user.first_name == 'mohammed'
-      @user.role = 'instructor'
-      @user.save
-    else @user.role = 'student'
+    #if @user.first_name == 'mohammed'
+    if @user.role = 'instructor' || @user.role = 'student'
       @user.save
     end
 

@@ -10,8 +10,7 @@ class SurveysController < ApplicationController
 
 
   def show
-    @user = Users.find(params[@user.id])
-    @survey = Surveys.find(params[:survey_id])
+
   end
 
   def create

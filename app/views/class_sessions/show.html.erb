@@ -10,12 +10,11 @@
 
 
 <%# Live chat area -- Centre column %>
-<% render 'comments' %>
-
+<%# render 'comments' %>
 
 <%# Survey -- right column %>
-
-<%= form_for([@user, @class_session, @survey]) do |f| %>
+<!-- @user, @class_session, -->
+<%= form_for :survey do |f| %>
 
   <fieldset>
     <legend>Helpfulness</legend>
@@ -37,7 +36,25 @@
     <%= f.text_area :suggestions %>
   </p>
 
-  <p>
+
     <%= f.submit 'Submit Survey' %>
 
+
+  <% end %>
+
+
+  <%= form_for :comment  do |f| %>
+  <br><br>
+
+  <p>
+    <%= f.label :comment, 'Add a Comment' %>
+    <%= f.text_area :comment %>
+  </p>
+
+  <%= f.submit 'Add Comment' %>
+
+<% end %>
+
+  <% @comments.each do |c| %>
+  <b><%= User.find(c.user_id).first_name%></b><br><%= c.comment %><hr><small><%= c.created_at.strftime("%A %B %d %Y") %></small>
   <% end %>

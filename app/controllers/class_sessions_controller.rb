@@ -9,7 +9,8 @@ class ClassSessionsController < ApplicationController
     @class_session = ClassSession.find(params[:user_id])
     @users = User.all
     @user = User.find(params[:user_id])
-    @survey = Survey.new 
+    @survey = Survey.new
+    @comments = Comment.where(class_session_id: params[:id])
   end
 
   def new
@@ -33,6 +34,7 @@ class ClassSessionsController < ApplicationController
 
     #redirect_to (probably Instructor's user profile )
   end
+
 
 private
   def class_session_params

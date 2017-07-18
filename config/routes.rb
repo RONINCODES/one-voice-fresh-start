@@ -7,7 +7,11 @@ Rails.application.routes.draw do
       resources :surveys
     end
 
-  end
+    post '/class_sessions/:id', to: 'comments#create', as: 'create_comment'
+    end
+
+
+
 
   resource :sessions, only: [:new, :create, :destroy]
 

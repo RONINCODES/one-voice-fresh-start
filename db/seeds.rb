@@ -3,7 +3,7 @@ ClassRoom.destroy_all
 ClassSession.destroy_all
 Survey.destroy_all
 
-100.times do
+40.times do
   user = User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,

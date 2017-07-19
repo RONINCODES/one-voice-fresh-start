@@ -3,6 +3,7 @@ ClassRoom.destroy_all
 ClassSession.destroy_all
 Survey.destroy_all
 
+# Create student accounts:
 40.times do
   user = User.create!(
     first_name: Faker::Name.first_name,
@@ -14,21 +15,22 @@ Survey.destroy_all
     # Classroom association?
     # Class Session association?
   )
-  puts user.first_name + " " + user.last_name + " registered as a student."
+  puts "New student: " + user.first_name + " " + user.last_name
 end
 
+# Create instructor accounts:
 20.times do
   user = User.create!(
     first_name: Faker::Name.first_name,
     last_name: Faker::Name.last_name,
     email: Faker::Internet.free_email,
-    role: 'student',
+    role: 'instructor',
     # password: 'password',
     # password_confirmation: 'password'
     # Classroom association?
     # Class session association?
   )
-  puts user.first_name + " " + user.last_name + " got hired as an instructor."
+  puts "New instructor: " + user.first_name + " " + user.last_name
 end
 
 # Create account: Mohammed
@@ -40,7 +42,7 @@ user = User.create!(
   # password: 'password',
   # password_confirmation: 'password'
 )
-puts user.first_name + " " + user.last_name + " got hired as an instructor."
+puts "New instructor: " + user.first_name + " " + user.last_name
 
 # Create account: Ronen
 user = User.create!(
@@ -51,7 +53,7 @@ user = User.create!(
   # password: 'password',
   # password_confirmation: 'password'
 )
-puts user.first_name + " " + user.last_name + " got hired as an instructor."
+puts "New instructor: " + user.first_name + " " + user.last_name
 
 # Create account: Mike
 user = User.create!(
@@ -62,4 +64,4 @@ user = User.create!(
   # password: 'password',
   # password_confirmation: 'password'
 )
-puts user.first_name + " " + user.last_name + " got hired as an instructor."
+puts "New instructor: " + user.first_name + " " + user.last_name

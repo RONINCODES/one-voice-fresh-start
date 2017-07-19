@@ -1,4 +1,7 @@
 User.destroy_all
+ClassRoom.destroy_all
+ClassSession.destroy_all
+Survey.destroy_all
 
 100.times do
   user = User.create!(
@@ -9,7 +12,7 @@ User.destroy_all
     # password: 'password',
     # password_confirmation: 'password'
   )
-  puts user.first_name + " " + user.last_name + "(student) registered as a student."
+  puts user.first_name + " " + user.last_name + " registered as a student."
 end
 
 20.times do
@@ -21,5 +24,5 @@ end
     # password: 'password',
     # password_confirmation: 'password'
   )
-  puts user.first_name + " " + user.last_name + " " + "got hired as an instructor."
+  puts user.first_name + " " + user.last_name + " got hired as an instructor."
 end

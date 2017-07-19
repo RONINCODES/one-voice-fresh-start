@@ -29,13 +29,6 @@ ActiveRecord::Schema.define(version: 20170718233549) do
     t.integer "class_room_id"
   end
 
-  create_table "classroom_users", force: :cascade do |t|
-    t.integer "classroom_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "comments", force: :cascade do |t|
     t.text "comment"
     t.datetime "created_at", null: false

@@ -28,8 +28,6 @@ end
     role: 'instructor',
     # password: 'password',
     # password_confirmation: 'password'
-    # Classroom association?
-    # Class session association?
   )
   puts "New instructor: " + user.first_name + " " + user.last_name
 end

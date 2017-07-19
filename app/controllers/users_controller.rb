@@ -14,11 +14,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.create(user_params)
-    #if @user.first_name == 'mohammed'
-    if @user.role = 'instructor' || @user.role = 'student'
-      @user.save
-    end
-
+    
     if @user.save
       #redirect_to @user
       flash[:notice] = 'Account successfully created!'

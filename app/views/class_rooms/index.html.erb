@@ -1,0 +1,9 @@
+<h1>Check Out Your Class Rooms</h1>
+
+<% @class_rooms.each do |c| %>
+Class: <%= c.subject %><br>Group Code: <%= c.group_code %><br>
+<%= link_to 'Create Session', new_user_class_room_class_session_path(params[:user_id], c.id) %>
+<%= link_to 'See All Sessions', user_class_room_class_sessions_path(params[:user_id], c.id) %>
+<br>
+<small><%= c.created_at.strftime("%A %B %d %Y") %></small><hr>
+<% end %>

@@ -1,5 +1,7 @@
+<h1>Class Sessions</h1>
+
 <% @class_sessions.each do |s|  %>
 
-  <li><%= link_to s.agenda , user_class_session_path(@user.id, s.id) %> || <%= s.date %></li>
+  <li><%= link_to s.agenda , user_class_room_class_session_path(@user.id, params[:class_room_id], s.id) %> || <%= s.date %></li>
 
 <% end %>

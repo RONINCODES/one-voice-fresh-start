@@ -17,8 +17,9 @@
 
   <p>
     <%= f.label :role %><br>
-    <%= f.text_field :role %>
+    <%= f.select :role, ['instructor', 'student']%>
   </p>
+
 
   <p>
     <%= f.label :password %><br>

@@ -1,0 +1,16 @@
+<h1>CREATE YOUR CLASS ROOM</h1>
+
+<%= form_for :class_room, url: {action: "create"} do |f| %>
+  <p>
+    <%= f.label :subject %><br>
+    <%= f.text_field :subject %>
+  </p>
+
+  <p>
+    <%= f.label :group_code %><br>
+    <%= f.number_field :group_code %>
+  </p>
+
+  <%= f.submit %>
+
+<% end %>

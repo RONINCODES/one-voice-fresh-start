@@ -1,5 +1,6 @@
+# Clear out table data:
 User.destroy_all
-ClassRoom.destroy_all
+# ClassRoom.destroy_all
 ClassSession.destroy_all
 Survey.destroy_all
 
@@ -65,3 +66,13 @@ user = User.create!(
   # password_confirmation: 'password'
 )
 puts "New instructor: " + user.first_name + " " + user.last_name
+
+# Create ClassRooms
+10.times do
+  class_room = ClassRoom.create!(
+    subject: Faker::Educator.course,
+    group_code: Faker::Number.digit.to_i,
+    user_id: User.where(role: 'instructor').all.sample.id
+  )
+  puts "New classroom: " + class_room.subject + " (Instructor: " + User.find_by(id: class_room.user_id).last_name + " " + User.find_by(id: class_room.user_id).last_name + ")"
+end

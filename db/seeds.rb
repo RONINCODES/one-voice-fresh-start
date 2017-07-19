@@ -1,8 +1,8 @@
 # Clear out table data:
-User.destroy_all
-# ClassRoom.destroy_all
 ClassSession.destroy_all
 Survey.destroy_all
+User.destroy_all
+# ClassRoom.destroy_all -- Throws a mysterious error. 
 
 # Create student accounts:
 40.times do
@@ -13,8 +13,6 @@ Survey.destroy_all
     role: 'student',
     # password: 'password',
     # password_confirmation: 'password'
-    # Classroom association?
-    # Class Session association?
   )
   puts "New student: " + user.first_name + " " + user.last_name
 end
@@ -41,7 +39,7 @@ user = User.create!(
   # password: 'password',
   # password_confirmation: 'password'
 )
-puts "New instructor: " + user.first_name + " " + user.last_name
+puts "New instructor (MJ): " + user.first_name + " " + user.last_name
 
 # Create account: Ronen
 user = User.create!(
@@ -52,7 +50,7 @@ user = User.create!(
   # password: 'password',
   # password_confirmation: 'password'
 )
-puts "New instructor: " + user.first_name + " " + user.last_name
+puts "New instructor (RA): " + user.first_name + " " + user.last_name
 
 # Create account: Mike
 user = User.create!(
@@ -63,7 +61,7 @@ user = User.create!(
   # password: 'password',
   # password_confirmation: 'password'
 )
-puts "New instructor: " + user.first_name + " " + user.last_name
+puts "New instructor (MS): " + user.first_name + " " + user.last_name
 
 # Create ClassRooms
 10.times do
@@ -72,5 +70,5 @@ puts "New instructor: " + user.first_name + " " + user.last_name
     group_code: Faker::Number.digit.to_i,
     user_id: User.where(role: 'instructor').all.sample.id
   )
-  puts "New classroom: " + class_room.subject + " (Instructor: " + User.find_by(id: class_room.user_id).last_name + " " + User.find_by(id: class_room.user_id).last_name + ")"
+  puts "New classroom: " + class_room.subject + " (Instructor: " + User.find_by(id: class_room.user_id).first_name + " " + User.find_by(id: class_room.user_id).last_name + ")"
 end

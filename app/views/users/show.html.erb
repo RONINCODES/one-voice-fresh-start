@@ -3,7 +3,7 @@
 <% if @user.role == 'student' %>
   <p>
     <%= link_to 'Edit', edit_user_path %> || <%= link_to 'Delete', user_path, method: :delete %><br />
-    <%= link_to 'Join Session', user_class_sessions_path(@user.id) %>
+    <%= link_to 'Show all class room', user_class_rooms_path(@user.id) %>
   </p>
 <% elsif @user.role == 'instructor' %>
   <p>

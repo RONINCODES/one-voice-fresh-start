@@ -1,50 +1,50 @@
 <div class="user_form">
 
-  <h1>Create Account</h1>
+  <h2>Create Account</h2>
 
   <%= form_for @user do |f| %>
     <div class="form_item">
       <p>
         <%= f.label :first_name, 'First Name' %><br>
-        <%= f.text_field :first_name %>
+        <%= f.text_field :first_name, placeholder: "i.e. Maggie" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
         <%= f.label :last_name, 'Last Name' %><br>
-        <%= f.text_field :last_name %>
+        <%= f.text_field :last_name, placeholder: "i.e. Simpson" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
-        <%= f.label :email, 'Email' %><br>
-        <%= f.email_field :email %>
+        <%= f.label :email, 'Email Address' %><br>
+        <%= f.email_field :email, placeholder: "i.e. clarkkent@dailyplanet.com" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
-        <%= f.label :role %><br>
-        <%= f.select :role, ['instructor', 'student']%>
+        <%= f.label :role, 'Student or Instructor?' %><br>
+        <%= f.select :role, ['student', 'instructor']%>
       </p>
     </div>
 
     <div class="form_item">
       <p>
-        <%= f.label :password, 'Password' %><br>
-        <%= f.password_field :password %>
+        <%= f.label :password, 'Create Password' %><br>
+        <%= f.password_field :password, placeholder: "Make it good!" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
         <%= f.label :password_confirmation, 'Confirm Password' %><br>
-        <%= f.password_field :password_confirmation %>
+        <%= f.password_field :password_confirmation, placeholder: "One more time!" %>
       </p>
     </div>
-    
+
     <div class="form_item">
       <p>
         <%= f.submit %>

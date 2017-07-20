@@ -1,20 +1,20 @@
 <div class="user_form">
 
-  <h1>Log In</h1>
+  <h2>Log In</h2>
 
   <%= form_for :session, url: sessions_path do |f| %>
 
     <div class="form_item">
       <p>
-        <%= f.label :email, 'Email' %><br>
-        <%= f.email_field :email %>
+        <%= f.label :email, 'Your Email' %><br>
+        <%= f.email_field :email, placeholder: "i.e. santa@northpole.ca" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
         <%= f.label :password, 'Password' %><br>
-        <%= f.password_field :password %>
+        <%= f.password_field :password, placeholder: "i.e. OpenSesame" %>
       </p>
     </div>
 

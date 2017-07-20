@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
   def create
     user_session = User.find_by(email: params[:session][:email])
 
-    if user_session #&& user_session.authenticate(params[:session][:password])
+    if user_session && user_session.authenticate(params[:session][:password])
       # Send a cookie to user's browser
       session[:user_id] = user_session.id
       redirect_to user_path(session[:user_id])

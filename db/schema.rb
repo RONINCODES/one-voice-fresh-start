@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170718233549) do
+ActiveRecord::Schema.define(version: 20170720115008) do
 
   create_table "class_rooms", force: :cascade do |t|
     t.string "subject"
@@ -27,13 +27,6 @@ ActiveRecord::Schema.define(version: 20170718233549) do
     t.datetime "updated_at", null: false
     t.integer "user_id"
     t.integer "class_room_id"
-  end
-
-  create_table "classroom_users", force: :cascade do |t|
-    t.integer "classroom_id"
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "comments", force: :cascade do |t|
@@ -59,10 +52,11 @@ ActiveRecord::Schema.define(version: 20170718233549) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
-    t.string "role"
-    t.integer "class_sessions_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "role"
+    t.string "class_sessions_id"
+    t.string "password_digest"
   end
 
 end

@@ -1,9 +1,9 @@
 class ClassSessionsController < ApplicationController
 
   def index
-    @class_sessions = ClassSession.where(class_room_id: params[:class_room_id])
     @user = current_user
-
+    @class_room = ClassRoom.find(params[:class_room_id])
+    @class_sessions = @class_room.class_sessions.where("class_room_id= ?", @class_room.id)
   end
 
   def show

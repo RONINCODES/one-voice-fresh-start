@@ -17,29 +17,39 @@
 document.addEventListener('DOMContentLoaded', function(event) {
 
   // Declare variables for click events:
-  var modal = document.querySelector('.modal');
-  var signIn = document.querySelector('.signin'); //button
-  var signUp = document.querySelector('.signup'); //button
-  var close = document.querySelector('.close');
-  var submit = document.querySelector('.submit');
+
+  var modalSignIn = document.querySelector('#sign_in');
+  var modalSignUp = document.querySelector('#sign_up');
+  var signIn = document.querySelector('.signin');
+  var signUp = document.querySelector('.signup');
+
+  // var close = document.querySelector('.close');
+  // var submit = document.querySelector('.submit');
 
   //-------------------------------------------------------------------------------------
   // When the user presses the .signin button, fade in the modal window
 
-  function showModalWindow(click) {
-    modal.style.display = 'block';
+  function showModalWindowSignIn(click) {
+    modalSignIn.style.display = 'block';
   };
-
-  signIn.addEventListener('click', showModalWindow);
+  // SignIn.addEventListener('click', showModalWindowSignIn);
 
   //-------------------------------------------------------------------------------------
+  // When the user presses the .signup button, fade in the modal window
+
+  function showModalWindowSignUp(click) {
+    modalSignUp.style.display = 'block';
+  };
+  // SignUp.addEventListener('click', showModalWindowSignUp);
+
+
   // When the user presses the .close button, fade out the modal window
 
   function hideModalWindow(click) {
     modal.style.display = 'none';
   };
 
-  close.addEventListener('click', hideModalWindow);
+  // close.addEventListener('click', hideModalWindow);
 
   //-------------------------------------------------------------------------------------
   // When the user presses the .submit button, add an .error class to both input elements
@@ -51,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     password.className = 'error';
   };
 
-  submit.addEventListener('click', addError);
+  // submit.addEventListener('click', addError);
 
   //-------------------------------------------------------------------------------------
   // When the user puts their cursor in one of the input fields, remove the .error class
@@ -65,8 +75,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     this.className = null;
   };
 
-  inputFields[0].addEventListener('click', removeError);
-  inputFields[1].addEventListener('click', removeError);
+  // inputFields[0].addEventListener('click', removeError);
+  // inputFields[1].addEventListener('click', removeError);
 
   //-------------------------------------------------------------------------------------
 

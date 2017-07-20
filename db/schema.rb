@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170720115008) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "class_rooms", force: :cascade do |t|
     t.string "subject"
     t.integer "group_code"

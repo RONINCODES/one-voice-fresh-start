@@ -11,10 +11,10 @@
 
   <body>
     <% if current_user %>
-        <li class="logout">
-          <%= link_to "Welcome #{current_user.first_name}!", users_path %>|
-          <%= link_to "Logout", sessions_path, method: :delete %>
-        </li>
+        <ul class="logout">
+          <li><%= link_to 'Back to Index', root_url %></li><br />
+          <li><%= link_to "Logout", sessions_path, method: :delete %></li>
+        </ul>
       <% end %>
     <%= yield %>
   </body>

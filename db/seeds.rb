@@ -2,7 +2,7 @@
 ClassSession.destroy_all
 Survey.destroy_all
 User.destroy_all
-# ClassRoom.destroy_all -- Throws a mysterious error. 
+# ClassRoom.destroy_all -- Throws a mysterious error.
 
 # Create student accounts:
 40.times do
@@ -11,8 +11,8 @@ User.destroy_all
     last_name: Faker::Name.last_name,
     email: Faker::Internet.free_email,
     role: 'student',
-    # password: 'password',
-    # password_confirmation: 'password'
+    password: 'password',
+    password_confirmation: 'password'
   )
   puts "New student: " + user.first_name + " " + user.last_name
 end
@@ -24,8 +24,8 @@ end
     last_name: Faker::Name.last_name,
     email: Faker::Internet.free_email,
     role: 'instructor',
-    # password: 'password',
-    # password_confirmation: 'password'
+    password: 'password',
+    password_confirmation: 'password'
   )
   puts "New instructor: " + user.first_name + " " + user.last_name
 end
@@ -36,8 +36,8 @@ user = User.create!(
   last_name: 'Jaffal',
   email: 'm@b.com',
   role: 'instructor',
-  # password: 'password',
-  # password_confirmation: 'password'
+  password: 'password',
+  password_confirmation: 'password'
 )
 puts "New instructor (MJ): " + user.first_name + " " + user.last_name
 
@@ -47,8 +47,8 @@ user = User.create!(
   last_name: 'Annason',
   email: 'r@a.com',
   role: 'instructor',
-  # password: 'password',
-  # password_confirmation: 'password'
+  password: 'password',
+  password_confirmation: 'password'
 )
 puts "New instructor (RA): " + user.first_name + " " + user.last_name
 
@@ -58,8 +58,8 @@ user = User.create!(
   last_name: 'Small',
   email: 'm@s.com',
   role: 'instructor',
-  # password: 'password',
-  # password_confirmation: 'password'
+  password: 'password',
+  password_confirmation: 'password'
 )
 puts "New instructor (MS): " + user.first_name + " " + user.last_name
 

@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   function showModalWindowSignIn(click) {
     modalSignIn.style.display = 'block';
   };
-  // SignIn.addEventListener('click', showModalWindowSignIn);
+  signIn.addEventListener('click', showModalWindowSignIn);
 
   //-------------------------------------------------------------------------------------
   // When the user presses the .signup button, fade in the modal window
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   function showModalWindowSignUp(click) {
     modalSignUp.style.display = 'block';
   };
-  // SignUp.addEventListener('click', showModalWindowSignUp);
+  signUp.addEventListener('click', showModalWindowSignUp);
 
 
   // When the user presses the .close button, fade out the modal window

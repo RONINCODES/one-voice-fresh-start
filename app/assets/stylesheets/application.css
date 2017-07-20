@@ -76,7 +76,7 @@
     ========================================================================== */
 
  html {
-   background: url("wallup.jpg"); /*no-repeat center center fixed;*/
+   background: url("wallup.jpg") no-repeat center center fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;
    -o-background-size: cover;
@@ -85,6 +85,15 @@
 
  h1 {
    color: white;
+   text-align: center;
+   font-size: 3em;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   text-shadow: 2px 2px black;
+ }
+
+ h2 {
+   color: white;
+   font-size: 1em;
    text-align: center;
    font-size: 2em;
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -95,18 +104,23 @@
 /* ----------------------------------------------------------------- */
  .modal {
      display: none;
-     position: absolute;
+     position: relative;
      width: 40%;
      height: 40%;
      margin: 0 auto;
-     border-radius: 10px;
-     background-color: gray;
+     margin-top: -170px;
+     border-radius: 20px;
+     background-color: #273746;
+     overflow: auto;
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
  }
 
  .user_form {
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-size: 20px;
+   color: white;
    text-align: center;
+
  }
 
  .form_item {
@@ -120,24 +134,25 @@
      display: block;
      border: none;
      outline: none;
-     width: 6em;
-     height: 2em;
+     width: 8em;
+     height: 3em;
      border-radius: 10px;
      line-height: 2;
      text-align: center;
-     font-size: 0.9em;
+     font-size: 1.5em;
      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
      background-color: skyblue;
      color: black;
      position: relative;
      margin: auto;
      margin-bottom: 10px;
-     top: 7em;
+     top: 4em;
      bottom: 0;
      left: 0;
      right: 0;
      -webkit-transition: all 200ms;
      transition: all 200ms;
+     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
  }
 
  button.hover {

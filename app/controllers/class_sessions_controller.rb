@@ -4,6 +4,7 @@ class ClassSessionsController < ApplicationController
     @user = current_user
     @class_room = ClassRoom.find(params[:class_room_id])
     @class_sessions = @class_room.class_sessions.where("class_room_id= ?", @class_room.id)
+    @classsessions = ClassSession.all
   end
 
   def show
@@ -16,13 +17,13 @@ class ClassSessionsController < ApplicationController
   end
 
   def new
-
+    @class_session = ClassSession.new
   end
 
   def create
     @class_room = ClassRoom.find(params[:class_room_id])
     @class_session = @class_room.class_sessions.new(class_session_params)
-
+    @class_session.user_id = current_user.id
     if @class_session.save
       redirect_to user_path(session[:user_id])
     else

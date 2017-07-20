@@ -3,6 +3,7 @@ class ClassRoomsController < ApplicationController
   def index
     @user = current_user
     @class_rooms = @user.class_rooms.where("user_id = ?", @user)
+    @classrooms = ClassRoom.all
   end
 
   def new

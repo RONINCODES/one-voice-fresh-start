@@ -10,7 +10,9 @@ class ClassRoomsController < ApplicationController
   end
 
   def create
-    @class_room = ClassRoom.new(class_room_params)
+    @user = current_user
+    @class_room = @user.class_rooms.new(class_room_params)
+    @class_room.user_id = @user.id
 
     if @class_room.save
       redirect_to user_class_rooms_path(params[:user_id])

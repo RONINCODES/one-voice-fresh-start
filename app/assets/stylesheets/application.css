@@ -90,6 +90,32 @@
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
  }
 
+/* ----------------------------------------------------------------- */
+/* Login and Signup Forms */
+/* ----------------------------------------------------------------- */
+ .modal {
+     display: none;
+     position: absolute;
+     width: 40%;
+     height: 40%;
+     margin: 0 auto;
+     border-radius: 10px;
+     background-color: gray;
+ }
+
+ .user_form {
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   font-size: 20px;
+   text-align: center;
+ }
+
+ .form_item {
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
+
+/* ----------------------------------------------------------------- */
+
  button {
      display: block;
      border: none;
@@ -117,16 +143,6 @@
  button.hover {
      background-color: gray;
      color: #666;
- }
-
- .modal {
-     display: none;
-     position: fixed;
-     top: 0;
-     left: 0;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(30,30,30,0.8);
  }
 
  .getstarted {

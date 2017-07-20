@@ -1,37 +1,46 @@
-<%= form_for @user do |f| %>
+<div class="user_form">
 
-  <p>
-    <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
-  </p>
+  <h1>Create Account</h1>
 
-  <p>
-    <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
-  </p>
+  <%= form_for @user do |f| %>
+    <div class="form_item">
+      <p>
+        <%= f.label :first_name, 'First Name' %><br>
+        <%= f.text_field :first_name %>
+      </p>
+    </div>
+    <div class="form_item">
+      <p>
+        <%= f.label :last_name, 'Last Name' %><br>
+        <%= f.text_field :last_name %>
+      </p>
+    </div>
+    <div class="form_item">
+      <p>
+        <%= f.label :email, 'Email' %><br>
+        <%= f.email_field :email %>
+      </p>
+    </div>
+    <div class="form_item">
+      <p>
+        <%= f.label :role %><br>
+        <%= f.select :role, ['instructor', 'student']%>
+      </p>
+    </div>
+    <div class="form_item">
+      <p>
+        <%= f.label :password, 'Password' %><br>
+        <%= f.password_field :password %>
+      </p>
+    <div class="form_item">
+      <p>
+        <%= f.label :password_confirmation, 'Confirm Password' %><br>
+        <%= f.password_field :password_confirmation %>
+      </p>
+    </div>
 
-  <p>
-    <%= f.label :email %><br>
-    <%= f.email_field :email %>
-  </p>
+    <%= f.submit %>
 
-  <p>
-    <%= f.label :role %><br>
-    <%= f.select :role, ['instructor', 'student']%>
-  </p>
+    <% end %>
 
-
-  <p>
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </p>
-
-  <p>
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
-  </p>
-
-
-  <%= f.submit %>
-
-  <% end %>
+</div>

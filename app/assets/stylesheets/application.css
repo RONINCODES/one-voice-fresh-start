@@ -99,7 +99,7 @@
   }
 
  h1 {
-   padding-top: 40px;
+   padding-top: 60px;
    color: white;
    text-align: center;
    font-size: 3em;
@@ -222,7 +222,7 @@
    opacity: 0.75;
    position: fixed;
    top: 0;
-
+   font-size: 1.4em;
  }
 
  .nav_main a {
@@ -242,4 +242,8 @@
    position: relative;
    padding: 20px;
    font-size: 1em;
+ }
+
+ .nav_user_role {
+   font-weight: normal;
  }

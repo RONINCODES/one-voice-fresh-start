@@ -14,7 +14,7 @@
 
 <%# Survey -- right column %>
 <!-- @user, @class_session, -->
-<%= form_for :survey do |f| %>
+<%= form_for :survey, url:  user_class_room_class_session_surveys_path(@user, @class_room, @class_session), method: :post do |f| %>
 
   <fieldset>
     <legend>Helpfulness</legend>

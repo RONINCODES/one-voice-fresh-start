@@ -32,11 +32,11 @@ ActiveRecord::Schema.define(version: 20170721162211) do
 
   create_table "class_sessions", force: :cascade do |t|
     t.date "date"
+    t.integer "class_room_id"
     t.text "agenda"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.integer "class_room_id"
   end
 
   create_table "comments", force: :cascade do |t|
@@ -62,9 +62,9 @@ ActiveRecord::Schema.define(version: 20170721162211) do
     t.string "first_name"
     t.string "last_name"
     t.string "email"
-    t.string "role"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "role"
     t.string "password_digest"
   end
 

@@ -1,14 +1,35 @@
-<h1><%= ["Hello!", "Aloha!", "Salam!", "Bonjour!", "Bonjourno!", "Shalom!", "Ola!"].sample.capitalize %> <%= @user.first_name.capitalize + ' ' + @user.last_name.capitalize %></h1>
 
-<% if @user.role == 'student' %>
-  <p>
-    <%= link_to 'Edit', edit_user_path %> || <%= link_to 'Delete', user_path, method: :delete %><br />
-    <%= link_to 'Show all class room', user_class_rooms_path(@user.id) %>
-  </p>
-<% elsif @user.role == 'instructor' %>
-  <p>
-    <%= link_to 'Edit', edit_user_path %> || <%= link_to 'Delete', user_path, method: :delete %><br />
-    <%= link_to 'Create Class Room', new_user_class_room_path(@user.id) %>
-    <%= link_to 'See All Class Rooms', user_class_rooms_path(@user.id) %>
-  </p>
-<% end %>
+<div id="user-profile">
+
+    <% if @user.role == 'student' %>
+
+      <div class="user-info">
+        <h3>Name: <%= @user.first_name %> <%= @user.last_name %></h3>
+        <h3>Email: <%= @user.email %></h3>
+        <h3>Role: <%= @user.role %></h3>
+        <h3><%= link_to 'Edit', edit_user_path %></h3>
+        <h3><%= link_to 'Delete', user_path, method: :delete %></h3>
+      </div>
+
+      <div class="user-nav">
+        <%= link_to 'Show all class room', user_class_rooms_path(@user.id) %>
+      </div>
+
+    <% elsif @user.role == 'instructor' %>
+
+      <div class="user-info">
+        <h3>Name: <%= @user.first_name %> <%= @user.last_name %></h3>
+        <h3>Email: <%= @user.email %></h3>
+        <h3>Role: <%= @user.role %></h3>
+        <h3><%= link_to 'Edit', edit_user_path %></h3>
+        <h3><%= link_to 'Delete', user_path, method: :delete %></h3>
+      </div>
+
+      <div class="user-nav">
+        <%= link_to 'Create Class Room', new_user_class_room_path(@user.id) %>
+        <%= link_to 'See All Class Rooms', user_class_rooms_path(@user.id) %>
+      </div>
+
+    <% end %>
+
+</div>

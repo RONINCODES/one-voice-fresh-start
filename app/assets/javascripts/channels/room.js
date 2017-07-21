@@ -18,7 +18,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
   commentForm.addEventListener("submit", function(evt) {
       evt.preventDefault();
       var comment_text_field = document.querySelector('#comment_comment');
-      App.room.send({text_field: comment_text_field.value})
+      App.room.send({
+        text_field: comment_text_field.value,
+        // user_id:
+        // class_session_id:
+
+      })
       console.log('howdy')
   }, true);
 

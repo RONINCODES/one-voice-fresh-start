@@ -24,6 +24,10 @@ class RoomChannel < ApplicationCable::Channel
 
 end
 #redifine class session and class user to find specific user and session
+# @class_session = ClassSession.find(params[:class_session_id])
+# @user = User.find(params[:user_id])
+# @comment = @class_session.comments.new(comment_params)
+# @comment.user = current_user
 
 #when saved i want to braodcasrt that comment was saved to the channel
 

@@ -37,6 +37,10 @@ document.addEventListener('DOMContentLoaded', function(event) {
     signIn.addEventListener('click', showModalSignIn);
   };
 
+    // signIn.addEventListener('click', showModalSignIn);
+
+
+
   // When user presses SIGN UP button, fade in the modal window
   if (modalSignUp != undefined) {
     function showModalSignUp(click) {
@@ -52,6 +56,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
     };
     closeSignIn.addEventListener('click', hideModalSignIn);
   };
+
+  // signUp.addEventListener('click', showModalSignUp);
+
 
   // When user presses CLOSE button, fade out the SIGN UP modal window
   if (modalSignUp != undefined) {
@@ -90,6 +97,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
     closeEdit.addEventListener('click', hideModalEdit);
   };
 
+  // closeSignIn.addEventListener('click', hideModalSignIn);
+
+
   //-------------------------------------------------------------------------------------
 
   // CREATE A CLASSROOM:
@@ -118,6 +128,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
     };
     closeCreate.addEventListener('click', hideModalCreate);
   };
+
+  // closeSignUp.addEventListener('click', hideModalSignUp);
+
 
   //-------------------------------------------------------------------------------------
 

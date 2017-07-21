@@ -8,12 +8,14 @@ class ClassSessionsController < ApplicationController
   end
 
   def show
-    @users = User.where(class_sessions_id: params[:class_sessions_id])
+    @class_room = ClassRoom.find(params[:class_room_id])
     @class_session = ClassSession.find(params[:id])
-    #@users = User.all
+    @class_session.users
+    @users = @class_session.users
     @user = User.find(params[:user_id])
     @survey = Survey.new
-    @comments = Comment.where(class_session_id: params[:id])
+    @comments = Comment.new
+    CheckIn.check_in(@user, @class_session)
   end
 
   def new

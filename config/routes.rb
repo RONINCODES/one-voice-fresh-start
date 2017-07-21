@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :class_rooms do
       resources :class_sessions do
         resources :surveys
+        resources :comments
       end
      end
     end

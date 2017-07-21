@@ -1,6 +1,10 @@
 class ClassSession < ApplicationRecord
-  #has many :surveys
+
+  belongs_to :class_room
+  has_many :check_ins
+  has_many :users, through: :check_ins
   has_many :comments
-  has_many :class_rooms
   has_many :surveys
+
+
 end

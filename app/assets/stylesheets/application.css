@@ -28,6 +28,10 @@
      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
  }
 
+ a {
+   text-decoration: none;
+ }
+
  ::-moz-selection {
      background: #b3d4fc;
      text-shadow: none;
@@ -117,6 +121,13 @@
    font-size: 2em;
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
  }
+
+ /*.back_to_your_profile {
+   text-align: center;
+   font-size: 2em;
+   padding: 5px;
+   background-color: black;
+ }*/
 
 /* ----------------------------------------------------------------- */
 /* Login and Signup Forms */

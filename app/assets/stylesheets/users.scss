@@ -5,6 +5,7 @@
 .user-info {
   float: left;
   height: 600px;
+  padding: 20px;
 }
 
 .user-nav {
@@ -12,4 +13,8 @@
   width: 738px;
   height: 600px;
   display: inline-grid;
+}
+
+h3 {
+  font-weight: normal;
 }

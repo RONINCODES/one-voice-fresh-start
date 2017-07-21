@@ -15,7 +15,7 @@
       <div class="nav_main">
 
         <div class="nav_to_profile">
-          <%= link_to 'Your User Profile (Replace this with Username)', root_url %>
+          <%= link_to "#{current_user.first_name} #{current_user.last_name} (#{current_user.role})", user_path(current_user.id) %>
         </div>
 
         <div class="nav_to_logout">

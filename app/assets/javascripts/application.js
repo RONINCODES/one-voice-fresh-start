@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
   var modalSignUp = document.querySelector('#sign_up');
   var signIn = document.querySelector('.signin');
   var signUp = document.querySelector('.signup');
-  var close = document.querySelector('.close');
+  var closeSignIn = document.querySelector('.close_sign_in');
+  var closeSignUp = document.querySelector('.close_sign_up');
 
   //-------------------------------------------------------------------------------------
 
@@ -47,7 +48,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   function hideModalSignIn(click) {
     modalSignIn.style.display = 'none';
   };
-  close.addEventListener('click', hideModalSignIn);
+  closeSignIn.addEventListener('click', hideModalSignIn);
 
 
   // When user presses CLOSE button, fade out the SIGN UP modal window
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   function hideModalSignUp(click) {
     modalSignUp.style.display = 'none';
   };
-  close.addEventListener('click', hideModalSignUp);
+  closeSignUp.addEventListener('click', hideModalSignUp);
 
   //-------------------------------------------------------------------------------------
 

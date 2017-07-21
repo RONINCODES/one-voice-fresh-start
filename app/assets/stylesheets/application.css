@@ -133,7 +133,7 @@
    margin-bottom: 10px;
  }
 
- .close {
+ .close_sign_in, .close_sign_up {
    display: block;
    border: none;
    outline: none;
@@ -150,7 +150,15 @@
   }
 
   #close_x {
-    margin: 0 auto;
+   color: white;
+   font-weight: bold;
+   font-size: 1em;
+   margin: 0 auto;
+   position: relative;
+   width: 100%;
+   text-align: center;
+   display: inline-block;
+   padding-top: 16px;
   }
 
 /* ----------------------------------------------------------------- */

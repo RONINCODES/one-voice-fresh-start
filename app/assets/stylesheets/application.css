@@ -77,11 +77,14 @@
     Author's custom styles ---> START YOUR STYLING BELOW
     ========================================================================== */
 
- /*html {
-   background: url("wallup.jpg") no-repeat center center fixed;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;*/
+  footer {
+    margin: 0 auto;
+    color: white;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
 
  .welcome_page {
    background-image: url("wallup.jpg");
@@ -136,7 +139,6 @@
    font-size: 20px;
    color: white;
    text-align: center;
-
  }
 
  .form_item {

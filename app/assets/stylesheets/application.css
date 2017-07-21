@@ -75,11 +75,8 @@
     Author's custom styles ---> START YOUR STYLING BELOW
     ========================================================================== */
 
- html {
-   background: url("wallup.jpg") no-repeat center center fixed;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
+ .welcome_page {
+   background-image: url("wallup.jpg");
    background-size: cover;
  }
 
@@ -158,20 +155,6 @@
  button.hover {
      background-color: gray;
      color: #666;
- }
-
- .getstarted {
-     display: block;
-     width: 400px;
-     height: 18em;
-     padding: 2em;
-     background-color: #b9c2cc;
-     position: absolute;
-     margin: auto;
-     top: 0;
-     bottom: 0;
-     left: 0;
-     right: 0;
  }
 
  .close {

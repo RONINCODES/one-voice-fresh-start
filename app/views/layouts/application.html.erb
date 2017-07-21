@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>One Voice</title>
+    <meta name="description" content="Realtime live classroom feedback for instructors">
     <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
     <%= javascript_include_tag('application.js') %>
-
   </head>
 
-
+  <%# Main Nav Bar: %>
   <body>
     <% if current_user %>
-        <ul class="logout">
-          <li><%= link_to 'Back to Index', root_url %></li><br />
-          <li><%= link_to "Logout", sessions_path, method: :delete %></li>
-        </ul>
-      <% end %>
+      <div class="nav_main">
+
+        <div class="nav_to_profile">
+          <%= link_to 'Your User Profile (Replace this with Username)', root_url %>
+        </div>
+
+        <div class="nav_to_logout">
+          <%= link_to "Logout", sessions_path, method: :delete %>
+        </div>
+
+      </div>
+    <% end %>
 
     <%= yield %>
 

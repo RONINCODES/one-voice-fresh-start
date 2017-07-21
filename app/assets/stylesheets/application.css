@@ -23,7 +23,9 @@
  }
 
  body {
+     background-color: gray;
      font-size: 1em;
+     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
  }
 
  ::-moz-selection {
@@ -75,16 +77,14 @@
     Author's custom styles ---> START YOUR STYLING BELOW
     ========================================================================== */
 
-
- html {
+ /*html {
    background: url("wallup.jpg") no-repeat center center fixed;
    -webkit-background-size: cover;
    -moz-background-size: cover;
-   -o-background-size: cover;
+   -o-background-size: cover;*/
 
  .welcome_page {
    background-image: url("wallup.jpg");
-
    background-size: cover;
  }
 
@@ -171,12 +171,11 @@
      outline: none;
      width: 1em;
      height: 1em;
-     font: 1.5em Arial;
+     font: 1em sans-serif;
      background-color: #bc2a39;
      color: #e7c0b9;
-     border-radius: 0.5em;
+     border-radius: 0.2em;
      line-height: 0;
-
      position: absolute;
      top: 0.25em;
      right: 0.25em;

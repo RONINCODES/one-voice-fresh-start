@@ -5,6 +5,7 @@
 .user-info {
   float: left;
   height: 600px;
+  margin-left: 20px;
 }
 
 .user-nav {
@@ -12,4 +13,17 @@
   width: 738px;
   height: 600px;
   display: inline-grid;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+.profile_page_photo {
+  border: 1px solid black;
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  margin-left: 20px;
+  text-align: center;
 }

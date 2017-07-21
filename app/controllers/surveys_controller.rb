@@ -14,12 +14,15 @@ class SurveysController < ApplicationController
   end
 
   def create
-    @survey = Survey.new(survey_params)
-
+    @class_session = ClassSession.find(params[:class_session_id])
+    @user = User.find(params[:user_id])
+    @survey = @class_session.surveys.new(survey_params)
+    @survey.user_id = @user.id
     if @survey.save
-      flash[:notice] = 'Thank you, That\'s some great feedback!'
-      #render ''
-
+      redirect_to user_path(@user)
+    else
+      render 'class_session/show'
+    end
   end
 
 private

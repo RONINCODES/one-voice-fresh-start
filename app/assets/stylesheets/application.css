@@ -75,8 +75,16 @@
     Author's custom styles ---> START YOUR STYLING BELOW
     ========================================================================== */
 
+
+ html {
+   background: url("wallup.jpg") no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+
  .welcome_page {
    background-image: url("wallup.jpg");
+
    background-size: cover;
  }
 

@@ -5,13 +5,13 @@
     <source src="<%= image_path "bueller.mp4" %>" type="video/mp4">
   </video>
 
-  <h1>Welcome to OneVoice</h1>
+  <div class="welcome_to_onevoice"><h1>Welcome to OneVoice</h1></div>
 
   <% if current_user %>
     <h2>You are logged in.</h2>
       <%# <button class="your_profile">Your Profile</button> %>
       <%#= link_to 'Back to your profile', user_path(current_user.id) %>
-      <button><%= button_to 'Your Profile', user_path(current_user.id) %></button>
+      <button><%= link_to 'Your Profile', user_path(current_user.id) %></button>
   <% else %>
     <p>
 
@@ -30,6 +30,5 @@
     </p>
   <% end %>
 
-  <footer>A Sababa Production &copy; 2112</footer>
 
 </body>

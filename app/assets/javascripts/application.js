@@ -15,42 +15,49 @@
 //= require_tree .
 
 document.addEventListener('DOMContentLoaded', function(event) {
-
+  //-------------------------------------------------------------------------------------
   // Declare variables for click events:
-
   var modalSignIn = document.querySelector('#sign_in');
   var modalSignUp = document.querySelector('#sign_up');
   var signIn = document.querySelector('.signin');
   var signUp = document.querySelector('.signup');
   var close = document.querySelector('.close');
-  // var submit = document.querySelector('.submit');
 
   //-------------------------------------------------------------------------------------
+
   // When user presses SIGN IN button, fade in the modal window
-  function showModalWindowSignIn(click) {
+
+  function showModalSignIn(click) {
     modalSignIn.style.display = 'block';
   };
-  signIn.addEventListener('click', showModalWindowSignIn);
+  signIn.addEventListener('click', showModalSignIn);
+
 
   // When user presses SIGN UP button, fade in the modal window
-  function showModalWindowSignUp(click) {
+
+  function showModalSignUp(click) {
     modalSignUp.style.display = 'block';
   };
-  signUp.addEventListener('click', showModalWindowSignUp);
+  signUp.addEventListener('click', showModalSignUp);
 
-  // When user presses CLOSE button, fade out the modal window
-  function hideModalWindowSignIn(click) {
+  //-------------------------------------------------------------------------------------
+
+  // When user presses CLOSE button, fade out the SIGN IN modal window
+
+  function hideModalSignIn(click) {
     modalSignIn.style.display = 'none';
   };
-  close.addEventListener('click', hideModalWindowSignIn);
+  close.addEventListener('click', hideModalSignIn);
 
 
-  // When user presses CLOSE button, fade out the modal window
-  function hideModalWindowSignUp(click) {
+  // When user presses CLOSE button, fade out the SIGN UP modal window
+
+  function hideModalSignUp(click) {
     modalSignUp.style.display = 'none';
   };
-  close.addEventListener('click', hideModalWindowSignUp);
+  close.addEventListener('click', hideModalSignUp);
 
+  //-------------------------------------------------------------------------------------
 
 // End of 'DOMContentLoaded':
 });

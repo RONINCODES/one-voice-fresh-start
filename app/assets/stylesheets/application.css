@@ -133,6 +133,26 @@
    margin-bottom: 10px;
  }
 
+ .close {
+   display: block;
+   border: none;
+   outline: none;
+   width: 30px;
+   height: 30px;
+   font: 20px sans-serif;
+   background-color: black;
+   color: white;
+   border-radius: 5px;
+   line-height: 0;
+   position: absolute;
+   top: 0.5em;
+   right: 0.5em;
+  }
+
+  #close_x {
+    margin: 0 auto;
+  }
+
 /* ----------------------------------------------------------------- */
 
  button {
@@ -157,28 +177,12 @@
      right: 0;
      -webkit-transition: all 200ms;
      transition: all 200ms;
-     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+     box-shadow: 2px 2px black;
  }
 
  button.hover {
      background-color: gray;
      color: #666;
- }
-
- .close {
-     display: block;
-     border: none;
-     outline: none;
-     width: 1em;
-     height: 1em;
-     font: 1em sans-serif;
-     background-color: #bc2a39;
-     color: #e7c0b9;
-     border-radius: 0.2em;
-     line-height: 0;
-     position: absolute;
-     top: 0.25em;
-     right: 0.25em;
  }
 
  button.submit {

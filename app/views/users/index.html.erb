@@ -1,24 +1,26 @@
-<h1>Welcome to OneVoice Community</h1>
+<body class="welcome_page">
 
-<% if current_user %>
-  <h2>You are logged in</h2>
-  <%= link_to 'Back to your profile', user_path(current_user.id) %>
-<% else %>
-  <p>
-    <%#= link_to 'Sign Up', new_user_path %>
-    <%#= link_to 'Log In', new_sessions_path %>
+  <h1>Welcome to OneVoice Community</h1>
 
-    <button class="signin">Sign In</button>
+  <% if current_user %>
+    <h2>You are logged in</h2>
+    <%= link_to 'Back to your profile', user_path(current_user.id) %>
+  <% else %>
+    <p>
 
-    <button class="signup">New User</button>
+      <button class="signin">Sign In</button>
 
-    <div class="modal" id="sign_in">
-      <%= render "login_form" %>
-    </div>
+      <button class="signup">New User</button>
 
-    <div class="modal" id="sign_up">
-      <%= render "form" %>
-    </div>
+      <div class="modal" id="sign_in">
+        <%= render "login_form" %>
+      </div>
 
-  </p>
-<% end %>
+      <div class="modal" id="sign_up">
+        <%= render "form" %>
+      </div>
+
+    </p>
+  <% end %>
+
+</body>

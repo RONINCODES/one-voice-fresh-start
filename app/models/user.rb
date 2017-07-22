@@ -10,4 +10,6 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, :email, :role, :password, :password_confirmation, presence: true
 
+  mount_uploader :user_image, UserImageUploader
+
 end

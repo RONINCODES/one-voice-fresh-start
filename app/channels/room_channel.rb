@@ -14,12 +14,14 @@ class RoomChannel < ApplicationCable::Channel
   #method to save data aka messages/comments to database
   def create_comment(data)
     @class_session = ClassSession.first
-    @user = User.first
+    user = User.find(data['user_id'])
     # binding.pry
     @comment = @class_session.comments.create!(
       comment: data['text_field'],
-      user: @user
+      user: user
     )
+    ActionCable.server.broadcast "room_channel", @comment 
+
   end
 
 end

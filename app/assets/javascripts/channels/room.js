@@ -9,6 +9,9 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
 
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
+    console.log(data)
+    document.querySelector('#comments').append
+
   }
 });
 // wrap an event listener around the comment form and submit buttons
@@ -20,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
       var comment_text_field = document.querySelector('#comment_comment');
       App.room.send({
         text_field: comment_text_field.value,
-        // user_id:
+        user_id: userId
         // class_session_id:
 
       })

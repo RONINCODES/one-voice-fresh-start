@@ -90,10 +90,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     closeEdit.addEventListener('click', hideModalEdit);
   };
 
-
-
-
-
   //-------------------------------------------------------------------------------------
 
 // End of 'DOMContentLoaded':

@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   };
   //-------------------------------------------------------------------------------------
   // When user presses CLOSE button, fade out the SIGN IN modal window
-  if (hideModalSignIn != undefined) {
+  if (modalSignIn != undefined) {
     function hideModalSignIn(click) {
       modalSignIn.style.display = 'none';
     };
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
   };
 
   // When user presses CLOSE button, fade out the SIGN UP modal window
-  if (hideModalSignUp != undefined) {
+  if (modalSignUp != undefined) {
     function hideModalSignUp(click) {
       modalSignUp.style.display = 'none';
     };
@@ -68,24 +68,32 @@ document.addEventListener('DOMContentLoaded', function(event) {
   var closeEdit   = document.querySelector('.close_edit');
 
   // Open the modal:
-  if (showModalEdit != undefined) {
+
+  if (modalEdit != undefined) {
     function showModalEdit(click) {
-      console.log('The modal was called.');
+      console.log('You should see the modal now.');
       modalEdit.style.display = 'block';
     };
     editProfile.addEventListener('click', function(event) {
       event.preventDefault();
-      showModalEdit;
+      console.log('The link was clicked.')
+      showModalEdit();
     });
   };
 
   // Close the modal:
-  if (hideModalSignUp != undefined) {
+
+  if (modalEdit != undefined) {
     function hideModalEdit(click) {
       modalEdit.style.display = 'none';
     };
     closeEdit.addEventListener('click', hideModalEdit);
   };
+
+
+
+
+
   //-------------------------------------------------------------------------------------
 
 // End of 'DOMContentLoaded':

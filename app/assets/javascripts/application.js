@@ -29,58 +29,64 @@ document.addEventListener('DOMContentLoaded', function(event) {
   var closeSignUp = document.querySelector('.close_sign_up');
 
   //-------------------------------------------------------------------------------------
-
   // When user presses SIGN IN button, fade in the modal window
-
-if (modalSignIn != undefined) {
-  function showModalSignIn(click) {
-    modalSignIn.style.display = 'block';
+  if (modalSignIn != undefined) {
+    function showModalSignIn(click) {
+      modalSignIn.style.display = 'block';
+    };
+    signIn.addEventListener('click', showModalSignIn);
   };
-  signIn.addEventListener('click', showModalSignIn);
-};
-
 
   // When user presses SIGN UP button, fade in the modal window
-
-if (modalSignUp != undefined) {
-  function showModalSignUp(click) {
-    modalSignUp.style.display = 'block';
+  if (modalSignUp != undefined) {
+    function showModalSignUp(click) {
+      modalSignUp.style.display = 'block';
+    };
+    signUp.addEventListener('click', showModalSignUp);
   };
-  signUp.addEventListener('click', showModalSignUp);
-};
   //-------------------------------------------------------------------------------------
-
   // When user presses CLOSE button, fade out the SIGN IN modal window
-
-if (hideModalSignIn != undefined) {
-  function hideModalSignIn(click) {
-    modalSignIn.style.display = 'none';
+  if (hideModalSignIn != undefined) {
+    function hideModalSignIn(click) {
+      modalSignIn.style.display = 'none';
+    };
+    closeSignIn.addEventListener('click', hideModalSignIn);
   };
-  closeSignIn.addEventListener('click', hideModalSignIn);
-};
 
   // When user presses CLOSE button, fade out the SIGN UP modal window
-
-if (hideModalSignUp != undefined) {
-  function hideModalSignUp(click) {
-    modalSignUp.style.display = 'none';
+  if (hideModalSignUp != undefined) {
+    function hideModalSignUp(click) {
+      modalSignUp.style.display = 'none';
+    };
+    closeSignUp.addEventListener('click', hideModalSignUp);
   };
-  closeSignUp.addEventListener('click', hideModalSignUp);
-};
-
   //-------------------------------------------------------------------------------------
-
   // EDIT PROFILE:
 
-  var editProfile      = document.querySelector('.edit_profile'); // The link.
-  var modalEditProfile = document.querySelector('#edit_profile'); // The modal.
+  var editProfile = document.querySelector('.edit_profile'); // The link.
+  var modalEdit   = document.querySelector('#edit_profile'); // The modal.
+  var closeEdit   = document.querySelector('.close_edit');
 
-  function showModalEditProfile(click) {
-    console.log('The modal was called.');
-    modalEditProfile.style.display = 'block';
+  // Open the modal:
+  if (showModalEdit != undefined) {
+    function showModalEdit(click) {
+      console.log('The modal was called.');
+      modalEdit.style.display = 'block';
+    };
+    editProfile.addEventListener('click', function(event) {
+      event.preventDefault();
+      showModalEdit;
+    });
   };
-  editProfile.addEventListener('click', showModalEditProfile);
 
+  // Close the modal:
+  if (hideModalSignUp != undefined) {
+    function hideModalEdit(click) {
+      modalEdit.style.display = 'none';
+    };
+    closeEdit.addEventListener('click', hideModalEdit);
+  };
   //-------------------------------------------------------------------------------------
+
 // End of 'DOMContentLoaded':
 });

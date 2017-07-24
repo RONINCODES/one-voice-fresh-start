@@ -15,7 +15,7 @@
       <h3>Role: <%= @user.role %></h3>
 
       <div class="edit_profile">
-        <h3>Edit Your Profile</h3>
+        <h3><%= link_to 'Edit Your Profile', '#' %></h3>
       </div>
 
       <h3><%= link_to 'Delete Your Account', user_path, method: :delete %></h3>

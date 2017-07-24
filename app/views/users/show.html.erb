@@ -3,9 +3,11 @@
     <div class="user-info">
 
       <div class="profile_page_photo">
-        <p>
+        <% if @user.user_image.present? %>
           <%= image_tag(@user.user_image.url) %>
-        </p>
+        <% else %>
+          <%= image_tag ActionController::Base.helpers.asset_path("adam_west.jpg") %>
+        <% end %>
       </div>
 
     </div>

@@ -8,39 +8,45 @@
         </p>
       </div>
 
-      <h3>Name: <%= @user.first_name %> <%= @user.last_name %></h3>
-
-      <h3>Contact: <%= mail_to @user.email, "#{ @user.email }" %></h3>
-
-      <h3>Role: <%= @user.role %></h3>
-
-      <div class="edit_profile">
-        <h3><%= link_to 'Edit Your Profile', '#' %></h3>
-      </div>
-
-      <h3><%= link_to 'Delete Your Account', user_path, method: :delete %></h3>
     </div>
 
-    <% if @user.role == 'student' %>
+    <div class="user-nav">
 
-      <div class="user-nav">
-        <h2>
-          <%= link_to 'Show All Classrooms', user_class_rooms_path(@user.id) %>
-        </h2>
+      <div id="user_name">
+        <p><%= @user.first_name %> <%= @user.last_name %></p>
       </div>
 
-    <% elsif @user.role == 'instructor' %>
+        <p>Role: <%= @user.role %></p>
 
-      <div class="user-nav">
-        <h2>
-          <%= link_to 'Create a Classroom', new_user_class_room_path(@user.id) %>
-        </h2>
-        <h2>
-          <%= link_to 'See All Classrooms', user_class_rooms_path(@user.id) %>
-        </h2>
-      </div>
+        <p>Email: <%= mail_to @user.email, "#{ @user.email }" %></p>
 
-    <% end %>
+
+        <div class="edit_profile">
+          <p><%= link_to 'Edit Your Profile', '#' %></p>
+        </div>
+
+        <p><%= link_to 'Delete Your Account', user_path, method: :delete %></p>
+
+        <% if @user.role == 'student' %>
+          <p>
+            <button class="access">
+              <%= link_to 'Show All Classrooms', user_class_rooms_path(@user.id) %>
+            </button>
+          </p>
+        <% elsif @user.role == 'instructor' %>
+          <p>
+            <button class="access">
+              <%= link_to 'Create a Classroom', new_user_class_room_path(@user.id) %>
+            </button>
+          </p>
+          <p>
+            <button class="access">
+              <%= link_to 'See All Classrooms', user_class_rooms_path(@user.id) %>
+            </button>
+          </p>
+        <% end %>
+
+    </div>
 
     <div class="modal" id="edit_profile">
       <%= render "edit_form" %>

@@ -137,9 +137,18 @@
    transform: translate(-50%, -50%);
  }
 
+ .modal p {
+   font-size: 1em;
+ }
+
  .modal#edit_profile {
    margin-top: 0;
-   transform: translate(-50%, -66%);
+   transform: translate(-50%, -10%);
+ }
+
+ .password_required {
+   color: red;
+   font-size: 0.6em;
  }
 
  .user_form {

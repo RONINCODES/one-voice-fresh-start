@@ -132,6 +132,7 @@
      height: 40%;
      margin: 0 auto;
      margin-top: -300px;
+     padding: 20px;
      border-radius: 20px;
      background-color: #273746;
      overflow: auto;
@@ -146,11 +147,11 @@
  }
 
  .form_item {
-   margin-top: 10px;
-   margin-bottom: 10px;
+   margin-top: 20px;
+   margin-bottom: 20px;
  }
 
- .close_sign_in, .close_sign_up {
+ .close_sign_in, .close_sign_up, .close_edit {
    display: block;
    border: none;
    outline: none;

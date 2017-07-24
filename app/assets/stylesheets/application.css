@@ -121,29 +121,25 @@
 /* Modals/Forms for Login, Signup, Edit Profile */
 /* ----------------------------------------------------------------- */
  .modal {
-     display: none;
-     position: relative;
-     width: 33%;
-     height: auto;
-     margin: 0 auto;
-     margin-top: -400px;
-     padding: 20px;
-     border-radius: 20px;
-     color: black;
-     background-color: beige;
-     overflow: auto;
-     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.56), 0 17px 50px 0 rgba(0,0,0,0.42);
-     z-index: 100;
+   display: none;
+   z-index: 100;
+   position: absolute;
+   width: 33%;
+   height: auto;
+   margin: 0 auto;
+   padding: 20px;
+   border-radius: 20px;
+   color: black;
+   background-color: beige;
+   overflow: auto;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.56), 0 17px 50px 0 rgba(0,0,0,0.42);
+   left: 50%;
+   transform: translate(-50%, -50%);
  }
 
  .modal#edit_profile {
-   position: absolute;
-   margin-top: -440px;
- }
-
- .user-profile {
-   position: relative;
-   width: 100%;
+   margin-top: 0;
+   transform: translate(-50%, -66%);
  }
 
  .user_form {
@@ -164,7 +160,9 @@
    width: 30px;
    height: 30px;
    font: 20px sans-serif;
-   background-color: black;
+   background-color: gray;
+   border: 1px solid black;
+   box-shadow: 1px 1px black;
    color: white;
    border-radius: 5px;
    line-height: 0;
@@ -174,8 +172,8 @@
   }
 
   #close_x {
-   color: white;
-   font-weight: bold;
+   color: black;
+   font-weight: normal;
    font-size: 1em;
    margin: 0 auto;
    position: relative;

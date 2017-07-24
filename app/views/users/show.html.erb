@@ -1,12 +1,12 @@
 <div id="user-profile">
 
-    <div class="profile_page_photo">
-      <p>
-        <%= image_tag(@user.user_image.url) %>
-      </p>
-    </div>
-
     <div class="user-info">
+
+      <div class="profile_page_photo">
+        <p>
+          <%= image_tag(@user.user_image.url) %>
+        </p>
+      </div>
 
       <h3>Name: <%= @user.first_name %> <%= @user.last_name %></h3>
 
@@ -24,14 +24,20 @@
     <% if @user.role == 'student' %>
 
       <div class="user-nav">
-        <%= link_to 'Show all classrooms', user_class_rooms_path(@user.id) %>
+        <h2>
+          <%= link_to 'Show All Classrooms', user_class_rooms_path(@user.id) %>
+        </h2>
       </div>
 
     <% elsif @user.role == 'instructor' %>
 
       <div class="user-nav">
-        <%= link_to 'Create a Classroom', new_user_class_room_path(@user.id) %>
-        <%= link_to 'See All Classrooms', user_class_rooms_path(@user.id) %>
+        <h2>
+          <%= link_to 'Create a Classroom', new_user_class_room_path(@user.id) %>
+        </h2>
+        <h2>
+          <%= link_to 'See All Classrooms', user_class_rooms_path(@user.id) %>
+        </h2>
       </div>
 
     <% end %>

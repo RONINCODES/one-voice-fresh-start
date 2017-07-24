@@ -14,10 +14,8 @@
 
 //= require_tree .
 
-document.addEventListener('DOMContentLoaded', function(event) {
 
-  // Show that this file has been loaded:
-  console.log('Hello world! (application.js was loaded)');
+  document.addEventListener('DOMContentLoaded', function(event) {
 
   //-------------------------------------------------------------------------------------
   // Declare variables for click events:
@@ -36,6 +34,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     };
     signIn.addEventListener('click', showModalSignIn);
   };
+
 
     // signIn.addEventListener('click', showModalSignIn);
 
@@ -57,7 +56,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
     closeSignIn.addEventListener('click', hideModalSignIn);
   };
 
+
   // signUp.addEventListener('click', showModalSignUp);
+
 
 
   // When user presses CLOSE button, fade out the SIGN UP modal window
@@ -88,7 +89,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
     });
   };
 
-  // Close the modal:
+
+  // When user presses CLOSE button, fade out the SIGN IN modal window
+
 
   if (modalEdit != undefined) {
     function hideModalEdit(click) {
@@ -97,7 +100,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
     closeEdit.addEventListener('click', hideModalEdit);
   };
 
+
   // closeSignIn.addEventListener('click', hideModalSignIn);
+
 
 
   //-------------------------------------------------------------------------------------
@@ -128,8 +133,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
     };
     closeCreate.addEventListener('click', hideModalCreate);
   };
+<<<<<<< 8fa07c4327adff4e0b1118c8fef9012e94483e14
 
   // closeSignUp.addEventListener('click', hideModalSignUp);
+=======
+  //  closeSignUp.addEventListener('click', hideModalSignUp);
+>>>>>>> back to posting comments without refresh
 
 
   //-------------------------------------------------------------------------------------

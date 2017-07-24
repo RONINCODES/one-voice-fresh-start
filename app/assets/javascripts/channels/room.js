@@ -10,7 +10,10 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
     console.log(data)
-    document.querySelector('#comments').append
+    document.querySelector('#comments').append(data.comment)
+
+
+
 
   }
 });
@@ -21,10 +24,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
   commentForm.addEventListener("submit", function(evt) {
       evt.preventDefault();
       var comment_text_field = document.querySelector('#comment_comment');
+      var path_array = window.location.pathname.split('/')
+      var class_session_ID = path_array[path_array.length-1]
       App.room.send({
         text_field: comment_text_field.value,
-        user_id: userId
-        // class_session_id:
+        user_id: userId,
+        class_session_id: class_session_ID
 
       })
       console.log('howdy')

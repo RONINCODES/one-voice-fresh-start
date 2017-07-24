@@ -19,10 +19,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
   // Declare variables for click events:
   var modalSignIn = document.querySelector('#sign_in');
   var modalSignUp = document.querySelector('#sign_up');
-  var signIn = document.querySelector('.signin');
-  var signUp = document.querySelector('.signup');
+  var signIn      = document.querySelector('.signin');
+  var signUp      = document.querySelector('.signup');
   var closeSignIn = document.querySelector('.close_sign_in');
   var closeSignUp = document.querySelector('.close_sign_up');
+
+  var modalEditProfile = document.querySelector('#edit_profile');
+  var editProfile      = document.querySelector('.edit_profile');
 
   //-------------------------------------------------------------------------------------
 
@@ -60,5 +63,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   //-------------------------------------------------------------------------------------
 
+  // EDIT PROFILE:
+
+  function showModalEditProfile(click) {
+    modalEditProfile.style.display = 'block';
+  };
+  editProfile.addEventListener('click', showModalEditProfile);
+
+  //-------------------------------------------------------------------------------------
 // End of 'DOMContentLoaded':
 });

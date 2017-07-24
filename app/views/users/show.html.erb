@@ -11,7 +11,7 @@
       <h3>Name: <%= @user.first_name %> <%= @user.last_name %></h3>
       <h3>Contact: <%= mail_to @user.email, "#{ @user.email }" %></h3>
       <h3>Role: <%= @user.role %></h3>
-      <h3><%= link_to 'Edit Profile', edit_user_path %></h3>
+      <button class="edit_profile">Edit Profile</button>
       <h3><%= link_to 'Delete Your Account', user_path, method: :delete %></h3>
     </div>
 
@@ -29,5 +29,9 @@
       </div>
 
     <% end %>
+
+    <div class="modal" id="edit_profile">
+      <%= render "form" %>
+    </div>
 
 </div>

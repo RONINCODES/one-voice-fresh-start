@@ -139,7 +139,24 @@
 
  .modal#edit_profile {
    margin-top: 0;
-   transform: translate(-50%, -66%);
+   transform: translate(-50%, -10%);
+ }
+
+ .modal#sign_in {
+   margin-top: 0;
+ }
+
+ .modal#sign_up {
+   margin-top: 0;
+ }
+
+ .modal p {
+   font-size: 1em;
+ }
+
+ .password_required {
+   color: red;
+   font-size: 0.6em;
  }
 
  .user_form {
@@ -164,7 +181,7 @@
    border: 1px solid black;
    box-shadow: 1px 1px black;
    color: white;
-   border-radius: 5px;
+   border-radius: 8px;
    line-height: 0;
    position: absolute;
    top: 0.5em;
@@ -189,12 +206,12 @@
      display: block;
      border: none;
      outline: none;
-     width: 8em;
-     height: 3em;
+     width: 7em;
+     height: 2.5em;
      border-radius: 10px;
      line-height: 2;
      text-align: center;
-     font-size: 1.5em;
+     font-size: 1.2em;
      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
      background-color: skyblue;
      color: black;
@@ -213,10 +230,6 @@
  button.hover {
      background-color: gray;
      color: #666;
- }
-
- .getstarted>input.error {
-     outline: 2px solid #bc2a39;
  }
 
  /* ----------------------------------------------------------------- */

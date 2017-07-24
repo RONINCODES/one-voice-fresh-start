@@ -43,15 +43,17 @@
 
     <div class="form_item">
       <p>
-        <%= f.label :password, 'Change Your Password' %><br>
-        <%= f.password_field :password, placeholder: "Make it good!" %>
+        <%= f.label :password, 'Change/Keep Password' %><br>
+        <%= f.password_field :password, placeholder: "Current or New Password" %>
+        <span class="password_required">Required Every Time</span>
       </p>
     </div>
 
     <div class="form_item">
       <p>
-        <%= f.label :password_confirmation, 'Confirm New Password' %><br>
-        <%= f.password_field :password_confirmation, placeholder: "One more time!" %>
+        <%= f.label :password_confirmation, 'Confirm Password' %><br>
+        <%= f.password_field :password_confirmation, placeholder: "Repeat the above." %>
+        <span class="password_required">Required Every Time</span>
       </p>
     </div>
 

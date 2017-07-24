@@ -15,6 +15,10 @@
 //= require_tree .
 
 document.addEventListener('DOMContentLoaded', function(event) {
+
+  // Show that this file has been loaded:
+  console.log('Hello world! (application.js was loaded)');
+
   //-------------------------------------------------------------------------------------
   // Declare variables for click events:
   var modalSignIn = document.querySelector('#sign_in');
@@ -24,48 +28,55 @@ document.addEventListener('DOMContentLoaded', function(event) {
   var closeSignIn = document.querySelector('.close_sign_in');
   var closeSignUp = document.querySelector('.close_sign_up');
 
-  var modalEditProfile = document.querySelector('#edit_profile');
-  var editProfile      = document.querySelector('.edit_profile');
-
   //-------------------------------------------------------------------------------------
 
   // When user presses SIGN IN button, fade in the modal window
 
+if (modalSignIn != undefined) {
   function showModalSignIn(click) {
     modalSignIn.style.display = 'block';
   };
   signIn.addEventListener('click', showModalSignIn);
+};
 
 
   // When user presses SIGN UP button, fade in the modal window
 
+if (modalSignUp != undefined) {
   function showModalSignUp(click) {
     modalSignUp.style.display = 'block';
   };
   signUp.addEventListener('click', showModalSignUp);
-
+};
   //-------------------------------------------------------------------------------------
 
   // When user presses CLOSE button, fade out the SIGN IN modal window
 
+if (hideModalSignIn != undefined) {
   function hideModalSignIn(click) {
     modalSignIn.style.display = 'none';
   };
   closeSignIn.addEventListener('click', hideModalSignIn);
-
+};
 
   // When user presses CLOSE button, fade out the SIGN UP modal window
 
+if (hideModalSignUp != undefined) {
   function hideModalSignUp(click) {
     modalSignUp.style.display = 'none';
   };
   closeSignUp.addEventListener('click', hideModalSignUp);
+};
 
   //-------------------------------------------------------------------------------------
 
   // EDIT PROFILE:
 
+  var editProfile      = document.querySelector('.edit_profile'); // The link.
+  var modalEditProfile = document.querySelector('#edit_profile'); // The modal.
+
   function showModalEditProfile(click) {
+    console.log('The modal was called.');
     modalEditProfile.style.display = 'block';
   };
   editProfile.addEventListener('click', showModalEditProfile);

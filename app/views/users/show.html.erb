@@ -1,4 +1,3 @@
-
 <div id="user-profile">
 
     <div class="profile_page_photo">
@@ -8,10 +7,17 @@
     </div>
 
     <div class="user-info">
+
       <h3>Name: <%= @user.first_name %> <%= @user.last_name %></h3>
+
       <h3>Contact: <%= mail_to @user.email, "#{ @user.email }" %></h3>
+
       <h3>Role: <%= @user.role %></h3>
-      <button class="edit_profile">Edit Profile</button>
+
+      <div class="edit_profile">
+        <h3>Edit Your Profile</h3>
+      </div>
+
       <h3><%= link_to 'Delete Your Account', user_path, method: :delete %></h3>
     </div>
 
@@ -30,8 +36,8 @@
 
     <% end %>
 
-    <div class="modal" id="edit_profile">
-      <%= render "form" %>
-    </div>
+</div>
 
+<div class="modal" id="edit_profile">
+  <%= render "edit_form" %>
 </div>

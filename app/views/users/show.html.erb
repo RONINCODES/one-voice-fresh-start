@@ -1,7 +1,6 @@
 <div id="user-profile">
 
     <div class="user-info">
-
       <div class="profile_page_photo">
         <% if @user.user_image.present? %>
           <%= image_tag(@user.user_image.url) %>
@@ -9,7 +8,6 @@
           <%= image_tag ActionController::Base.helpers.asset_path("adam_west.jpg") %>
         <% end %>
       </div>
-
     </div>
 
     <div class="user-nav">
@@ -19,8 +17,8 @@
           <%= @user.first_name %> <%= @user.last_name %>
         </p>
       </div>
-      <p>Role: <%= @user.role %></p>
-      <p>Email: <%= mail_to @user.email, "#{ @user.email }" %></p>
+      <p><%= @user.role.titleize %></p>
+      <p><%= mail_to @user.email, "#{ @user.email }" %></p>
 
       <div class="edit_profile">
         <p><%= link_to 'Edit Profile', '#' %></p>

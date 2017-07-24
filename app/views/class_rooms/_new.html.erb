@@ -4,8 +4,6 @@
 
     <%= form_for :class_room, url: {action: "create"} do |f| %>
 
-    <%# Need to adapt this code: new_user_class_room_path(@user.id) %>
-
     <div class="close_create"><span id="close_x">X</span></div>
 
     <div class="form_item">
@@ -22,11 +20,11 @@
       </p>
     </div>
 
-    <%= hidden_field(:user, :id) %> 
+    <%= hidden_field(:user, :id) %>
 
     <div class="form_item">
       <p>
-        <%= f.submit 'Enter' %>
+        <%= f.submit 'Make it so.' %>
       </p>
     </div>
 

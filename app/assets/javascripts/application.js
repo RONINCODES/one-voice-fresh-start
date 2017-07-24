@@ -14,8 +14,7 @@
 
 //= require_tree .
 
-
-  document.addEventListener('DOMContentLoaded', function(event) {
+document.addEventListener('DOMContentLoaded', function(event) {
 
   //-------------------------------------------------------------------------------------
   // Declare variables for click events:
@@ -28,17 +27,15 @@
 
   //-------------------------------------------------------------------------------------
   // When user presses SIGN IN button, fade in the modal window
+
+
+
   if (modalSignIn != undefined) {
     function showModalSignIn(click) {
       modalSignIn.style.display = 'block';
     };
     signIn.addEventListener('click', showModalSignIn);
   };
-
-
-    // signIn.addEventListener('click', showModalSignIn);
-
-
 
   // When user presses SIGN UP button, fade in the modal window
   if (modalSignUp != undefined) {
@@ -56,12 +53,7 @@
     closeSignIn.addEventListener('click', hideModalSignIn);
   };
 
-
-  // signUp.addEventListener('click', showModalSignUp);
-
-
-
-  // When user presses CLOSE button, fade out the SIGN UP modal window
+// When user presses CLOSE button, fade out the SIGN UP modal window
   if (modalSignUp != undefined) {
     function hideModalSignUp(click) {
       modalSignUp.style.display = 'none';
@@ -91,19 +83,12 @@
 
 
   // When user presses CLOSE button, fade out the SIGN IN modal window
-
-
   if (modalEdit != undefined) {
     function hideModalEdit(click) {
       modalEdit.style.display = 'none';
     };
     closeEdit.addEventListener('click', hideModalEdit);
   };
-
-
-  // closeSignIn.addEventListener('click', hideModalSignIn);
-
-
 
   //-------------------------------------------------------------------------------------
 
@@ -133,12 +118,7 @@
     };
     closeCreate.addEventListener('click', hideModalCreate);
   };
-<<<<<<< 8fa07c4327adff4e0b1118c8fef9012e94483e14
 
-  // closeSignUp.addEventListener('click', hideModalSignUp);
-=======
-  //  closeSignUp.addEventListener('click', hideModalSignUp);
->>>>>>> back to posting comments without refresh
 
 
   //-------------------------------------------------------------------------------------

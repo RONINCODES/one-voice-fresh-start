@@ -20,7 +20,8 @@ class RoomChannel < ApplicationCable::Channel
       comment: data['text_field'],
       user: user
     )
-    ActionCable.server.broadcast "room_channel", @comment
+    ActionCable.server.broadcast "room_channel",
+      { comment: @comment, name: user.first_name}
 
   end
 

@@ -8,10 +8,8 @@
   <div class="welcome_to_onevoice"><h1>Welcome to OneVoice</h1></div>
 
   <% if current_user %>
-    <h2>You are logged in.</h2>
-      <%# <button class="your_profile">Your Profile</button> %>
-      <%#= link_to 'Back to your profile', user_path(current_user.id) %>
-      <button><%= link_to 'Your Profile', user_path(current_user.id) %></button>
+    <h2 class="you_are_logged_in">You are logged in.</h2>
+    <button><%= link_to 'Your Profile', user_path(current_user.id) %></button>
   <% else %>
     <p>
 

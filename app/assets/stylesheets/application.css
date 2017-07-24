@@ -91,6 +91,11 @@
    background-size: cover;
  }
 
+ .you_are_logged_in {
+   color: white;
+   text-shadow: 2px 2px black;
+ }
+
  #video-background {
    position: fixed;
    right: 0;

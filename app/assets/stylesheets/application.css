@@ -157,6 +157,10 @@
    margin-top: 0;
  }
 
+ .modal#create_classroom {
+   transform: translate(-50%);
+ }
+
  .modal p {
    font-size: 1em;
  }
@@ -177,7 +181,7 @@
    margin: 25px;
  }
 
- .close_sign_in, .close_sign_up, .close_edit {
+ .close_sign_in, .close_sign_up, .close_edit, .close_create {
    display: block;
    border: none;
    outline: none;

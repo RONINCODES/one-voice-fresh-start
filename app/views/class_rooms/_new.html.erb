@@ -1,0 +1,33 @@
+<div class="user_form">
+
+  <h2>Create a Classroom</h2>
+
+  <%= form_for :class_room, url: {action: "create"} do |f| %>
+
+  <%# Need to adapt this code: new_user_class_room_path(@user.id) %>
+
+    <div class="close_create"><span id="close_x">X</span></div>
+
+    <div class="form_item">
+      <p>
+        <%= f.label :subject, 'Class Subject' %><br>
+        <%= f.text_field :subject %>
+      </p>
+    </div>
+
+    <div class="form_item">
+      <p>
+        <%= f.label :group_code, 'Group Code' %><br>
+        <%= f.number_field :group_code %>
+      </p>
+    </div>
+
+    <div class="form_item">
+      <p>
+        <%= f.submit %>
+      </p>
+    </div>
+
+  <% end %>
+
+</div>

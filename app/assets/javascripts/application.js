@@ -71,12 +71,12 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   if (modalEdit != undefined) {
     function showModalEdit(click) {
-      console.log('You should see the modal now.');
+      console.log('You should see the Edit Profile modal now.');
       modalEdit.style.display = 'block';
     };
     editProfile.addEventListener('click', function(event) {
       event.preventDefault();
-      console.log('The link was clicked.')
+      console.log('The Edit Profile link was clicked.')
       showModalEdit();
     });
   };
@@ -88,6 +88,35 @@ document.addEventListener('DOMContentLoaded', function(event) {
       modalEdit.style.display = 'none';
     };
     closeEdit.addEventListener('click', hideModalEdit);
+  };
+
+  //-------------------------------------------------------------------------------------
+
+  // CREATE A CLASSROOM:
+
+  var createClassroom = document.querySelector('.create_classroom'); // The link.
+  var modalCreate   = document.querySelector('#create_classroom'); // The modal.
+  var closeCreate   = document.querySelector('.close_create');
+
+  // Open the modal:
+  if (modalCreate != undefined) {
+    function showModalCreate(click) {
+      console.log('You should see the Create Classroom modal now.');
+      modalCreate.style.display = 'block';
+    };
+    createClassroom.addEventListener('click', function(event) {
+      event.preventDefault();
+      console.log('The Create Classroom button was clicked.')
+      showModalCreate();
+    });
+  };
+
+  // Close the modal:
+  if (modalCreate != undefined) {
+    function hideModalCreate(click) {
+      modalCreate.style.display = 'none';
+    };
+    closeCreate.addEventListener('click', hideModalCreate);
   };
 
   //-------------------------------------------------------------------------------------

@@ -35,11 +35,14 @@
           </button>
         </p>
       <% elsif @user.role == 'instructor' %>
-        <p>
-          <button class="access">
-            <%= link_to 'Create a Classroom', new_user_class_room_path(@user.id) %>
-          </button>
-        </p>
+        <div class="create_classroom">
+          <p>
+            <button class="access">
+              <%= link_to 'Create a Classroom', '#' %>
+              <%#= link_to 'Create a Classroom', new_user_class_room_path(@user.id) %>
+            </button>
+          </p>
+        </div>
         <p>
           <button class="access">
             <%= link_to 'See All Classrooms', user_class_rooms_path(@user.id) %>
@@ -51,6 +54,10 @@
 
     <div class="modal" id="edit_profile">
       <%= render "edit_form" %>
+    </div>
+
+    <div class="modal" id="create_classroom">
+      <%= render "class_rooms/new" %>
     </div>
 
 </div>

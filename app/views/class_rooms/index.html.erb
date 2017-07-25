@@ -32,7 +32,7 @@
     <% end %>
 
   <% else %>
-    <% @classrooms.each do |a| %>
+    <% @classrooms.reverse.each do |a| %>
       <div id="student_classroom">
         <%= link_to a.subject, user_class_room_class_sessions_path(@user.id, a.id) %>
       </div>

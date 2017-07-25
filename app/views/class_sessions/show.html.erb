@@ -2,7 +2,7 @@
 
 <%# Users who are logged in -- Left column %>
 <% @users.each do |u| %>
-  <li><%= u.first_name%></li>
+  <li><%= u.first_name%> <%= u.last_name %></li>
 <% end %>
 
 <br>
@@ -62,8 +62,8 @@
     <div class="comment">
       <b>
         <%= User.find(c.user_id).first_name%>
-      </b><br>
-      <%= c.comment %>
+      </b>
+      <pre><%= c.comment %></pre>
       <hr>
       <small><%= c.created_at.strftime("%A %B %d %Y") %></small>
     </div>

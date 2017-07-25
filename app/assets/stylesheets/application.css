@@ -157,6 +157,10 @@
    margin-top: 0;
  }
 
+ .modal#create_classroom {
+   transform: translate(-50%);
+ }
+
  .modal p {
    font-size: 1em;
  }
@@ -177,16 +181,16 @@
    margin: 25px;
  }
 
- .close_sign_in, .close_sign_up, .close_edit {
+ .close_sign_in, .close_sign_up, .close_edit, .close_create {
    display: block;
    border: none;
    outline: none;
    width: 30px;
    height: 30px;
    font: 20px sans-serif;
-   background-color: gray;
+   background-color: pink;
    border: 1px solid black;
-   box-shadow: 1px 1px black;
+   /*box-shadow: 1px 1px black;*/
    color: white;
    border-radius: 8px;
    line-height: 0;

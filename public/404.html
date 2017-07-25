@@ -3,6 +3,11 @@
 <head>
   <title>The page you were looking for doesn't exist (404)</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <video autoplay loop id="video-background" muted plays-inline>
+    <source src="<%= image_path "bueller.mp4" %>" type="video/mp4">
+  </video>
+
   <style>
   .rails-default-error-page {
     background-color: #EFEFEF;
@@ -51,6 +56,11 @@
     color: #666;
     box-shadow: 0 3px 8px rgba(50, 50, 50, 0.17);
   }
+
+  h1, p {
+    color: white;
+  }
+
   </style>
 </head>
 

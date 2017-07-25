@@ -2,14 +2,69 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.user-info {
+html {
+  background-color: lightgray;
+}
+
+#user-profile {
+  width: 100%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.user-image {
   float: left;
-  height: 600px;
+  width: 45%;
+  padding-right: 10px;
 }
 
 .user-nav {
+  float: left;
+  width: 45%;
+  padding-left: 10px;
+  margin-top: 0;
+}
+
+.profile_page_photo {
+  width: 100%;
+}
+
+h3 {
+  font-weight: normal;
+}
+
+img {
   float: right;
-  width: 738px;
-  height: 600px;
-  display: inline-grid;
+  max-height: 680px;
+  max-width: 100%;
+}
+
+p {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+.access {
+  width: 12em;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-size: 1.2em;
+  float: left;
+}
+
+#user_name {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#user_role {
+  font-size: 1.5em;
+  font-weight: normal;
+}
+
+.profile_tools {
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  font-size: 0.8em;
 }

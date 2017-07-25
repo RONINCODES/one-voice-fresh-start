@@ -18,7 +18,7 @@ class ClassRoomsController < ApplicationController
     if @class_room.save
       redirect_to user_class_rooms_path(params[:user_id])
     else
-      render 'new'
+      flash.now[:alert] = 'Error. Try again!'
     end
   end
 

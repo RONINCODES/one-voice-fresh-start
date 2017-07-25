@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>One Voice</title>
+    <title>OneVoice</title>
     <meta name="description" content="Realtime live classroom feedback for instructors">
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%#= javascript_include_tag('application.js') %>
   </head>
 
   <%# Main Nav Bar: %>
@@ -16,7 +15,7 @@
 
         <div class="nav_to_profile">
           <%= link_to "#{current_user.first_name} #{current_user.last_name}", user_path(current_user.id) %>
-          <span class="nav_user_role"><%= " (#{current_user.role})" %></span>
+          <span class="nav_user_role"><%= link_to " (#{current_user.role})", user_path(current_user.id) %></span>
         </div>
 
         <div class="nav_to_logout">

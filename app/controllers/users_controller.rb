@@ -8,6 +8,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(session[:user_id])
     @class_room = ClassRoom.new
+    @class_rooms = ClassRoom.where("user_id = ?", @user)
   end
 
   def new
@@ -16,13 +17,10 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
     if @user.save
-
       flash[:notice] = 'Account successfully created!'
       session[:user_id] = @user.id
       redirect_to user_path(session[:user_id])
-
     else
       flash.now[:notice] = 'Sorry, try again!'
       redirect_to root_url
@@ -34,8 +32,7 @@ class UsersController < ApplicationController
   end
 
   def update
-      @user = User.find(params[:id])
-
+    @user = User.find(params[:id])
 
     if @user.update(user_params)
       flash[:notice] = 'Account Succesfully Updated!'

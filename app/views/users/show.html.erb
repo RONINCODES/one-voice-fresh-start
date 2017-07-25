@@ -25,24 +25,35 @@
       </div>
 
       <% if @user.role == 'student' %>
-        <p>
-          <button class="access">
-            <%= link_to 'Show All Classrooms', user_class_rooms_path(@user.id) %>
-          </button>
-        </p>
+
+          <div class="show_student_classrooms">
+            <p>
+              <button class="access">
+                <%= link_to 'Show All Classrooms', '#' %>
+                <%#= link_to 'Show All Classrooms', user_class_rooms_path(@user.id) %>
+              </button>
+            </p>
+          </div>
+
       <% elsif @user.role == 'instructor' %>
-        <div class="create_classroom">
-          <p>
-            <button class="access">
-              <%= link_to 'Create a Classroom', '#' %>
-            </button>
-          </p>
-        </div>
-        <p>
-          <button class="access">
-            <%= link_to 'See All Classrooms', user_class_rooms_path(@user.id) %>
-          </button>
-        </p>
+
+          <div class="create_classroom">
+            <p>
+              <button class="access">
+                <%= link_to 'Create a Classroom', '#' %>
+              </button>
+            </p>
+          </div>
+
+          <div class="show_instructor_classrooms">
+            <p>
+              <button class="access">
+                <%= link_to 'Show All Classrooms', '#' %>
+                <%#= link_to 'Show All Classrooms', user_class_rooms_path(@user.id) %>
+              </button>
+            </p>
+          </div>
+
       <% end %>
 
       <div class="profile_tools">
@@ -60,6 +71,14 @@
 
     <div class="modal" id="create_classroom">
       <%= render "class_rooms/new" %>
+    </div>
+
+    <div class="modal" id="show_instructor_classrooms">
+      <%= render "class_rooms/index" %>
+    </div>
+
+    <div class="modal" id="show_student_classrooms">
+      <%= render "class_rooms/index" %>
     </div>
 
 </div>

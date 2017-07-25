@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(session[:user_id])
+    @class_room = ClassRoom.new
   end
 
   def new

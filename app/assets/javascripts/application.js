@@ -16,9 +16,6 @@
 
 document.addEventListener('DOMContentLoaded', function(event) {
 
-  // Show that this file has been loaded:
-  console.log('Hello world! (application.js was loaded)');
-
   //-------------------------------------------------------------------------------------
   // Declare variables for click events:
   var modalSignIn = document.querySelector('#sign_in');
@@ -30,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
   //-------------------------------------------------------------------------------------
   // When user presses SIGN IN button, fade in the modal window
+
+
+
   if (modalSignIn != undefined) {
     function showModalSignIn(click) {
       modalSignIn.style.display = 'block';
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     closeSignIn.addEventListener('click', hideModalSignIn);
   };
 
-  // When user presses CLOSE button, fade out the SIGN UP modal window
+// When user presses CLOSE button, fade out the SIGN UP modal window
   if (modalSignUp != undefined) {
     function hideModalSignUp(click) {
       modalSignUp.style.display = 'none';
@@ -81,8 +81,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     });
   };
 
-  // Close the modal:
 
+  // When user presses CLOSE button, fade out the SIGN IN modal window
   if (modalEdit != undefined) {
     function hideModalEdit(click) {
       modalEdit.style.display = 'none';
@@ -118,6 +118,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     };
     closeCreate.addEventListener('click', hideModalCreate);
   };
+
+
 
   //-------------------------------------------------------------------------------------
 

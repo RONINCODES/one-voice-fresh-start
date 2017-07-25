@@ -14,7 +14,7 @@ class ClassSessionsController < ApplicationController
     @users = @class_session.users
     @user = User.find(params[:user_id])
     @survey = Survey.new
-    @comments = Comment.new
+    @comments = @class_session.comments.all
     CheckIn.check_in(@user, @class_session)
   end
 

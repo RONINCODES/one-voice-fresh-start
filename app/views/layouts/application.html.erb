@@ -4,13 +4,24 @@
     <title>OneVoice</title>
     <meta name="description" content="Realtime live classroom feedback for instructors">
     <%= csrf_meta_tags %>
+
+
+
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+
+
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
-  <%# Main Nav Bar: %>
-  <body>
+
+  <body id="check_this">
+
     <% if current_user %>
+
+    <script>var userId = <%= current_user.id %></script>
       <div class="nav_main">
 
         <div class="nav_to_profile">

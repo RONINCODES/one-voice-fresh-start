@@ -23,7 +23,7 @@
  }
 
  body {
-     background-color: pink;
+     background-color: lightgray;
      font-size: 1em;
      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
      display: inline;
@@ -40,16 +40,6 @@
 
  a:visited {
    color: blue;
- }
-
- ::-moz-selection {
-     background: #b3d4fc;
-     text-shadow: none;
- }
-
- ::selection {
-     background: #b3d4fc;
-     text-shadow: none;
  }
 
  fieldset {

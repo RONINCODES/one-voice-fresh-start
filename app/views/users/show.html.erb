@@ -26,7 +26,7 @@
 
       <% if @user.role == 'student' %>
 
-          <div class="show_all_classrooms">
+          <div class="show_student_classrooms">
             <p>
               <button class="access">
                 <%= link_to 'Show All Classrooms', '#' %>
@@ -45,7 +45,7 @@
             </p>
           </div>
 
-          <div class="show_all_classrooms">
+          <div class="show_instructor_classrooms">
             <p>
               <button class="access">
                 <%= link_to 'Show All Classrooms', '#' %>

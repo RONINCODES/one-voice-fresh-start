@@ -122,26 +122,58 @@ document.addEventListener('DOMContentLoaded', function(event) {
   //-------------------------------------------------------------------------------------
 
   // Show all INSTRUCTOR classrooms:
-
   var instructorClassrooms = document.querySelector('.show_instructor_classrooms');
   var modalInstructorClassrooms = document.querySelector('#show_instructor_classrooms');
   var closeInstructorClassrooms = document.querySelector('.close_instructor_classrooms');
 
   // Open the modal:
+  if (modalInstructorClassrooms != undefined) {
+    function showModalInstructorClassrooms(click) {
+      console.log('You should see the All (Instructor) Classrooms modal now.');
+      modalInstructorClassrooms.style.display = 'block';
+    };
+    instructorClassrooms.addEventListener('click', function(event) {
+      event.preventDefault();
+      console.log('The All (Instructor) Classrooms button was clicked.')
+      showModalInstructorClassrooms();
+    });
+  };
 
   // Close the modal:
+  if (modalInstructorClassrooms != undefined) {
+    function hideModalInstructorClassrooms(click) {
+      modalInstructorClassrooms.style.display = 'none';
+    };
+    closeInstructorClassrooms.addEventListener('click', hideModalInstructorClassrooms);
+  };
 
   //-------------------------------------------------------------------------------------
 
   // Show all STUDENT classrooms:
-
   var studentClassrooms = document.querySelector('.show_student_classrooms');
   var modalStudentClassrooms = document.querySelector('#show_student_classrooms');
   var closeInstructorClassrooms = document.querySelector('.close_instructor_classrooms');
 
   // Open the modal:
+  if (modalStudentClassrooms != undefined) {
+    function showModalStudentClassrooms(click) {
+      console.log('You should see the All (Student) Classrooms modal now.');
+      modalStudentClassrooms.style.display = 'block';
+    };
+    studentClassrooms.addEventListener('click', function(event) {
+      event.preventDefault();
+      console.log('The All (Student) Classrooms button was clicked.')
+      showModalStudentClassrooms();
+    });
+  };
 
   // Close the modal:
+  if (modalStudentClassrooms != undefined) {
+    function hideModalStudentClassrooms(click) {
+      modalStudentClassrooms.style.display = 'none';
+    };
+    closeStudentClassrooms.addEventListener('click', hideModalStudentClassrooms);
+  };
 
   //-------------------------------------------------------------------------------------
 

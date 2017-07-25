@@ -18,9 +18,14 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
 
   }
 });
+
+
+
+
 // wrap an event listener around the comment form and submit buttons
 // select the text that goes into the comment text box /appending to the room
 document.addEventListener('DOMContentLoaded', function(event) {
+
   var commentForm = document.querySelector('#comment-add-form');
   commentForm.addEventListener("submit", function(evt) {
       evt.preventDefault();
@@ -35,20 +40,20 @@ document.addEventListener('DOMContentLoaded', function(event) {
       })
       console.log('howdy')
   }, true);
+  document.getElementById("comment_comment").addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode == 13) {
+
+      if (event.shiftKey) {
+      this.value = this.value + '<br>'
+      console.log(this.value)
+      }
+      else {
+      document.getElementById("submit_comment").click();
+      }
+
+    }
 
 });
 
-
-// if (element.addEventListener) {
-//     element.addEventListener("submit", function(evt) {
-//         evt.preventDefault();
-//         window.history.back();
-//     }, true);
-// }
-// else {
-//     element.attachEvent('onsubmit', function(evt){
-//         evt.preventDefault();
-//         window.history.back();
-//     });
-// }
-//
+});

@@ -6,7 +6,7 @@
 
   <% if @user.role == 'instructor' %>
 
-    <% @class_rooms.each do |c| %>
+    <% @class_rooms.reverse.each do |c| %>
 
       <div id="classroom_name">
         <%= c.subject %>

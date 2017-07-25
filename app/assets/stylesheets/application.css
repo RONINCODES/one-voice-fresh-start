@@ -190,7 +190,7 @@
    font: 20px sans-serif;
    background-color: pink;
    border: 1px solid black;
-   box-shadow: 1px 1px black;
+   /*box-shadow: 1px 1px black;*/
    color: white;
    border-radius: 8px;
    line-height: 0;

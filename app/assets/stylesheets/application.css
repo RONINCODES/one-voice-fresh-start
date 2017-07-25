@@ -156,6 +156,10 @@
    transform: translate(-50%);
  }
 
+ .modal#show_instructor_classrooms , .modal#show_student_classrooms {
+   transform: translate(-50%, -8%);
+ }
+
  .modal p {
    font-size: 1em;
  }
@@ -176,7 +180,7 @@
    margin: 25px;
  }
 
- .close_sign_in, .close_sign_up, .close_edit, .close_create {
+ .close_sign_in, .close_sign_up, .close_edit, .close_create, .close_instructor_classrooms, .close_student_classrooms {
    display: block;
    border: none;
    outline: none;

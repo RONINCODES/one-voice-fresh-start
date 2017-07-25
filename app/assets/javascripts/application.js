@@ -134,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
     };
     instructorClassrooms.addEventListener('click', function(event) {
       event.preventDefault();
-      alert(0);
       console.log('The All (Instructor) Classrooms button was clicked.');
       showModalInstructorClassrooms();
     });

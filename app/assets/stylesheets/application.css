@@ -34,7 +34,12 @@
  }
 
  a {
+   color: blue;
    text-decoration: none;
+ }
+
+ a:visited {
+   color: blue;
  }
 
  ::-moz-selection {
@@ -235,6 +240,12 @@
      -webkit-transition: all 200ms;
      transition: all 200ms;
      box-shadow: 2px 2px black;
+ }
+
+ .your_dashboard {
+   width: auto;
+   padding-left: 20px;
+   padding-right: 20px;
  }
 
  button.hover {

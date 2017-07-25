@@ -1,3 +1,21 @@
 // Place all the styles related to the Class_rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  background-color: lightgray;
+}
+
+.your_classrooms {
+  text-align: center;
+}
+
+#your_classrooms_header {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+#classroom_name {
+  font-size: 1.5em;
+  font-weight: bold;
+}

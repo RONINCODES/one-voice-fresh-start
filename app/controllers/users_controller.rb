@@ -24,8 +24,8 @@ class UsersController < ApplicationController
       redirect_to user_path(session[:user_id])
 
     else
-      flash.now[:error] = 'Sorry, try again!'
-      render :index
+      flash.now[:notice] = 'Sorry, try again!'
+      redirect_to root_url
     end
   end
 

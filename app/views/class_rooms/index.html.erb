@@ -1,13 +1,15 @@
 <div class="your_classrooms">
 
-  <h2>Your Classrooms</h2>
+  <div id="your_classrooms_header">
+    <p>Your Classrooms</p>
+  </div>
 
   <% if @user.role == 'instructor' %>
 
     <% @class_rooms.each do |c| %>
 
     <div id="classroom_name">
-      Class: <%= c.subject %>
+      <%= c.subject %>
     </div>
 
     <div id="group_code">
@@ -23,7 +25,7 @@
     </div>
 
     <div id="created_at">
-      <small><%= c.created_at.strftime("%A %B %d %Y") %></small>
+      Created <%= c.created_at.strftime("%A %B %d %Y") %>
     </div>
 
     <hr>

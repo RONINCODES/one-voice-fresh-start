@@ -1,0 +1,43 @@
+<div class="your_classrooms">
+
+  <div id="your_classrooms_header">
+    <p>Your Classrooms</p>
+  </div>
+
+  <% if @user.role == 'instructor' %>
+
+    <% @class_rooms.reverse.each do |c| %>
+
+      <div id="classroom_name">
+        <%= c.subject %>
+      </div>
+
+      <div id="group_code">
+        Group code: <%= c.group_code %>
+      </div>
+
+      <div id="create_session">
+        <%= link_to 'Start New Session', new_user_class_room_class_session_path(params[:user_id], c.id) %>
+      </div>
+      <div id="view_sessions">
+        <%= link_to 'View Past Sessions', user_class_room_class_sessions_path(params[:user_id], c.id) %>
+      </div>
+
+      <div id="created_at">
+        Created <%= c.created_at.strftime("%A %B %d %Y") %>
+      </div>
+
+      <hr>
+
+    <% end %>
+
+  <% else %>
+    <% @classrooms.reverse.each do |a| %>
+      <div id="student_classroom">
+        <%= link_to a.subject, user_class_room_class_sessions_path(@user.id, a.id) %>
+      </div>
+    <% end %>
+
+  <% end %>
+
+</div>

@@ -17,10 +17,10 @@
       </div>
 
       <div id="create_session">
-        <%= link_to 'Start New Session', new_user_class_room_class_session_path(params[:user_id], c.id) %>
+        <%= link_to 'Start New Session', new_user_class_room_class_session_path(session[:user_id], c.id) %>
       </div>
       <div id="view_sessions">
-        <%= link_to 'View Past Sessions', user_class_room_class_sessions_path(params[:user_id], c.id) %>
+        <%= link_to 'View Past Sessions', user_class_room_class_sessions_path(session[:user_id], c.id) %>
       </div>
 
       <div id="created_at">

@@ -119,7 +119,29 @@ document.addEventListener('DOMContentLoaded', function(event) {
     closeCreate.addEventListener('click', hideModalCreate);
   };
 
+  //-------------------------------------------------------------------------------------
 
+  // Show all INSTRUCTOR classrooms:
+
+  var instructorClassrooms = document.querySelector('.show_instructor_classrooms');
+  var modalInstructorClassrooms = document.querySelector('#show_instructor_classrooms');
+  var closeInstructorClassrooms = document.querySelector('.close_instructor_classrooms');
+
+  // Open the modal:
+
+  // Close the modal:
+
+  //-------------------------------------------------------------------------------------
+
+  // Show all STUDENT classrooms:
+
+  var studentClassrooms = document.querySelector('.show_student_classrooms');
+  var modalStudentClassrooms = document.querySelector('#show_student_classrooms');
+  var closeInstructorClassrooms = document.querySelector('.close_instructor_classrooms');
+
+  // Open the modal:
+
+  // Close the modal:
 
   //-------------------------------------------------------------------------------------
 

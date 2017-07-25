@@ -13,10 +13,15 @@
     <div class="user-nav">
 
       <div id="user_name">
-        <p><%= @user.first_name.titleize %> <%= @user.last_name.titleize %></p>
+        <%= @user.first_name.titleize %> <%= @user.last_name.titleize %>
       </div>
+
+      <div id="user_email">
+        <%= mail_to @user.email, "#{ @user.email }" %>
+      </div>
+
       <div id="user_role">
-        <p><%= @user.role.titleize %></p>
+        <%= @user.role.titleize %>
       </div>
 
       <% if @user.role == 'student' %>
@@ -30,7 +35,6 @@
           <p>
             <button class="access">
               <%= link_to 'Create a Classroom', '#' %>
-              <%#= link_to 'Create a Classroom', new_user_class_room_path(@user.id) %>
             </button>
           </p>
         </div>
@@ -42,13 +46,10 @@
       <% end %>
 
       <div class="profile_tools">
-        <p><%= mail_to @user.email, "#{ @user.email }" %></p>
-        <p>
           <span class="edit_profile">
            <%= link_to 'edit your profile', '#' %>
          </span> |
          <%= link_to 'delete your account', user_path, method: :delete %>
-        </p>
       </div>
 
     </div>

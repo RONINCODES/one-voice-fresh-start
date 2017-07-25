@@ -237,6 +237,12 @@
      box-shadow: 2px 2px black;
  }
 
+ .your_dashboard {
+   width: auto;
+   padding-left: 20px;
+   padding-right: 20px;
+ }
+
  button.hover {
      background-color: gray;
      color: #666;

@@ -25,7 +25,7 @@ class UsersController < ApplicationController
 
     else
       flash.now[:error] = 'Sorry, try again!'
-      render :new
+      render :index
     end
   end
 

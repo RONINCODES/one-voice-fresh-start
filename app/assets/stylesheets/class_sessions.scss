@@ -19,6 +19,15 @@
   font-size: 1.2em;
 }
 
+.live_session_title_bar {
+  font-family: 'Merriweather', serif;
+  font-size: 2em;
+  width: 100%;
+  background-color: beige;
+  padding-left: 20px;
+  padding-bottom: 10px;
+}
+
 .user_column {
   width: 20%;
   height: 100vh;
@@ -39,4 +48,12 @@
   position: relative;
   width: 60%;
   float: left;
+}
+
+.write_new_comment {
+  position: fixed;
+  width: 60%;
+  bottom: 0;
+  z-index: 100;
+  background-color: green;
 }

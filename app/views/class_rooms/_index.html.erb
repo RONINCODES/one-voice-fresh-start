@@ -26,10 +26,6 @@
           <%= link_to 'View All Sessions', user_class_room_class_sessions_path(session[:user_id], c.id) %>
         </div>
 
-        <div id="created_at">
-          Since <%= c.created_at.strftime("%B %d, %Y") %>
-        </div>
-
         <hr>
 
       <% end %>

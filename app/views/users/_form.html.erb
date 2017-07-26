@@ -8,35 +8,35 @@
 
     <div class="form_item">
       <p>
-        <%= f.label :first_name, 'First Name' %><br>
-        <%= f.text_field :first_name, placeholder: "i.e. Maggie" %>
+        <%= f.label :first_name, 'First Name' %>
+        <%= f.text_field :first_name, placeholder: "i.e. Waylon" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
-        <%= f.label :last_name, 'Last Name' %><br>
-        <%= f.text_field :last_name, placeholder: "i.e. Simpson" %>
+        <%= f.label :last_name, 'Last Name' %>
+        <%= f.text_field :last_name, placeholder: "i.e. Smithers" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
-        <%= f.label :user_image, 'Upload your picture' %><br>
+        <%= f.label :user_image, 'Profile Photo' %>
         <%= f.file_field :user_image, placeholder: "i.e. jpg" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
-        <%= f.label :email, 'Email Address' %><br>
+        <%= f.label :email, 'Email' %>
         <%= f.email_field :email, placeholder: "i.e. clarkkent@dailyplanet.com" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
-        <%= f.label :role, 'Student or Instructor?' %><br>
+        <%= f.label :role, 'Role' %>
         <%= f.select :role, ['student', 'instructor']%>
       </p>
     </div>
@@ -44,14 +44,14 @@
     <div class="form_item">
       <p>
         <%= f.label :password, 'Create Password' %><br>
-        <%= f.password_field :password, placeholder: "Make it good!" %>
+        <%= f.password_field :password, placeholder: "minimum 8 characters" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
         <%= f.label :password_confirmation, 'Confirm Password' %><br>
-        <%= f.password_field :password_confirmation, placeholder: "One more time!" %>
+        <%= f.password_field :password_confirmation, placeholder: "one more time!" %>
       </p>
     </div>
 

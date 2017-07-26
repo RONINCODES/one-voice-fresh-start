@@ -4,9 +4,9 @@
     <p>Your Classrooms</p>
   </div>
 
-  <% if @user.role == 'instructor' %>
+  <div class="close_classrooms"><span id="close_x">X</span></div>
 
-    <div class="close_instructor_classrooms"><span id="close_x">X</span></div>
+  <% if @user.role == 'instructor' %>
 
     <% @class_rooms.reverse.each do |c| %>
 
@@ -34,11 +34,12 @@
     <% end %>
 
   <% else %>
-    <div class="close_student_classrooms"><span id="close_x">X</span></div>
+  
     <% @class_rooms.reverse.each do |a| %>
       <div id="student_classroom">
         <%= link_to a.subject, user_class_room_class_sessions_path(@user.id, a.id) %>
       </div>
+
     <% end %>
 
   <% end %>

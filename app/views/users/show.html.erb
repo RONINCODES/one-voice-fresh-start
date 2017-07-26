@@ -24,35 +24,26 @@
         <%= @user.role %>
       </div>
 
-      <% if @user.role == 'student' %>
+      <div class="show_classrooms">
+        <p>
+          <button class="access">
+            Your Classrooms
+          </button>
+        </p>
+      </div>
 
-          <div class="show_student_classrooms">
-            <p>
-              <button class="access">
-                Show All Classrooms
-                <%#= link_to 'Show All Classrooms', '#' %>
-              </button>
-            </p>
-          </div>
-
-      <% elsif @user.role == 'instructor' %>
+      <% if @user.role == 'instructor' %>
 
           <div class="create_classroom">
             <p>
               <button class="access">
-                Create a Classroom
-                <%#= link_to 'Create a Classroom', '#' %>
+                Create Classroom
               </button>
             </p>
           </div>
 
-          <div class="show_instructor_classrooms">
-            <p>
-              <button class="access">
-                Show All Classrooms
-                <%#= link_to 'Show All Classrooms', '#' %>
-              </button>
-            </p>
+          <div class="modal" id="create_classroom">
+            <%= render "class_rooms/new" %>
           </div>
 
       <% end %>
@@ -70,15 +61,7 @@
       <%= render "edit_form" %>
     </div>
 
-    <div class="modal" id="create_classroom">
-      <%= render "class_rooms/new" %>
-    </div>
-
-    <div class="modal" id="show_instructor_classrooms">
-      <%= render "class_rooms/index" %>
-    </div>
-
-    <div class="modal" id="show_student_classrooms">
+    <div class="modal" id="show_classrooms">
       <%= render "class_rooms/index" %>
     </div>
 

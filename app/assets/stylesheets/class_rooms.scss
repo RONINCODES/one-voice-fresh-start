@@ -11,12 +11,20 @@ html {
 }
 
 #your_classrooms_header {
-  font-size: 2em;
+  font-size: 2.2em;
   font-weight: bold;
   font-family: 'Merriweather', serif;
 }
 
 #classroom_name {
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: bold;
+}
+
+#classroom_name a {
+  color: black;
+}
+
+#group_code, #view_sessions {
+  font-size: 1.1em;
 }

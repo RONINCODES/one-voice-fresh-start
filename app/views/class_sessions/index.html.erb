@@ -1,7 +1,16 @@
-<h1>Class Sessions</h1>
+<div class="class_sessions_page">
 
-<% @class_sessions.each do |s|  %>
+  <div id="class_sessions_header">
+    <%= @class_room.subject %>
+  </div>
 
-  <li><%= link_to s.agenda , user_class_room_class_session_path(@user.id, params[:class_room_id], s.id) %> || <%= s.date %></li>
+  <div class="scrolling_list">
 
-<% end %>
+    <% @class_sessions.reverse.each do |s|  %>
+      <%= s.date %> • <%= link_to s.agenda , user_class_room_class_session_path(@user.id, params[:class_room_id], s.id) %>
+      <hr>
+    <% end %>
+
+  </div>
+
+<div>

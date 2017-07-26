@@ -21,7 +21,7 @@
       </div>
 
       <div id="user_role">
-        <%= @user.role.titleize %>
+        <%= @user.role %>
       </div>
 
       <% if @user.role == 'student' %>
@@ -29,8 +29,8 @@
           <div class="show_student_classrooms">
             <p>
               <button class="access">
-                <%= link_to 'Show All Classrooms', '#' %>
-                <%#= link_to 'Show All Classrooms', user_class_rooms_path(@user.id) %>
+                Show All Classrooms
+                <%#= link_to 'Show All Classrooms', '#' %>
               </button>
             </p>
           </div>
@@ -40,7 +40,8 @@
           <div class="create_classroom">
             <p>
               <button class="access">
-                <%= link_to 'Create a Classroom', '#' %>
+                Create a Classroom
+                <%#= link_to 'Create a Classroom', '#' %>
               </button>
             </p>
           </div>
@@ -48,8 +49,8 @@
           <div class="show_instructor_classrooms">
             <p>
               <button class="access">
-                <%= link_to 'Show All Classrooms', '#' %>
-                <%#= link_to 'Show All Classrooms', user_class_rooms_path(@user.id) %>
+                Show All Classrooms
+                <%#= link_to 'Show All Classrooms', '#' %>
               </button>
             </p>
           </div>

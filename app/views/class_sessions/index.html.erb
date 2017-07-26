@@ -6,7 +6,7 @@
 
   <div class="scrolling_list">
 
-    <% @class_sessions.each do |s|  %>
+    <% @class_sessions.reverse.each do |s|  %>
       <%= s.date %> • <%= link_to s.agenda , user_class_room_class_session_path(@user.id, params[:class_room_id], s.id) %>
       <hr>
     <% end %>

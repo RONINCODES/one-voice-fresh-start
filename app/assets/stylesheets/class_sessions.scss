@@ -2,8 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-h2 {
-  margin-bottom: 40px;
+#class_sessions_header {
+  text-align: center;
+  font-family: 'Merriweather', serif;
+  font-size: 2.4em;
+  font-weight: bold;
+  margin-bottom: 36px;
 }
 
 .class_sessions_list {

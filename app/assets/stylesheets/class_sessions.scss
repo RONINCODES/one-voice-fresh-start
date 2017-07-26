@@ -26,6 +26,8 @@
   background-color: beige;
   padding-left: 20px;
   padding-bottom: 10px;
+  margin-top: 47px;
+  padding-top: 10px;
 }
 
 .user_column {
@@ -33,13 +35,16 @@
   height: 100vh;
   float: left;
   position: relative;
+  font-size: 1.2em;
   background-color: pink;
+  overflow: scroll;
 }
 
 .survey_column {
   width: 20%;
   height: 100vh;
   float: right;
+  font-size: 1.2em;
   background-color: lightskyblue;
 }
 
@@ -56,4 +61,5 @@
   bottom: 0;
   z-index: 100;
   background-color: beige;
+  font-size: 1.2em;
 }

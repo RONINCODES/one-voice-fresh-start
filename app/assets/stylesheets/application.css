@@ -29,9 +29,10 @@
      display: inline;
  }
 
- .spacer {
-   padding-top: 60px;
- }
+ /*.spacer {
+   margin-top: 0;
+   height: 60px;
+ }*/
 
  a {
    color: mediumblue;

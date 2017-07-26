@@ -95,11 +95,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
   // CREATE A CLASSROOM:
 
   var createClassroom = document.querySelector('.create_classroom'); // The link.
-  var modalCreate   = document.querySelector('#create_classroom'); // The modal.
-  var closeCreate   = document.querySelector('.close_create');
+  var modalCreate     = document.querySelector('#create_classroom'); // The modal.
+  var closeCreate     = document.querySelector('.close_create');
 
   // Open the modal:
-  if (modalCreate != undefined) {
+  if (modalCreate != undefined || modalCreate != null) {
     function showModalCreate(click) {
       console.log('You should see the Create Classroom modal now.');
       modalCreate.style.display = 'block';
@@ -120,59 +120,33 @@ document.addEventListener('DOMContentLoaded', function(event) {
   };
 
   //-------------------------------------------------------------------------------------
-
-  // Show all INSTRUCTOR classrooms:
-  var instructorClassrooms = document.querySelector('.show_instructor_classrooms');
-  var modalInstructorClassrooms = document.querySelector('#show_instructor_classrooms');
-  var closeInstructorClassrooms = document.querySelector('.close_instructor_classrooms');
-
-  // Open the modal:
-  if (modalInstructorClassrooms != undefined) {
-    function showModalInstructorClassrooms(click) {
-      console.log('You should see the All (Instructor) Classrooms modal now.');
-      modalInstructorClassrooms.style.display = 'block';
-    };
-    instructorClassrooms.addEventListener('click', function(event) {
-      event.preventDefault();
-      console.log('The All (Instructor) Classrooms button was clicked.');
-      showModalInstructorClassrooms();
-    });
-  };
-
-  // Close the modal:
-  if (modalInstructorClassrooms != undefined) {
-    function hideModalInstructorClassrooms(click) {
-      modalInstructorClassrooms.style.display = 'none';
-    };
-    closeInstructorClassrooms.addEventListener('click', hideModalInstructorClassrooms);
-  };
-
+  // Show All Classrooms:
   //-------------------------------------------------------------------------------------
 
-  // Show all STUDENT classrooms:
-  var studentClassrooms = document.querySelector('.show_student_classrooms');
-  var modalStudentClassrooms = document.querySelector('#show_student_classrooms');
-  var closeInstructorClassrooms = document.querySelector('.close_instructor_classrooms');
+  // Declare variables:
+  var classrooms         = document.querySelector('.show_classrooms');
+  var modalClassrooms    = document.querySelector('#show_classrooms');
+  var closeClassrooms = document.querySelector('.close_classrooms');
 
   // Open the modal:
-  if (modalStudentClassrooms != undefined) {
-    function showModalStudentClassrooms(click) {
-      console.log('You should see the All (Student) Classrooms modal now.');
-      modalStudentClassrooms.style.display = 'block';
+  if (modalClassrooms != undefined) {
+    function showModalClassrooms(click) {
+      console.log('You should see the All Classrooms modal now.');
+      modalClassrooms.style.display = 'block';
     };
-    studentClassrooms.addEventListener('click', function(event) {
+    classrooms.addEventListener('click', function(event) {
       event.preventDefault();
-      console.log('The All (Student) Classrooms button was clicked.')
-      showModalStudentClassrooms();
+      console.log('The All Classrooms button was clicked.')
+      showModalClassrooms();
     });
   };
 
   // Close the modal:
-  if (modalStudentClassrooms != undefined) {
-    function hideModalStudentClassrooms(click) {
-      modalStudentClassrooms.style.display = 'none';
+  if (modalClassrooms != undefined) {
+    function hideModalClassrooms(click) {
+      modalClassrooms.style.display = 'none';
     };
-    closeStudentClassrooms.addEventListener('click', hideModalStudentClassrooms);
+    closeClassrooms.addEventListener('click', hideModalClassrooms);
   };
 
   //-------------------------------------------------------------------------------------

@@ -182,7 +182,7 @@
    margin: 15px;
  }
 
- .close_sign_in, .close_sign_up, .close_edit, .close_create, .close_instructor_classrooms, .close_student_classrooms {
+ .close_sign_in, .close_sign_up, .close_edit, .close_create, .close_classrooms {
    display: block;
    border: none;
    outline: none;

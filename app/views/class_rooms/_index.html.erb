@@ -20,15 +20,13 @@
           Group code: <%= c.group_code %>
         </div>
 
-        <div id="create_session">
-          <%= link_to 'Start New Session', new_user_class_room_class_session_path(session[:user_id], c.id) %>
-        </div>
         <div id="view_sessions">
+          <%= link_to 'Start New Session', new_user_class_room_class_session_path(session[:user_id], c.id) %> •
           <%= link_to 'View All Sessions', user_class_room_class_sessions_path(session[:user_id], c.id) %>
         </div>
 
         <div id="created_at">
-          Created <%= c.created_at.strftime("%A %B %d %Y") %>
+          Since <%= c.created_at.strftime("%B %d, %Y") %>
         </div>
 
         <hr>

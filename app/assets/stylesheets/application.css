@@ -146,7 +146,7 @@
    border-radius: 10px;
    padding: 20px;
    overflow: scroll;
-   max-height: 460px;
+   max-height: 480px;
  }
 
  .modal#edit_profile {
@@ -209,6 +209,15 @@
    right: 0.5em;
   }
 
+  .close_sign_in:hover, .close_sign_up:hover, .close_edit:hover, .close_create:hover, .close_classrooms:hover {
+    cursor: pointer;
+    background-color: salmon;
+  }
+
+  .close_sign_in:active, .close_sign_up:active, .close_edit:active, .close_create:active, .close_classrooms:active {
+    background-color: gray;
+  }
+
   #close_x {
    color: black;
    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -223,6 +232,9 @@
   }
 
 /* ----------------------------------------------------------------- */
+/*    Buttons:                                                       */
+/* ----------------------------------------------------------------- */
+
 
  button {
    display: block;
@@ -234,7 +246,7 @@
    text-align: center;
    font-size: 1.2em;
    font-family: 'Lato', sans-serif;
-   background-color: skyblue;
+   background-color: lightskyblue;
    color: black;
    position: relative;
    margin: auto;
@@ -255,6 +267,13 @@
 
  button:hover {
    cursor: pointer;
+   background-color: skyblue;
+ }
+
+ button:active {
+   background-color: lightblue;
+   box-shadow: 0px 0px black;
+   outline: none;
  }
 
  button a {
@@ -282,7 +301,6 @@
 
  .nav_to_profile {
    float: left;
-   font-weight: bold;
  }
 
  .nav_to_logout {

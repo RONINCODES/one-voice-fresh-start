@@ -126,14 +126,14 @@
    border: 1px solid black;
    z-index: 100;
    position: absolute;
-   width: 33%;
+   width: 40%;
    height: auto;
    margin: 0 auto;
    padding: 20px;
    border-radius: 20px;
    color: black;
    background-color: beige;
-   overflow: auto;
+   overflow: scroll;
    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.56), 0 17px 50px 0 rgba(0,0,0,0.42);
    left: 50%;
    transform: translate(-50%, -50%);
@@ -142,6 +142,7 @@
  .modal#edit_profile {
    margin-top: 0;
    transform: translate(-50%, -10%);
+   max-height: 80vh;
  }
 
  .modal#sign_in {
@@ -150,6 +151,7 @@
 
  .modal#sign_up {
    margin-top: 0;
+   max-height: 80vh;
  }
 
  .modal#create_classroom {
@@ -158,6 +160,7 @@
 
  .modal#show_instructor_classrooms , .modal#show_student_classrooms {
    transform: translate(-50%, -8%);
+   max-height: 80vh;
  }
 
  .modal p {
@@ -170,14 +173,13 @@
  }
 
  .user_form {
-   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
    font-size: 20px;
    color: black;
    text-align: center;
  }
 
  .form_item {
-   margin: 25px;
+   margin: 15px;
  }
 
  .close_sign_in, .close_sign_up, .close_edit, .close_create, .close_instructor_classrooms, .close_student_classrooms {
@@ -189,7 +191,6 @@
    font: 20px sans-serif;
    background-color: pink;
    border: 1px solid black;
-   /*box-shadow: 1px 1px black;*/
    color: white;
    border-radius: 8px;
    line-height: 0;
@@ -213,28 +214,27 @@
 /* ----------------------------------------------------------------- */
 
  button {
-     display: block;
-     border: none;
-     outline: none;
-     width: 7em;
-     height: 2.5em;
-     border-radius: 10px;
-     line-height: 2;
-     text-align: center;
-     font-size: 1.2em;
-     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-     background-color: skyblue;
-     color: black;
-     position: relative;
-     margin: auto;
-     margin-bottom: 10px;
-     bottom: 0;
-     left: 0;
-     right: 0;
-     -webkit-transition: all 200ms;
-     transition: all 200ms;
-     box-shadow: 2px 2px black;
- }
+   display: block;
+   border: none;
+   width: 7em;
+   height: 2.5em;
+   border-radius: 10px;
+   line-height: 2;
+   text-align: center;
+   font-size: 1.2em;
+   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+   background-color: skyblue;
+   color: black;
+   position: relative;
+   margin: auto;
+   margin-bottom: 10px;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   -webkit-transition: all 200ms;
+   transition: all 200ms;
+   box-shadow: 2px 2px black;
+}
 
  .your_dashboard {
    width: auto;
@@ -242,9 +242,12 @@
    padding-right: 20px;
  }
 
- button.hover {
-     background-color: gray;
-     color: #666;
+ button:hover {
+   cursor: pointer;
+ }
+
+ button a {
+   color: black;
  }
 
  /* ----------------------------------------------------------------- */

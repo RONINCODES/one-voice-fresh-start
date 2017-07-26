@@ -134,11 +134,19 @@
    border-radius: 20px;
    color: black;
    background-color: beige;
-   overflow: scroll;
+   overflow: auto;
    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.56), 0 17px 50px 0 rgba(0,0,0,0.42);
    left: 50%;
    transform: translate(-50%, -50%);
    font-family: 'Lato', sans-serif;
+ }
+
+ .scrollable_list {
+   background-color: white;
+   border-radius: 10px;
+   padding: 20px;
+   overflow: scroll;
+   max-height: 460px;
  }
 
  .modal#edit_profile {

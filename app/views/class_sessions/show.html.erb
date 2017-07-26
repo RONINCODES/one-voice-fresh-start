@@ -1,6 +1,10 @@
-<h2><%= @class_room.subject %></h2>
-<h2><%= @class_session.agenda %></h2>
-<h2><%= @class_session.date %></h2>
+<h2>
+  <%= @class_room.subject %>
+  &mdash;
+  <%= @class_session.agenda %>
+  &mdash;
+  <%= @class_session.date %>
+</h2>
 
 <%# Logged-in Users -- left column %>
 <div class="user_column">

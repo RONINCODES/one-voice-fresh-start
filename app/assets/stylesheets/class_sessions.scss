@@ -20,13 +20,22 @@
 }
 
 .user_column {
-
+  width: 20%;
+  height: 100vh;
+  float: left;
+  position: relative;
+  background-color: pink;
 }
 
 .survey_column {
-
+  width: 20%;
+  height: 100vh;
+  float: right;
+  background-color: lightskyblue;
 }
 
 #comments {
-  
+  background-color: white;
+  position: relative;
+  float: left;
 }

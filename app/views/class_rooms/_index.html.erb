@@ -22,7 +22,7 @@
         <%= link_to 'Start New Session', new_user_class_room_class_session_path(session[:user_id], c.id) %>
       </div>
       <div id="view_sessions">
-        <%= link_to 'View Past Sessions', user_class_room_class_sessions_path(session[:user_id], c.id) %>
+        <%= link_to 'View All Sessions', user_class_room_class_sessions_path(session[:user_id], c.id) %>
       </div>
 
       <div id="created_at">
@@ -34,7 +34,7 @@
     <% end %>
 
   <% else %>
-  
+
     <% @class_rooms.reverse.each do |a| %>
       <div id="student_classroom">
         <%= link_to a.subject, user_class_room_class_sessions_path(@user.id, a.id) %>

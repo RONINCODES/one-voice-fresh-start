@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.class_sessions_page {
+
+}
+
 #class_sessions_header {
   text-align: center;
   font-family: 'Merriweather', serif;
@@ -10,7 +14,7 @@
   margin-bottom: 36px;
 }
 
-.class_sessions_list {
+.scrolling_list {
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.2em;
 }

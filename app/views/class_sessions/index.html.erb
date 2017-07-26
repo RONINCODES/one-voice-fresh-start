@@ -4,7 +4,7 @@
     <%= @class_room.subject %>
   </div>
 
-  <div class="class_sessions_list">
+  <div class="scrolling_list">
 
     <% @class_sessions.each do |s|  %>
       <%= s.date %> • <%= link_to s.agenda , user_class_room_class_session_path(@user.id, params[:class_room_id], s.id) %>

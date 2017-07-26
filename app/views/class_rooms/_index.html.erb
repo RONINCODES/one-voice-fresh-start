@@ -13,7 +13,8 @@
       <% @class_rooms.reverse.each do |c| %>
 
         <div id="classroom_name">
-          <%= c.subject %>
+          <%#= c.subject %>
+          <%= link_to c.subject, user_class_room_class_sessions_path(session[:user_id], c.id) %>
         </div>
 
         <div id="group_code">

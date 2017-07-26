@@ -1,7 +1,14 @@
-<h1>Class Sessions</h1>
+<div class="class_sessions_page">
 
-<% @class_sessions.each do |s|  %>
+  <h2><%= @class_room.subject %> &mdash; Class Sessions</h2>
 
-  <li><%= link_to s.agenda , user_class_room_class_session_path(@user.id, params[:class_room_id], s.id) %> || <%= s.date %></li>
+  <div class="class_sessions_list">
 
-<% end %>
+    <% @class_sessions.each do |s|  %>
+      <%= s.date %> • <%= link_to s.agenda , user_class_room_class_session_path(@user.id, params[:class_room_id], s.id) %>
+      <hr>
+    <% end %>
+
+  </div>
+
+<div>

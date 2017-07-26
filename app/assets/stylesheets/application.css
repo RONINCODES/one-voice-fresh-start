@@ -34,12 +34,12 @@
  }
 
  a {
-   color: blue;
+   color: mediumblue;
    text-decoration: none;
  }
 
  a:visited {
-   color: blue;
+   color: mediumblue;
  }
 
  fieldset {

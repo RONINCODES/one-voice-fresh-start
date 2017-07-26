@@ -1,13 +1,15 @@
-<h1>Class Session</h1>
+<h2><%= @class_room.subject %></h2>
+<h2><%= @class_session.agenda %></h2>
+<h2><%= @class_session.date %></h2>
 
 <%# Users who are logged in -- Left column %>
 <% @users.each do |u| %>
-  <li><%= u.first_name%></li>
+  <ul>
+    <li><%= u.first_name%> <%=u.last_name %></li>
+  </ul>
 <% end %>
 
 <br>
-<br>
-
 
 <%# Live chat area -- Centre column %>
 <%# render 'comments' %>

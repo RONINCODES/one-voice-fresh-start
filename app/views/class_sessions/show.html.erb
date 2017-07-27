@@ -10,18 +10,20 @@
   </span>
 </div>
 
-<div class="column_wrapper">
+<div class="all_columns_wrapper">
 
 <%#===========================================================================%>
 <%#   Logged-in Users -- left column                                          %>
 <%#===========================================================================%>
 
   <div class="user_column">
-    <% @users.each do |u| %>
-      <ul>
-        <li><%= u.first_name%> <%=u.last_name %></li>
-      </ul>
-    <% end %>
+    <div class="list_of_users">
+      <% @users.each do |u| %>
+        <ul>
+          <li><%= u.first_name%> <%=u.last_name %></li>
+        </ul>
+      <% end %>
+    </div>
   </div>
 
 <%#===========================================================================%>

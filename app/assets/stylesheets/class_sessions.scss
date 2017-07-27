@@ -18,12 +18,8 @@ body {
   margin-bottom: 36px;
 }
 
-.scrolling_list {
-  text-align: center;
-  font-size: 1.2em;
-}
-
 .live_session_title_bar {
+  position: relative;
   text-align: center;
   font-size: 1.5em;
   width: 100%;
@@ -39,20 +35,42 @@ body {
   padding-right: 10px;
 }
 
+.all_columns_wrapper {
+
+}
+
 .user_column {
   width: 20%;
-  height: 100vh;
   float: left;
+  height: 100vh;
   position: relative;
+  bottom: 0;
   font-size: 1.2em;
-  background-color: lightskyblue;
+  background-color: royalblue;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.list_of_users {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   overflow: scroll;
+  background-color: lightskyblue;
+  max-height: 60vh;
+}
+
+.centre_column_wrapper {
+  width: 60%;
+  float: left;
 }
 
 .survey_column {
   width: 20%;
-  height: 100vh;
+  height: auto;
   float: right;
+  height: 100vh;
   font-size: 1.2em;
   background-color: lightskyblue;
 }
@@ -68,10 +86,7 @@ body {
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-.centre_column_wrapper {
-  width: 60%;
-  float: left;
-}
+
 
 #comments {
   position: relative;

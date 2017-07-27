@@ -12,7 +12,10 @@
 
 <div class="column_wrapper">
 
-  <%# Logged-in Users -- left column %>
+<%#===========================================================================%>
+<%#   Logged-in Users -- left column                                          %>
+<%#===========================================================================%>
+
   <div class="user_column">
     <div class="users_header">
       Present
@@ -24,7 +27,10 @@
     <% end %>
   </div>
 
-  <%# Survey -- right column %>
+<%#===========================================================================%>
+<%#   Survey -- right column                                                  %>
+<%#===========================================================================%>
+
   <div class="survey_column">
     <div class="survey_header">
       Feedback
@@ -50,8 +56,10 @@
     <% end %>
   </div>
 
-  <%# Live Chat -- centre column %>
-  
+<%#===========================================================================%>
+<%#   Live Chat -- centre column                                              %>
+<%#===========================================================================%>
+
   <div class="centre_column_wrapper">
 
     <div id="comments">
@@ -67,9 +75,9 @@
 
     <div class="write_new_comment">
       <%= form_for :comment, url: user_class_room_class_session_comments_path(@user.id, @class_room.id, @class_session.id), method: :post, html: {id: 'comment-add-form'} do |f| %>
-          <%= f.label :comment, 'Speak:' %>
-          <%= f.text_area :comment %>
-          <%= f.submit 'Add Comment', data: { disable_with: false }, id: 'submit_comment' %>
+        <span class="speak"><%= f.label :comment, 'Speak: ' %></span>
+        <%= f.text_area :comment %>
+        <%= f.submit 'Add Comment', data: { disable_with: false }, id: 'submit_comment' %>
       <% end %>
     </div>
 

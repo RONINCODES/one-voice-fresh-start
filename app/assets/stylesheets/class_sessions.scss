@@ -91,16 +91,19 @@ body {
 }
 
 .write_new_comment {
-  width: 100%;
-  position: fixed;
+  width: 60%;
+  position: absolute;
   bottom: 0;
-  z-index: 100;
   background-color: lightpink;
   font-size: 1.2em;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   padding-top: 10px;
 }
 
+.speak {
+  padding-left: 20px;
+  font-size: 1.2em;
+}
 .author {
   font-family: 'Merriweather', serif;
   font-size: 1.2em;

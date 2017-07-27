@@ -7,7 +7,21 @@ body {
 }
 
 .class_sessions_page {
-  margin-top: 47px;
+  margin-top: 67px;
+}
+
+.sessions_list {
+  width: 40%;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 20px;
+  font-size: 1.2em;
+  padding: 20px;
+}
+
+.single_session {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 #class_sessions_header {

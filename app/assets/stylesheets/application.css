@@ -105,6 +105,10 @@
    z-index: -100;
   }
 
+  .welcome_to_onevoice {
+    margin-top: 80px;
+  }
+
  h1 {
    color: white;
    text-align: center;
@@ -140,6 +144,7 @@
    left: 50%;
    transform: translate(-50%, -50%);
    font-family: 'Lato', sans-serif;
+   z-index: 300;
  }
 
  .scrollable_list {

@@ -4,18 +4,12 @@
     <title>OneVoice</title>
     <meta name="description" content="Realtime live classroom feedback for instructors">
     <%= csrf_meta_tags %>
-
-
-
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Lato|Merriweather');
+    </style>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-
-
-
-
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
   </head>
-
 
   <body id="check_this">
 
@@ -26,7 +20,7 @@
 
         <div class="nav_to_profile">
           <%= link_to "#{current_user.first_name} #{current_user.last_name}", user_path(current_user.id) %>
-          <span class="nav_user_role"><%= link_to " (#{current_user.role})", user_path(current_user.id) %></span>
+          <span class="nav_user_role"><%= link_to " • #{current_user.role}", user_path(current_user.id) %></span>
         </div>
 
         <div class="nav_to_logout">
@@ -36,8 +30,6 @@
       </div>
 
     <% end %>
-
-    <div class="spacer"></div>
 
     <%= yield %>
 

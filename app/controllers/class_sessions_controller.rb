@@ -17,6 +17,7 @@ class ClassSessionsController < ApplicationController
     @comments = @class_session.comments.all
     CheckIn.check_in(@user, @class_session)
 
+
     #analytics logic
     @helpfulness1and2 = Survey.where('helpfulness=? or helpfulness= ?','1','2').where(class_session_id: params[:class_session_id]).count
     @helpfulness3 = Survey.where(helpfulness:'3').where(class_session_id: params[:class_session_id]).count
@@ -30,6 +31,11 @@ class ClassSessionsController < ApplicationController
     @pace3 = Survey.where(pace:'3').where(class_session_id: params[:class_session_id]).count
     @pace4and5 = Survey.where('pace= ? or pace= ?','4','5' ).where(class_session_id: params[:class_session_id]).count
     @suggestions = Survey.where(class_session_id: params[:class_session_id])
+
+    res = Typhoeus::Request.get(
+          "https://gateway.watsonplatform.net/discovery/api/v1/environments/37e227de-a4ec-4574-aa19-8d52307fcb70/collections/a9ea5772-9961-4130-92ed-01cf9b9876bb/query?version=2017-07-19&count=&offset=&aggregation=term%28enriched_text.sentiment.document.label%2Ccount%3A3%29&filter=#{@class_room.id}#{@class_session.id}&passages=true&highlight=true&return=&query=",
+          userpwd: "#{ENV['WATSON_KEY']}:#{ENV['WATSON_PASS']}")
+    @body = JSON.parse(res.body)
 
   end
 

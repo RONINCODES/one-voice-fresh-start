@@ -10,6 +10,7 @@ before_action :check_user, except: [:new, :create, :index]
   def show
     @user = User.find(session[:user_id])
     @class_room = ClassRoom.new
+    @class_rooms = ClassRoom.where("user_id = ?", @user)
   end
 
   def new
@@ -18,13 +19,10 @@ before_action :check_user, except: [:new, :create, :index]
 
   def create
     @user = User.new(user_params)
-
     if @user.save
-
       flash[:notice] = 'Account successfully created!'
       session[:user_id] = @user.id
       redirect_to user_path(session[:user_id])
-
     else
       flash.now[:notice] = 'Sorry, try again!'
       redirect_to root_url
@@ -36,8 +34,7 @@ before_action :check_user, except: [:new, :create, :index]
   end
 
   def update
-      @user = User.find(params[:id])
-
+    @user = User.find(params[:id])
 
     if @user.update(user_params)
       flash[:notice] = 'Account Succesfully Updated!'

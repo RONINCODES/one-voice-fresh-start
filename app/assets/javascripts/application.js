@@ -95,11 +95,11 @@ document.addEventListener('DOMContentLoaded', function(event) {
   // CREATE A CLASSROOM:
 
   var createClassroom = document.querySelector('.create_classroom'); // The link.
-  var modalCreate   = document.querySelector('#create_classroom'); // The modal.
-  var closeCreate   = document.querySelector('.close_create');
+  var modalCreate     = document.querySelector('#create_classroom'); // The modal.
+  var closeCreate     = document.querySelector('.close_create');
 
   // Open the modal:
-  if (modalCreate != undefined) {
+  if (modalCreate != undefined || modalCreate != null) {
     function showModalCreate(click) {
       console.log('You should see the Create Classroom modal now.');
       modalCreate.style.display = 'block';
@@ -119,7 +119,35 @@ document.addEventListener('DOMContentLoaded', function(event) {
     closeCreate.addEventListener('click', hideModalCreate);
   };
 
+  //-------------------------------------------------------------------------------------
+  // Show All Classrooms:
+  //-------------------------------------------------------------------------------------
 
+  // Declare variables:
+  var classrooms         = document.querySelector('.show_classrooms');
+  var modalClassrooms    = document.querySelector('#show_classrooms');
+  var closeClassrooms = document.querySelector('.close_classrooms');
+
+  // Open the modal:
+  if (modalClassrooms != undefined) {
+    function showModalClassrooms(click) {
+      console.log('You should see the All Classrooms modal now.');
+      modalClassrooms.style.display = 'block';
+    };
+    classrooms.addEventListener('click', function(event) {
+      event.preventDefault();
+      console.log('The All Classrooms button was clicked.')
+      showModalClassrooms();
+    });
+  };
+
+  // Close the modal:
+  if (modalClassrooms != undefined) {
+    function hideModalClassrooms(click) {
+      modalClassrooms.style.display = 'none';
+    };
+    closeClassrooms.addEventListener('click', hideModalClassrooms);
+  };
 
   //-------------------------------------------------------------------------------------
 

@@ -10,7 +10,9 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
     console.log(data)
-    document.querySelector('#comments').insertAdjacentHTML('beforeend', '<div class="comment"><b>' + data.name + ' says: </b><pre> ' + data.comment.comment + '</pre><hr><small>'  + '</small></div>')
+
+    document.querySelector('#comments').insertAdjacentHTML('beforeend', '<div class="comment"><span class="author">' + data.name + ':</span><br><span class="content">' + data.comment.comment + '</span></div>')
+
     var t = document.getElementById('comment_comment');
     t.value = t.defaultValue;
     window.scrollTo(0,document.body.scrollHeight);

@@ -1,42 +1,42 @@
 <div class="user_form">
 
+  <div class="close_edit"><span id="close_x">X</span></div>
+
   <h2>Edit Your Details</h2>
 
   <%= form_for @user do |f| %>
 
-    <div class="close_edit"><span id="close_x">X</span></div>
-
     <div class="form_item">
       <p>
-        <%= f.label :first_name, 'First Name' %><br>
+        <%= f.label :first_name, 'First Name' %>
         <%= f.text_field :first_name, placeholder: "i.e. Maggie" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
-        <%= f.label :last_name, 'Last Name' %><br>
+        <%= f.label :last_name, 'Last Name' %>
         <%= f.text_field :last_name, placeholder: "i.e. Simpson" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
-        <%= f.label :user_image, 'Upload New Profile Photo' %><br>
+        <%= f.label :user_image, 'Profile Photo' %>
         <%= f.file_field :user_image, placeholder: "i.e. jpg" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
-        <%= f.label :email, 'Email Address' %><br>
-        <%= f.email_field :email, placeholder: "i.e. clarkkent@dailyplanet.com" %>
+        <%= f.label :email, 'Email' %>
+        <%= f.email_field :email, placeholder: "i.e. ringo@beatles.com" %>
       </p>
     </div>
 
     <div class="form_item">
       <p>
-        <%= f.label :role, 'Student or Instructor?' %><br>
+        <%= f.label :role, 'Role' %>
         <%= f.select :role, ['student', 'instructor'] %>
       </p>
     </div>
@@ -44,7 +44,8 @@
     <div class="form_item">
       <p>
         <%= f.label :password, 'Change/Keep Password' %><br>
-        <%= f.password_field :password, placeholder: "Current or New Password" %>
+        <%= f.password_field :password, placeholder: "Same or New Password" %>
+        <br />
         <span class="password_required">Required Every Time</span>
       </p>
     </div>
@@ -53,6 +54,7 @@
       <p>
         <%= f.label :password_confirmation, 'Confirm Password' %><br>
         <%= f.password_field :password_confirmation, placeholder: "Repeat the above." %>
+        <br />
         <span class="password_required">Required Every Time</span>
       </p>
     </div>

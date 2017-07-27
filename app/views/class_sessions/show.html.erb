@@ -1,3 +1,4 @@
+
 <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
 <h1>Class Session</h1>
 
@@ -76,18 +77,89 @@
   </div>
 <% end %>
 
+<div class="live_session_title_bar">
+  <span class="top_subject">
+    <%= @class_room.subject %>
+  </span> •
+  <span class="top_agenda">
+    <%= @class_session.agenda %>
+  </span> •
+  <span class="top_date">
+    <%= @class_session.date %>
+  </span>
+</div>
 
-  <%= form_for :comment, url: user_class_room_class_session_comments_path(@user.id, @class_room.id, @class_session.id), method: :post, html: {id: 'comment-add-form'} do |f| %>
-  <br><br>
+<div class="all_columns_wrapper">
 
-  <p>
-    <%= f.label :comment, 'Add a Comment' %>
-    <%= f.text_area :comment %>
-  </p>
+<%#===========================================================================%>
+<%#   Logged-in Users -- left column                                          %>
+<%#===========================================================================%>
 
-  <%= f.submit 'Add Comment', data: { disable_with: false }, id: 'submit_comment' %>
+  <div class="user_column">
+    <div class="list_of_users">
+      <% @users.each do |u| %>
+        <ul>
+          <li><%= u.first_name%> <%=u.last_name %></li>
+        </ul>
+      <% end %>
+    </div>
+  </div>
 
-<% end %>
+<%#===========================================================================%>
+<%#   Survey -- right column                                                  %>
+<%#===========================================================================%>
+
+  <div class="survey_column">
+    <div class="survey_header">
+      Feedback
+    </div>
+    <%= form_for :survey, url:  user_class_room_class_session_surveys_path(@user, @class_room, @class_session), method: :post do |f| %>
+      <fieldset>
+        <legend>Helpfulness</legend>
+        <%= f.collection_radio_buttons(:helpfulness, survey_options, :first, :last)%>
+      </fieldset>
+      <fieldset>
+        <legend>Clarity</legend>
+        <%= f.collection_radio_buttons(:clarity, survey_options, :first, :last)%>
+      </fieldset>
+      <fieldset>
+        <legend>Pace</legend>
+        <%= f.collection_radio_buttons(:pace, survey_options, :first, :last)%>
+      </fieldset>
+      <p>
+        <%= f.label :suggestions %>
+        <%= f.text_area :suggestions %>
+      </p>
+      <%= f.submit 'Submit Survey' %>
+    <% end %>
+  </div>
+
+<%#===========================================================================%>
+<%#   Live Chat -- centre column                                              %>
+<%#===========================================================================%>
+
+  <div class="centre_column_wrapper">
+
+    <div id="comments">
+      <% @comments.each do |c| %>
+        <div class="comment">
+          <%= User.find(c.user_id).first_name%>
+          <br />
+          <%= c.comment %>
+          <small><%= c.created_at.strftime("%A %B %d %Y") %></small>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="write_new_comment">
+      <%= form_for :comment, url: user_class_room_class_session_comments_path(@user.id, @class_room.id, @class_session.id), method: :post, html: {id: 'comment-add-form'} do |f| %>
+        <span class="speak"><%= f.label :comment, 'Speak: ' %></span>
+        <%= f.text_area :comment %>
+        <%= f.submit 'Add Comment', data: { disable_with: false }, id: 'submit_comment' %>
+      <% end %>
+    </div>
+
+  </div>
 
 <div id="comments">
   <% @comments.each do |c| %>
@@ -100,4 +172,9 @@
       <small><%= c.created_at.strftime("%A %B %d %Y") %></small>
     </div>
   <% end %>
+
+    <% @body["aggregations"].each do |body| %>
+    <%= body["results"] %>
+    <% end %>
+  
 </div>

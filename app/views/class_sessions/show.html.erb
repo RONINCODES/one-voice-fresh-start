@@ -1,3 +1,4 @@
+<%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
 <h1>Class Session</h1>
 
 <%# Users who are logged in -- Left column %>
@@ -14,6 +15,7 @@
 
 <%# Survey -- right column %>
 <!-- @user, @class_session, -->
+<% if @user.role == 'student' %>
 <%= form_for :survey, url:  user_class_room_class_session_surveys_path(@user, @class_room, @class_session), method: :post do |f| %>
 
   <fieldset>
@@ -38,11 +40,41 @@
 
 
     <%= f.submit 'Submit Survey' %>
-
-
   <% end %>
 
+<% elsif @user.role == 'instructor' %>
+  <h1><strong>Today's Feedback</strong></h1>
+  <center><h3><strong><%= @helpfulness1and2+@helpfulness3+@helpfulness4and5 %></strong> Students Submitted Today's Survey</h3></center>
 
+
+
+  <br>
+
+
+
+  <div style="width: 350px; height: 350px; background-color:white" >
+    <h3>How HELPFUL was this Lesson</h3>
+    <%= pie_chart({"Not Helpful" => @helpfulness1and2, "Just OK" => @helpfulness3, "Very Helpful" => @helpfulness4and5}, height: "300px", width: "300px")%>
+  </div>
+
+  <div style="width: 350px; height: 350px; background-color:white; margin-top: 100px">
+    <h3>How CLEAR was this Lesson</h3>
+    <%= pie_chart({"Not Clear" => @clarity1and2, "Kind of Clear" => @clarity3, "Very Clear" => @clarity4and5}) %>
+  </div>
+
+  <div style="width: 350px; height: 350px; background-color:white; margin-top: 100px; margin-bottom: 150px">
+    <h3>How was the PACE this Lesson</h3>
+    <%= pie_chart({"Way Too Fast" => @pace1and2, "Could Be Better" => @pace3, "Perfect" => @pace4and5}) %>
+  </div>
+  <br><br>
+
+  <p>Student's Suggestions<p>
+  <div id="daily suggestions">
+    <% @suggestions.each do |s| %>
+    <p><small><%= s.suggestions %></small></p><hr>
+  <% end %>
+  </div>
+<% end %>
 
 
   <%= form_for :comment, url: user_class_room_class_session_comments_path(@user.id, @class_room.id, @class_session.id), method: :post, html: {id: 'comment-add-form'} do |f| %>

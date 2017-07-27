@@ -16,6 +16,21 @@ class ClassSessionsController < ApplicationController
     @survey = Survey.new
     @comments = @class_session.comments.all
     CheckIn.check_in(@user, @class_session)
+
+    #analytics logic
+    @helpfulness1and2 = Survey.where('helpfulness=? or helpfulness= ?','1','2').where(class_session_id: params[:class_session_id]).count
+    @helpfulness3 = Survey.where(helpfulness:'3').where(class_session_id: params[:class_session_id]).count
+    @helpfulness4and5 = Survey.where('helpfulness= ? or helpfulness= ?','4','5' ).where(class_session_id: params[:class_session_id]).count
+
+    @clarity1and2 = Survey.where('clarity =? or clarity =?', '1', '2' ).where(class_session_id: params[:class_session_id]).count
+    @clarity3 = Survey.where(clarity:'3').where(class_session_id: params[:class_session_id]).count
+    @clarity4and5 = Survey.where('helpfulness= ? or helpfulness= ?','4','5' ).where(class_session_id: params[:class_session_id]).count
+
+    @pace1and2 = Survey.where('pace =? or pace =?', '1', '2' ).where(class_session_id: params[:class_session_id]).count
+    @pace3 = Survey.where(pace:'3').where(class_session_id: params[:class_session_id]).count
+    @pace4and5 = Survey.where('pace= ? or pace= ?','4','5' ).where(class_session_id: params[:class_session_id]).count
+    @suggestions = Survey.where(class_session_id: params[:class_session_id])
+
   end
 
   def new

@@ -11,12 +11,12 @@ class ApplicationController < ActionController::Base
 
 
 #Security - restricting access
-  def check_user
-
-    if params[:id].to_i != session[:user_id]
-      redirect
-    end
-  end
+  # def check_user
+  #
+  #   if params[:id].to_i != session[:user_id]
+  #     redirect
+  #   end
+  # end
 
   # def check_class_room
   #   if params[:id].to_i != class_rooms[:user_id]

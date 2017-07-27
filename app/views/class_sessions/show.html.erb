@@ -1,7 +1,7 @@
 <div class="live_session_title_bar">
   <span class="top_subject">
     <%= @class_room.subject %>
-  </span> • 
+  </span> •
   <span class="top_agenda">
     <%= @class_session.agenda %>
   </span> •
@@ -51,28 +51,27 @@
   </div>
 
   <%# Live Chat -- centre column %>
-  <div id="comments">
+  
+  <div class="centre_column_wrapper">
 
-    <% @comments.each do |c| %>
-
-      <div class="comment">
+    <div id="comments">
+      <% @comments.each do |c| %>
+        <div class="comment">
           <%= User.find(c.user_id).first_name%>
-        <br>
-        <%= c.comment %>
-        <small><%= c.created_at.strftime("%A %B %d %Y") %></small>
-      </div>
+          <br />
+          <%= c.comment %>
+          <small><%= c.created_at.strftime("%A %B %d %Y") %></small>
+        </div>
+      <% end %>
+    </div>
 
-    <% end %>
-
-    <%= form_for :comment, url: user_class_room_class_session_comments_path(@user.id, @class_room.id, @class_session.id), method: :post, html: {id: 'comment-add-form'} do |f| %>
-
-      <div class="write_new_comment">
-        <%= f.label :comment, 'Speak:' %>
-        <%= f.text_area :comment %>
-        <%= f.submit 'Add Comment', data: { disable_with: false }, id: 'submit_comment' %>
-      </div>
-
-    <% end %>
+    <div class="write_new_comment">
+      <%= form_for :comment, url: user_class_room_class_session_comments_path(@user.id, @class_room.id, @class_session.id), method: :post, html: {id: 'comment-add-form'} do |f| %>
+          <%= f.label :comment, 'Speak:' %>
+          <%= f.text_area :comment %>
+          <%= f.submit 'Add Comment', data: { disable_with: false }, id: 'submit_comment' %>
+      <% end %>
+    </div>
 
   </div>
 

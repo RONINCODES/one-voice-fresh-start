@@ -10,7 +10,9 @@ class ApplicationController < ActionController::Base
   end
 
 
+
 #Security - restricting access
+
   def check_user
 
     if params[:id].to_i != session[:user_id]

@@ -4,10 +4,12 @@
     <%= @class_room.subject %>
   </div>
 
-  <div class="scrollable_list">
+  <div class="sessions_list">
 
     <% @class_sessions.reverse.each do |s|  %>
-      <%= s.date %> • <%= link_to s.agenda , user_class_room_class_session_path(@user.id, params[:class_room_id], s.id) %>
+      <div class="single_session">
+        <%= s.date %> • <%= link_to s.agenda , user_class_room_class_session_path(@user.id, params[:class_room_id], s.id) %>
+      </div>
       <hr>
     <% end %>
 

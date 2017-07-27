@@ -11,7 +11,7 @@
 // about supported directives.
 //
 //= require rails-ujs
-
+//= require chartkick
 //= require_tree .
 
 document.addEventListener('DOMContentLoaded', function(event) {

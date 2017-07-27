@@ -6,61 +6,67 @@
   <%= @class_session.date %>
 </div>
 
-<%# Logged-in Users -- left column %>
-<div class="user_column">
-  <% @users.each do |u| %>
-    <ul>
-      <li><%= u.first_name%> <%=u.last_name %></li>
-    </ul>
-  <% end %>
-</div>
+<div class="column_wrapper">
 
-<%# Survey -- right column %>
-<div class="survey_column">
-  <%= form_for :survey, url:  user_class_room_class_session_surveys_path(@user, @class_room, @class_session), method: :post do |f| %>
-    <fieldset>
-      <legend>Helpfulness</legend>
-      <%= f.collection_radio_buttons(:helpfulness, survey_options, :first, :last)%>
-    </fieldset>
-    <fieldset>
-      <legend>Clarity</legend>
-      <%= f.collection_radio_buttons(:clarity, survey_options, :first, :last)%>
-    </fieldset>
-    <fieldset>
-      <legend>Pace</legend>
-      <%= f.collection_radio_buttons(:pace, survey_options, :first, :last)%>
-    </fieldset>
-    <p>
-      <%= f.label :suggestions %>
-      <%= f.text_area :suggestions %>
-    </p>
-    <%= f.submit 'Submit Survey' %>
-  <% end %>
-</div>
+  <%# Logged-in Users -- left column %>
+  <div class="user_column">
+    <% @users.each do |u| %>
+      <ul>
+        <li><%= u.first_name%> <%=u.last_name %></li>
+      </ul>
+    <% end %>
+  </div>
 
+  <%# Survey -- right column %>
+  <div class="survey_column">
+    <div class="survey_header">
+      Feedback
+    </div>
+    <%= form_for :survey, url:  user_class_room_class_session_surveys_path(@user, @class_room, @class_session), method: :post do |f| %>
+      <fieldset>
+        <legend>Helpfulness</legend>
+        <%= f.collection_radio_buttons(:helpfulness, survey_options, :first, :last)%>
+      </fieldset>
+      <fieldset>
+        <legend>Clarity</legend>
+        <%= f.collection_radio_buttons(:clarity, survey_options, :first, :last)%>
+      </fieldset>
+      <fieldset>
+        <legend>Pace</legend>
+        <%= f.collection_radio_buttons(:pace, survey_options, :first, :last)%>
+      </fieldset>
+      <p>
+        <%= f.label :suggestions %>
+        <%= f.text_area :suggestions %>
+      </p>
+      <%= f.submit 'Submit Survey' %>
+    <% end %>
+  </div>
 
-
-<%# Live Chat -- centre column %>
-
+  <%# Live Chat -- centre column %>
   <div id="comments">
 
     <% @comments.each do |c| %>
+
       <div class="comment">
-        <b>
           <%= User.find(c.user_id).first_name%>
-        </b><br>
+        <br>
         <%= c.comment %>
-        <hr>
         <small><%= c.created_at.strftime("%A %B %d %Y") %></small>
       </div>
+
     <% end %>
 
     <%= form_for :comment, url: user_class_room_class_session_comments_path(@user.id, @class_room.id, @class_session.id), method: :post, html: {id: 'comment-add-form'} do |f| %>
+
       <div class="write_new_comment">
         <%= f.label :comment, 'Speak:' %>
         <%= f.text_area :comment %>
         <%= f.submit 'Add Comment', data: { disable_with: false }, id: 'submit_comment' %>
       </div>
+
     <% end %>
 
   </div>
+
+</div>

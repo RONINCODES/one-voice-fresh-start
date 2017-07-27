@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+  width: 100%;
+}
+
 .class_sessions_page {
   margin-top: 47px;
 }
@@ -14,52 +18,118 @@
   margin-bottom: 36px;
 }
 
-.scrolling_list {
-  text-align: center;
-  font-size: 1.2em;
-}
-
 .live_session_title_bar {
-  font-family: 'Merriweather', serif;
-  font-size: 2em;
+  position: relative;
+  text-align: center;
+  font-size: 1.5em;
   width: 100%;
   background-color: beige;
-  padding-left: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 12px;
   margin-top: 47px;
-  padding-top: 10px;
+  padding-top: 12px;
+}
+
+.top_subject, .top_agenda, .top_date {
+  font-family: 'Lato', sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.all_columns_wrapper {
+
 }
 
 .user_column {
   width: 20%;
-  height: 100vh;
   float: left;
+  height: 100vh;
   position: relative;
+  bottom: 0;
   font-size: 1.2em;
-  background-color: pink;
+  background-color: royalblue;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.list_of_users {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
   overflow: scroll;
+  background-color: lightskyblue;
+  max-height: 60vh;
+}
+
+.centre_column_wrapper {
+  width: 60%;
+  float: left;
 }
 
 .survey_column {
   width: 20%;
-  height: 100vh;
+  height: auto;
   float: right;
+  height: 100vh;
   font-size: 1.2em;
   background-color: lightskyblue;
 }
 
+.survey_header {
+  width: 100%;
+  background-color: lightpink;
+  font-family: 'Merriweather', serif;
+  font-size: 1.2em;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
 #comments {
-  background-color: white;
   position: relative;
-  width: 60%;
-  float: left;
+  width: 100%;
+  overflow: scroll;
+}
+
+.comment {
+  background-color: white;
+  border-radius: 10px;
+  width: 92%;
+  margin: 0 auto;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 12px;
 }
 
 .write_new_comment {
-  position: fixed;
   width: 60%;
+  position: fixed;
   bottom: 0;
-  z-index: 100;
-  background-color: beige;
+  background-color: lightpink;
   font-size: 1.2em;
+  padding-bottom: 15px;
+  padding-top: 10px;
+}
+
+.speak {
+  padding-left: 20px;
+  font-size: 1.2em;
+}
+.author {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.content {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+  font-weight: normal;
+}
+
+li {
+  line-height: 0.8;
 }

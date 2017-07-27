@@ -10,26 +10,26 @@ class ApplicationController < ActionController::Base
   end
 
 
-#Security - restricting access
-  # def check_user
-  #
-  #   if params[:id].to_i != session[:user_id]
-  #     redirect
-  #   end
-  # end
+# Security - restricting access
+  def check_user
 
-  # def check_class_room
-  #   if params[:id].to_i != class_rooms[:user_id]
-  #     redirect
-  #   end
-  # end
-  #
-  # def check_class_session
-  #   if params[:id].to_i != class_sessions[:user_id]
-  #     redirect
-  #   end
-  # end
-  #
+    if params[:id].to_i != session[:user_id]
+      redirect
+    end
+  end
+
+  def check_class_room
+    if params[:id].to_i != class_rooms[:user_id]
+      redirect
+    end
+  end
+
+  def check_class_session
+    if params[:id].to_i != class_sessions[:user_id]
+      redirect
+    end
+  end
+
 
 
   private

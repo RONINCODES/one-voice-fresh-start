@@ -1,15 +1,22 @@
 <div class="live_session_title_bar">
-  <%= @class_room.subject %>
-  &mdash;
-  <%= @class_session.agenda %>
-  &mdash;
-  <%= @class_session.date %>
+  <span class="top_subject">
+    <%= @class_room.subject %>
+  </span> • 
+  <span class="top_agenda">
+    <%= @class_session.agenda %>
+  </span> •
+  <span class="top_date">
+    <%= @class_session.date %>
+  </span>
 </div>
 
 <div class="column_wrapper">
 
   <%# Logged-in Users -- left column %>
   <div class="user_column">
+    <div class="users_header">
+      Present
+    </div>
     <% @users.each do |u| %>
       <ul>
         <li><%= u.first_name%> <%=u.last_name %></li>

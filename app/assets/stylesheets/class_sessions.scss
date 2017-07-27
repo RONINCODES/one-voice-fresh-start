@@ -57,7 +57,7 @@ body {
   background-color: lightskyblue;
 }
 
-.survey_header, .users_header {
+.survey_header {
   width: 100%;
   background-color: lightpink;
   font-family: 'Merriweather', serif;
@@ -92,7 +92,7 @@ body {
 
 .write_new_comment {
   width: 60%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   background-color: lightpink;
   font-size: 1.2em;

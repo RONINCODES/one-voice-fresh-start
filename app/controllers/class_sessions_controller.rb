@@ -16,6 +16,10 @@ class ClassSessionsController < ApplicationController
     @survey = Survey.new
     @comments = @class_session.comments.all
     CheckIn.check_in(@user, @class_session)
+    res = Typhoeus::Request.get(
+          "https://gateway.watsonplatform.net/discovery/api/v1/environments/37e227de-a4ec-4574-aa19-8d52307fcb70/collections/a9ea5772-9961-4130-92ed-01cf9b9876bb/query?version=2017-07-19&count=&offset=&aggregation=term%28enriched_text.sentiment.document.label%2Ccount%3A3%29&filter=#{@class_room.id}#{@class_session.id}&passages=true&highlight=true&return=&query=",
+          userpwd: "#{ENV['WATSON_KEY']}:#{ENV['WATSON_PASS']}")
+    @body = JSON.parse(res.body)
   end
 
   def new

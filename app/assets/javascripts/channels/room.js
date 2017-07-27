@@ -10,7 +10,9 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
   received: function(data) {
     // Called when there's incoming data on the websocket for this channel
     console.log(data)
+
     document.querySelector('#comments').insertAdjacentHTML('beforeend', '<div class="comment"><span class="author">' + data.name + ':</span><br><span class="content">' + data.comment.comment + '</span></div>')
+
     var t = document.getElementById('comment_comment');
     t.value = t.defaultValue;
     window.scrollTo(0,document.body.scrollHeight);
@@ -45,8 +47,8 @@ document.addEventListener('DOMContentLoaded', function(event) {
     if (event.keyCode == 13) {
 
       if (event.shiftKey) {
-      this.value = this.value + '<br>'
-      console.log(this.value)
+
+      console.log('shift + enter')
       }
       else {
       document.getElementById("submit_comment").click();

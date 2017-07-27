@@ -28,6 +28,34 @@ end
     password_confirmation: 'password'
   )
   puts "New instructor: " + user.first_name + " " + user.last_name
+  10.times do
+    class_room = ClassRoom.create!(
+      subject: Faker::Educator.course,
+      group_code: Faker::Number.digit.to_i,
+      user_id: user.id
+    )
+    puts "New classroom: " + class_room.subject + " (Instructor: " + User.find_by(id: class_room.user_id).first_name + " " + User.find_by(id: class_room.user_id).last_name + ")"
+      5.times do
+        class_session = class_room.class_sessions.create!(
+        date: class_room.created_at + rand(1000000000),
+        agenda: Faker::HitchhikersGuideToTheGalaxy.marvin_quote,
+        user_id: class_room.user_id
+        )
+        20.times do
+          survey = class_session.surveys.create!(
+          helpfulness: rand(1..5).to_s,
+          clarity: rand(1..5).to_s,
+          pace: rand(1..5).to_s,
+          suggestions: Faker::Simpsons.quote,
+          user_id: User.where(role: 'student').all.sample.id
+          )
+
+        end
+      end
+    end
+
+
+
 end
 
 # Create account: Mohammed
@@ -64,11 +92,5 @@ user = User.create!(
 puts "New instructor (MS): " + user.first_name + " " + user.last_name
 
 # Create ClassRooms
-10.times do
-  class_room = ClassRoom.create!(
-    subject: Faker::Educator.course,
-    group_code: Faker::Number.digit.to_i,
-    user_id: User.where(role: 'instructor').all.sample.id
-  )
-  puts "New classroom: " + class_room.subject + " (Instructor: " + User.find_by(id: class_room.user_id).first_name + " " + User.find_by(id: class_room.user_id).last_name + ")"
-end
+
+# create class sessions

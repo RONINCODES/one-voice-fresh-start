@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+#security before action 
+before_action :check_user, except: [:new, :create, :index]
   def index
     @users = User.all
     @user = User.new

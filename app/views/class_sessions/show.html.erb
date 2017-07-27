@@ -82,4 +82,8 @@
 
   </div>
 
+    <% @body["aggregations"].each do |body| %>
+    <%= body["results"] %>
+    <% end %>
+  
 </div>

@@ -1,5 +1,9 @@
 <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
 
+<%#===========================================================================%>
+<%#   Header -- shows class, agenda, date                                     %>
+<%#===========================================================================%>
+
 <div class="live_session_title_bar">
   <span class="top_subject">
     <%= @class_room.subject %>
@@ -37,104 +41,100 @@
       Feedback
     </div>
     <% if @user.role == 'student' %>
-    <%= form_for :survey, url:  user_class_room_class_session_surveys_path(@user, @class_room, @class_session), method: :post do |f| %>
-
-      <fieldset>
-        <legend>Helpfulness</legend>
-        <%= f.collection_radio_buttons(:helpfulness, survey_options, :first, :last)%>
-      </fieldset>
-
-      <fieldset>
-        <legend>Clarity</legend>
-        <%= f.collection_radio_buttons(:clarity, survey_options, :first, :last)%>
-      </fieldset>
-
-      <fieldset>
-        <legend>Pace</legend>
-        <%= f.collection_radio_buttons(:pace, survey_options, :first, :last)%>
-      </fieldset>
-
-      <p>
-        <%= f.label :suggestions %>
-        <%= f.text_area :suggestions %>
-      </p>
-
-
+      <%= form_for :survey, url:  user_class_room_class_session_surveys_path(@user, @class_room, @class_session), method: :post do |f| %>
+        <fieldset>
+          <legend>Helpfulness</legend>
+          <%= f.collection_radio_buttons(:helpfulness, survey_options, :first, :last)%>
+        </fieldset>
+        <fieldset>
+          <legend>Clarity</legend>
+          <%= f.collection_radio_buttons(:clarity, survey_options, :first, :last)%>
+        </fieldset>
+        <fieldset>
+          <legend>Pace</legend>
+          <%= f.collection_radio_buttons(:pace, survey_options, :first, :last)%>
+        </fieldset>
+        <p>
+          <%= f.label :suggestions %>
+          <%= f.text_area :suggestions %>
+        </p>
         <%= f.submit 'Submit Survey' %>
       <% end %>
 
     <% elsif @user.role == 'instructor' %>
 
-      <center><h3><strong><%= @helpfulness1and2+@helpfulness3+@helpfulness4and5 %></strong> Students Submitted Today's Survey</h3></center>
+      <%= @helpfulness1and2+@helpfulness3+@helpfulness4and5 %> Submitted
 
       <br>
 
       <div style="width: 80%; background-color:white" >
-        <h3>How HELPFUL was this Lesson</h3>
+        How HELPFUL was this Lesson
         <%= pie_chart({"Not Helpful" => @helpfulness1and2, "Just OK" => @helpfulness3, "Very Helpful" => @helpfulness4and5}, width: "80%")%>
       </div>
 
       <div style="width: 80%; background-color:white; margin-top: 20px">
-        <h3>How CLEAR was this Lesson</h3>
+        How CLEAR was this Lesson
         <%= pie_chart({"Not Clear" => @clarity1and2, "Kind of Clear" => @clarity3, "Very Clear" => @clarity4and5}) %>
       </div>
 
       <div style="width: 80%; background-color:white; margin-top: 20px">
-        <h3>How was the PACE this Lesson</h3>
+        How was the PACE this Lesson
         <%= pie_chart({"Way Too Fast" => @pace1and2, "Could Be Better" => @pace3, "Perfect" => @pace4and5}) %>
       </div>
-      <br><br>
 
-      <p>Student's Suggestions<p>
+      Student Suggestions
+
       <div id="daily suggestions">
         <% @suggestions.each do |s| %>
-        <p><small><%= s.suggestions %></small></p><hr>
-      <% end %>
+          <%= s.suggestions %>
+          <hr>
+        <% end %>
+      </div>
+
+    <% end %>
+  </div>
+
+  <%#===========================================================================%>
+  <%#   Live Chat -- centre column                                              %>
+  <%#===========================================================================%>
+
+    <div class="centre_column_wrapper">
+
+      <div id="comments">
+        <% @comments.each do |c| %>
+          <div class="comment">
+            <%= User.find(c.user_id).first_name%>
+            <br />
+            <%= c.comment %>
+            <small><%= c.created_at.strftime("%A %B %d %Y") %></small>
+          </div>
+        <% end %>
+      </div>
+
+      <div class="write_new_comment">
+        <%= form_for :comment, url: user_class_room_class_session_comments_path(@user.id, @class_room.id, @class_session.id), method: :post, html: {id: 'comment-add-form'} do |f| %>
+          <span class="speak"><%= f.label :comment, 'Speak: ' %></span>
+          <%= f.text_area :comment %>
+          <%= f.submit 'Add Comment', data: { disable_with: false }, id: 'submit_comment' %>
+        <% end %>
+      </div>
+
+    </div>
+
+  <div id="comments">
+    <% @comments.each do |c| %>
+      <div class="comment">
+        <b>
+          <%= User.find(c.user_id).first_name%>
+        </b>
+        <pre><%= c.comment %></pre>
+        <hr>
+        <small><%= c.created_at.strftime("%A %B %d %Y") %></small>
       </div>
     <% end %>
-  </div>
 
-<%#===========================================================================%>
-<%#   Live Chat -- centre column                                              %>
-<%#===========================================================================%>
-
-  <div class="centre_column_wrapper">
-
-    <div id="comments">
-      <% @comments.each do |c| %>
-        <div class="comment">
-          <%= User.find(c.user_id).first_name%>
-          <br />
-          <%= c.comment %>
-          <small><%= c.created_at.strftime("%A %B %d %Y") %></small>
-        </div>
+      <% @body["aggregations"].each do |body| %>
+      <%= body["results"] %>
       <% end %>
-    </div>
-
-    <div class="write_new_comment">
-      <%= form_for :comment, url: user_class_room_class_session_comments_path(@user.id, @class_room.id, @class_session.id), method: :post, html: {id: 'comment-add-form'} do |f| %>
-        <span class="speak"><%= f.label :comment, 'Speak: ' %></span>
-        <%= f.text_area :comment %>
-        <%= f.submit 'Add Comment', data: { disable_with: false }, id: 'submit_comment' %>
-      <% end %>
-    </div>
 
   </div>
-
-<div id="comments">
-  <% @comments.each do |c| %>
-    <div class="comment">
-      <b>
-        <%= User.find(c.user_id).first_name%>
-      </b>
-      <pre><%= c.comment %></pre>
-      <hr>
-      <small><%= c.created_at.strftime("%A %B %d %Y") %></small>
-    </div>
-  <% end %>
-
-    <% @body["aggregations"].each do |body| %>
-    <%= body["results"] %>
-    <% end %>
-
-</div>

@@ -44,8 +44,6 @@ body {
   margin-bottom: 36px;
 }
 
-
-
 .all_columns_wrapper {
 
 }
@@ -66,7 +64,7 @@ body {
 .live_session_title_bar {
   text-align: center;
   width: 90%;
-  background-color: white;
+  background-color: lightgrey;
   padding-bottom: 12px;
 }
 
@@ -74,12 +72,14 @@ body {
   font-family: 'Merriweather', serif;
   font-size: 1.2em;
   font-weight: bold;
+  padding: 10px;
 }
 
 .top_agenda, .top_date {
   font-family: 'Lato', sans-serif;
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 10px;
 }
 
 .list_of_users {

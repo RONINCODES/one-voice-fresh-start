@@ -6,5 +6,5 @@ test:
 
 production:
   adapter: redis
-  url: redis://localhost:6379/1
+  url: redis://redistogo:76487f9c7eb4861f3abe025d9908eb1a@angelfish.redistogo.com:9932/
   channel_prefix: one-voice-fresh-start_production

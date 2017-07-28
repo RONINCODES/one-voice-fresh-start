@@ -29,11 +29,6 @@
      display: inline;
  }
 
- /*.spacer {
-   margin-top: 0;
-   height: 60px;
- }*/
-
  a {
    color: mediumblue;
    text-decoration: none;
@@ -97,22 +92,23 @@
  #video-background {
    position: fixed;
    right: 0;
-   bottom: 0;
+   top: 0;
    min-width: 100%;
    min-height: 100%;
    width: auto;
    height: auto;
    z-index: -100;
+   text-align: center;
   }
 
   .welcome_to_onevoice {
-    margin-top: 80px;
+    margin-top: 100px;
   }
 
  h1 {
    color: white;
    text-align: center;
-   font-size: 3em;
+   font-size: 3.5em;
    font-family: 'Merriweather', serif;
    text-shadow: 2px 2px black;
  }

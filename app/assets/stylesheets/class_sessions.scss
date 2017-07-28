@@ -54,10 +54,9 @@ body {
   margin-top: 47px;
   height: 80vh;
   position: relative;
-    font-size: 1.2em;
+  font-size: 1.2em;
   background-color: lightgrey;
   overflow: hidden;
-  z-index: -2;
 }
 
 .live_session_title_bar {
@@ -65,13 +64,15 @@ body {
   width: 90%;
   background-color: lightgrey;
   padding-bottom: 12px;
+  margin: 0 auto;
 }
 
 .top_subject {
   font-family: 'Merriweather', serif;
   font-size: 1.2em;
   font-weight: bold;
-  padding: 10px;
+  padding-top: 20px;
+  padding-left: 10px;
 }
 
 .top_agenda, .top_date {
@@ -87,7 +88,8 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   overflow: scroll;
-  background-color: lightgrey;
+  background-color: white;
+  border-radius: 10px;
 }
 
 .centre_column_wrapper {
@@ -112,7 +114,7 @@ body {
   font-size: 1.2em;
   font-weight: bold;
   text-align: center;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 10px;
 }
 
@@ -186,6 +188,32 @@ li {
 
 .result_suggestions {
   text-align: center;
+}
+
+.survey_help, .survey_clarity, .survey_pace {
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  max-height: 150px;
+  overflow: scroll;
+}
+
+.suggestion_box {
+  font-size: 1em;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Merriweather', serif;
+}
+
+.submit_survey {
+  text-align: center;
+  margin: 0 auto;
 }
 
 textarea {

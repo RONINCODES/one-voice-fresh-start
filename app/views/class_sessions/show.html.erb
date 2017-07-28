@@ -43,23 +43,31 @@
     </div>
     <% if @user.role == 'student' %>
       <%= form_for :survey, url:  user_class_room_class_session_surveys_path(@user, @class_room, @class_session), method: :post do |f| %>
-        <fieldset>
-          <legend>Helpfulness</legend>
-          <%= f.collection_radio_buttons(:helpfulness, survey_options, :first, :last)%>
-        </fieldset>
-        <fieldset>
-          <legend>Clarity</legend>
-          <%= f.collection_radio_buttons(:clarity, survey_options, :first, :last)%>
-        </fieldset>
-        <fieldset>
-          <legend>Pace</legend>
-          <%= f.collection_radio_buttons(:pace, survey_options, :first, :last)%>
-        </fieldset>
-        <p>
+        <div class="survey_help">
+          <fieldset>
+            <legend>Helpfulness</legend>
+            <%= f.collection_radio_buttons(:helpfulness, survey_options, :first, :last)%>
+          </fieldset>
+        </div>
+        <div class="survey_clarity">
+          <fieldset>
+            <legend>Clarity</legend>
+            <%= f.collection_radio_buttons(:clarity, survey_options, :first, :last)%>
+          </fieldset>
+        </div>
+        <div class="survey_pace">
+          <fieldset>
+            <legend>Pace</legend>
+            <%= f.collection_radio_buttons(:pace, survey_options, :first, :last)%>
+          </fieldset>
+        </div>
+        <div class="suggestion_box">
           <%= f.label :suggestions %>
           <%= f.text_area :suggestions %>
-        </p>
-        <%= f.submit 'Submit Survey' %>
+        </div>
+        <div class="submit_survey">
+          <%= f.submit 'Submit Survey' %>
+        </div>
       <% end %>
 
     <% elsif @user.role == 'instructor' %>
@@ -83,19 +91,21 @@
         <%= pie_chart({"Way Too Fast" => @pace1and2, "Could Be Better" => @pace3, "Perfect" => @pace4and5}) %>
       </div>
 
-    <% end %>
+      <div class="result_suggestions">
+        Student Suggestions
 
-    <div class="result_suggestions">
-      Student Suggestions
+        <div id="daily suggestions">
+          <% @suggestions.each do |s| %>
+            <%= s.suggestions %>
+            <hr>
+          <% end %>
+        </div>
 
-      <div id="daily suggestions">
-        <% @suggestions.each do |s| %>
-          <%= s.suggestions %>
-          <hr>
-        <% end %>
       </div>
 
-    </div>
+    <% end %>
+
+
 
   </div>
 

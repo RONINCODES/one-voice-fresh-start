@@ -11,6 +11,7 @@ class UsersController < ApplicationController
     @user = User.find(session[:user_id])
     @class_room = ClassRoom.new
     @class_rooms = ClassRoom.where("user_id = ?", @user)
+    @classrooms = ClassRoom.all
   end
 
   def new

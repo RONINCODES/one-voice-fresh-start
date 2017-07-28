@@ -265,6 +265,10 @@
    box-shadow: 2px 2px black;
 }
 
+button.access {
+  margin-right: 5px;
+}
+
  .your_dashboard {
    width: auto;
    padding-left: 20px;

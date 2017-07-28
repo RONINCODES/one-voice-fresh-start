@@ -68,11 +68,11 @@ body {
 .user_column {
   width: 20%;
   float: left;
-  height: 100vh;
+  height: 80vh;
   position: relative;
   bottom: 0;
   font-size: 1.2em;
-  background-color: royalblue;
+  background-color: lightgrey;
   overflow: hidden;
   z-index: -2;
 }
@@ -83,8 +83,7 @@ body {
   margin-top: 10px;
   margin-bottom: 10px;
   overflow: scroll;
-  background-color: lightskyblue;
-  max-height: 60vh;
+  background-color: lightgrey;
 }
 
 .centre_column_wrapper {
@@ -96,9 +95,8 @@ body {
   width: 20%;
   height: auto;
   float: right;
-  height: 100vh;
   font-size: 1.2em;
-  background-color: lightskyblue;
+  background-color: lightgrey;
 }
 
 .survey_header {
@@ -158,4 +156,23 @@ body {
 
 li {
   line-height: 0.8;
+}
+
+.result_number {
+  text-align: center;
+}
+.result_help, .result_clarity, .result_pace {
+  width: 80%;
+  text-align: center;
+  border-radius: 10px;
+  background-color: white;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  max-height: 150px;
+  overflow: scroll;
+}
+
+.result_suggestions {
+  text-align: center;
 }

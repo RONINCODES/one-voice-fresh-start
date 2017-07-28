@@ -63,25 +63,28 @@
 
     <% elsif @user.role == 'instructor' %>
 
-      <%= @helpfulness1and2+@helpfulness3+@helpfulness4and5 %> Submitted
-
-      <br>
-
-      <div style="width: 80%; background-color:white" >
-        How HELPFUL was this Lesson
-        <%= pie_chart({"Not Helpful" => @helpfulness1and2, "Just OK" => @helpfulness3, "Very Helpful" => @helpfulness4and5}, width: "80%")%>
+      <div class="result_number">
+        <%= @helpfulness1and2+@helpfulness3+@helpfulness4and5 %> Submitted
       </div>
 
-      <div style="width: 80%; background-color:white; margin-top: 20px">
-        How CLEAR was this Lesson
+      <div class="result_help">
+        Your Helpfulness
+        <%= pie_chart({"Not Helpful" => @helpfulness1and2, "Just OK" => @helpfulness3, "Very Helpful" => @helpfulness4and5})%>
+      </div>
+
+      <div class="result_clarity">
+        Your Clarity
         <%= pie_chart({"Not Clear" => @clarity1and2, "Kind of Clear" => @clarity3, "Very Clear" => @clarity4and5}) %>
       </div>
 
-      <div style="width: 80%; background-color:white; margin-top: 20px">
-        How was the PACE this Lesson
+      <div class="result_pace">
+        Your Pace
         <%= pie_chart({"Way Too Fast" => @pace1and2, "Could Be Better" => @pace3, "Perfect" => @pace4and5}) %>
       </div>
+
     <% end %>
+
+    <div class="result_suggestions">
       Student Suggestions
 
       <div id="daily suggestions">
@@ -90,7 +93,8 @@
           <hr>
         <% end %>
       </div>
-
+      
+    </div>
 
   </div>
 

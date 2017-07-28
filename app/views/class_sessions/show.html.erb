@@ -1,28 +1,29 @@
 <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
 
 <%#===========================================================================%>
-<%#   Header -- shows class, agenda, date                                     %>
+<%#   Wrapper                                                                 %>
 <%#===========================================================================%>
-
-<div class="live_session_title_bar">
-  <span class="top_subject">
-    <%= @class_room.subject %>
-  </span> •
-  <span class="top_agenda">
-    <%= @class_session.agenda %>
-  </span> •
-  <span class="top_date">
-    <%= @class_session.date %>
-  </span>
-</div>
 
 <div class="all_columns_wrapper">
 
 <%#===========================================================================%>
-<%#   Logged-in Users -- left column                                          %>
+<%#   Title and Logged-in Users -- left column                                %>
 <%#===========================================================================%>
 
   <div class="user_column">
+
+    <div class="live_session_title_bar">
+      <div class="top_subject">
+        <%= @class_room.subject %>
+      </div>
+      <div class="top_agenda">
+        <%= @class_session.agenda %>
+      </div>
+      <div class="top_date">
+        <%= @class_session.date %>
+      </div>
+    </div>
+
     <div class="list_of_users">
       <% @users.each do |u| %>
         <ul>
@@ -42,54 +43,68 @@
     </div>
     <% if @user.role == 'student' %>
       <%= form_for :survey, url:  user_class_room_class_session_surveys_path(@user, @class_room, @class_session), method: :post do |f| %>
-        <fieldset>
-          <legend>Helpfulness</legend>
-          <%= f.collection_radio_buttons(:helpfulness, survey_options, :first, :last)%>
-        </fieldset>
-        <fieldset>
-          <legend>Clarity</legend>
-          <%= f.collection_radio_buttons(:clarity, survey_options, :first, :last)%>
-        </fieldset>
-        <fieldset>
-          <legend>Pace</legend>
-          <%= f.collection_radio_buttons(:pace, survey_options, :first, :last)%>
-        </fieldset>
-        <p>
+        <div class="survey_help">
+          <fieldset>
+            <legend>Helpfulness</legend>
+            <%= f.collection_radio_buttons(:helpfulness, survey_options, :first, :last)%>
+          </fieldset>
+        </div>
+        <div class="survey_clarity">
+          <fieldset>
+            <legend>Clarity</legend>
+            <%= f.collection_radio_buttons(:clarity, survey_options, :first, :last)%>
+          </fieldset>
+        </div>
+        <div class="survey_pace">
+          <fieldset>
+            <legend>Pace</legend>
+            <%= f.collection_radio_buttons(:pace, survey_options, :first, :last)%>
+          </fieldset>
+        </div>
+        <div class="suggestion_box">
           <%= f.label :suggestions %>
           <%= f.text_area :suggestions %>
-        </p>
-        <%= f.submit 'Submit Survey' %>
+        </div>
+        <div class="submit_survey">
+          <%= f.submit 'Submit Survey' %>
+        </div>
       <% end %>
 
     <% elsif @user.role == 'instructor' %>
 
-      <%= @helpfulness1and2+@helpfulness3+@helpfulness4and5 %> Submitted
-
-      <br>
-
-      <div style="width: 80%; background-color:white" >
-        How HELPFUL was this Lesson
-        <%= pie_chart({"Not Helpful" => @helpfulness1and2, "Just OK" => @helpfulness3, "Very Helpful" => @helpfulness4and5}, width: "80%")%>
+      <div class="result_number">
+        <%= @helpfulness1and2+@helpfulness3+@helpfulness4and5 %> Submitted
       </div>
 
-      <div style="width: 80%; background-color:white; margin-top: 20px">
-        How CLEAR was this Lesson
+      <div class="result_help">
+        Your Helpfulness
+        <%= pie_chart({"Not Helpful" => @helpfulness1and2, "Just OK" => @helpfulness3, "Very Helpful" => @helpfulness4and5})%>
+      </div>
+
+      <div class="result_clarity">
+        Your Clarity
         <%= pie_chart({"Not Clear" => @clarity1and2, "Kind of Clear" => @clarity3, "Very Clear" => @clarity4and5}) %>
       </div>
 
-      <div style="width: 80%; background-color:white; margin-top: 20px">
-        How was the PACE this Lesson
+      <div class="result_pace">
+        Your Pace
         <%= pie_chart({"Way Too Fast" => @pace1and2, "Could Be Better" => @pace3, "Perfect" => @pace4and5}) %>
       </div>
-    <% end %>
-      Student Suggestions
 
-      <div id="daily suggestions">
-        <% @suggestions.each do |s| %>
-          <%= s.suggestions %>
-          <hr>
-        <% end %>
+      <div class="result_suggestions">
+        Student Suggestions
+
+        <div id="daily suggestions">
+          <% @suggestions.each do |s| %>
+            <%= s.suggestions %>
+            <hr>
+          <% end %>
+        </div>
+
       </div>
+
+    <% end %>
+
 
 
   </div>

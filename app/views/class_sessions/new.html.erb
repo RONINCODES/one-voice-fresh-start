@@ -1,17 +1,25 @@
-<h1>hi</h1>
+<div class="create_class_session_page">
 
-<%= form_for :class_session, url: user_class_room_class_sessions_path do |f| %>
+  <div class="create_class_session_header">Create Session</div>
 
-  <p>
-    <%= f.label :date %><br>
-    <%= f.date_field :date %>
-  </p>
+  <div class="create_class_session_form">
 
-  <p>
-    <%= f.label :agenda %><br>
-    <%= f.text_field :agenda %>
-  </p>
+    <%= form_for :class_session, url: user_class_room_class_sessions_path do |f| %>
 
-  <%= f.submit %>
+      <p>
+        <%= f.label :date %><br>
+        <%= f.date_field :date %>
+      </p>
 
-  <% end %>
+      <p>
+        <%= f.label :agenda %><br>
+        <%= f.text_field :agenda %>
+      </p>
+
+      <%= f.submit %>
+
+      <% end %>
+
+  </div>
+
+</div>

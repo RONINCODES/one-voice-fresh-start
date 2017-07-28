@@ -2,7 +2,7 @@
 ClassSession.destroy_all
 Survey.destroy_all
 User.destroy_all
-# ClassRoom.destroy_all -- Throws a mysterious error.
+# ClassRoom.destroy_all 
 
 # Create student accounts:
 40.times do
@@ -28,20 +28,33 @@ end
     password_confirmation: 'password'
   )
   puts "New instructor: " + user.first_name + " " + user.last_name
-  10.times do
+<<<<<<< HEAD
+  5.times do
+=======
+
+  3.times do
+>>>>>>> 777de1713122b98142e0572070ce997c95fd1997
     class_room = ClassRoom.create!(
       subject: Faker::Educator.course,
       group_code: Faker::Number.digit.to_i,
       user_id: user.id
     )
     puts "New classroom: " + class_room.subject + " (Instructor: " + User.find_by(id: class_room.user_id).first_name + " " + User.find_by(id: class_room.user_id).last_name + ")"
-      5.times do
+<<<<<<< HEAD
+=======
+
+>>>>>>> 777de1713122b98142e0572070ce997c95fd1997
+      3.times do
         class_session = class_room.class_sessions.create!(
         date: class_room.created_at + rand(1000000000),
-        agenda: Faker::HitchhikersGuideToTheGalaxy.marvin_quote,
+        agenda: Faker::Job.key_skill,
         user_id: class_room.user_id
         )
-        20.times do
+<<<<<<< HEAD
+=======
+
+>>>>>>> 777de1713122b98142e0572070ce997c95fd1997
+        10.times do
           survey = class_session.surveys.create!(
           helpfulness: rand(1..5).to_s,
           clarity: rand(1..5).to_s,
@@ -53,9 +66,6 @@ end
         end
       end
     end
-
-
-
 end
 
 # Create account: Mohammed
@@ -90,7 +100,3 @@ user = User.create!(
   password_confirmation: 'password'
 )
 puts "New instructor (MS): " + user.first_name + " " + user.last_name
-
-# Create ClassRooms
-
-# create class sessions

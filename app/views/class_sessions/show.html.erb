@@ -1,28 +1,29 @@
 <%= javascript_include_tag "https://www.gstatic.com/charts/loader.js" %>
 
 <%#===========================================================================%>
-<%#   Header -- shows class, agenda, date                                     %>
+<%#   Wrapper                                                                 %>
 <%#===========================================================================%>
-
-<div class="live_session_title_bar">
-  <span class="top_subject">
-    <%= @class_room.subject %>
-  </span> •
-  <span class="top_agenda">
-    <%= @class_session.agenda %>
-  </span> •
-  <span class="top_date">
-    <%= @class_session.date %>
-  </span>
-</div>
 
 <div class="all_columns_wrapper">
 
 <%#===========================================================================%>
-<%#   Logged-in Users -- left column                                          %>
+<%#   Title and Logged-in Users -- left column                                %>
 <%#===========================================================================%>
 
   <div class="user_column">
+
+    <div class="live_session_title_bar">
+      <div class="top_subject">
+        <%= @class_room.subject %>
+      </div>
+      <div class="top_agenda">
+        <%= @class_session.agenda %>
+      </div>
+      <div class="top_date">
+        <%= @class_session.date %>
+      </div>
+    </div>
+
     <div class="list_of_users">
       <% @users.each do |u| %>
         <ul>
@@ -93,7 +94,7 @@
           <hr>
         <% end %>
       </div>
-      
+
     </div>
 
   </div>

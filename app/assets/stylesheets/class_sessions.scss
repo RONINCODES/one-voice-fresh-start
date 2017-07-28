@@ -44,22 +44,7 @@ body {
   margin-bottom: 36px;
 }
 
-.live_session_title_bar {
-  position: relative;
-  text-align: center;
-  font-size: 1.5em;
-  width: 100%;
-  background-color: beige;
-  padding-bottom: 12px;
-  margin-top: 47px;
-  padding-top: 12px;
-}
 
-.top_subject, .top_agenda, .top_date {
-  font-family: 'Lato', sans-serif;
-  padding-left: 10px;
-  padding-right: 10px;
-}
 
 .all_columns_wrapper {
 
@@ -68,6 +53,7 @@ body {
 .user_column {
   width: 20%;
   float: left;
+  margin-top: 47px;
   height: 80vh;
   position: relative;
   bottom: 0;
@@ -75,6 +61,25 @@ body {
   background-color: lightgrey;
   overflow: hidden;
   z-index: -2;
+}
+
+.live_session_title_bar {
+  text-align: center;
+  width: 90%;
+  background-color: white;
+  padding-bottom: 12px;
+}
+
+.top_subject {
+  font-family: 'Merriweather', serif;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.top_agenda, .top_date {
+  font-family: 'Lato', sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 .list_of_users {
@@ -89,9 +94,11 @@ body {
 .centre_column_wrapper {
   width: 60%;
   float: left;
+  margin-top: 47px;
 }
 
 .survey_column {
+  margin-top: 47px;
   width: 20%;
   height: auto;
   float: right;
@@ -101,7 +108,8 @@ body {
 
 .survey_header {
   width: 100%;
-  background-color: lightpink;
+  background-color: black;
+  color: white;
   font-family: 'Merriweather', serif;
   font-size: 1.2em;
   font-weight: bold;
@@ -114,7 +122,9 @@ body {
 #comments {
   position: relative;
   width: 100%;
+  margin: 0 auto;
   overflow: scroll;
+  max-height: 80vh;
 }
 
 .comment {
@@ -132,15 +142,16 @@ body {
   width: 60%;
   position: fixed;
   bottom: 0;
-  background-color: lightpink;
+  background-color: black;
+  color: white;
   font-size: 1.2em;
-  padding-bottom: 15px;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .speak {
   padding-left: 20px;
   font-size: 1.2em;
+  padding-right: 10px;
 }
 .author {
   font-family: 'Merriweather', serif;
@@ -160,6 +171,7 @@ li {
 
 .result_number {
   text-align: center;
+  padding: 10px;
 }
 .result_help, .result_clarity, .result_pace {
   width: 80%;
@@ -167,12 +179,21 @@ li {
   border-radius: 10px;
   background-color: white;
   margin: 0 auto;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   max-height: 150px;
   overflow: scroll;
 }
 
 .result_suggestions {
   text-align: center;
+}
+
+textarea {
+  width: 80%;
+}
+
+#submit_comment {
+  visibility: hidden;
 }

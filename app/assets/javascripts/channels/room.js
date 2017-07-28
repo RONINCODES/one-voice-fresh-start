@@ -15,8 +15,9 @@ App.room = App.cable.subscriptions.create("RoomChannel", {
 
     var t = document.getElementById('comment_comment');
     t.value = t.defaultValue;
-    window.scrollTo(0,document.body.scrollHeight);
 
+    var obj = document.getElementById("#comments");
+    obj.scrollTop = obj.scrollHeight;
 
   }
 });

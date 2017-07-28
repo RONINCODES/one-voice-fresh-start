@@ -54,8 +54,7 @@ body {
   margin-top: 47px;
   height: 80vh;
   position: relative;
-  bottom: 0;
-  font-size: 1.2em;
+    font-size: 1.2em;
   background-color: lightgrey;
   overflow: hidden;
   z-index: -2;
@@ -108,15 +107,13 @@ body {
 
 .survey_header {
   width: 100%;
-  background-color: black;
-  color: white;
+  color: black;
   font-family: 'Merriweather', serif;
   font-size: 1.2em;
   font-weight: bold;
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  margin-bottom: 10px;
 }
 
 #comments {
@@ -192,6 +189,10 @@ li {
 
 textarea {
   width: 80%;
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  line-height: 0.5;
+  padding-top: 10px;
 }
 
 #submit_comment {

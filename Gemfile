@@ -4,9 +4,17 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+<<<<<<< HEAD
 gem "typhoeus"
 gem 'redis'
 gem 'faker'
+=======
+
+gem 'faker'
+
+gem "typhoeus"
+
+>>>>>>> 777de1713122b98142e0572070ce997c95fd1997
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 # Use sqlite3 as the database for Active Record
@@ -41,14 +49,20 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   # Adds support for Capybara system testing and selenium driver
+<<<<<<< HEAD
 
+=======
+>>>>>>> 777de1713122b98142e0572070ce997c95fd1997
 
   gem 'capybara', '~> 2.13'
 
   gem 'selenium-webdriver'
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 777de1713122b98142e0572070ce997c95fd1997
 end
 
 group :development do

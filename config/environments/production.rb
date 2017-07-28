@@ -1,4 +1,11 @@
 Rails.application.configure do
+  # HEROKU CONFIGURATION - Set the cable server's URI for production...wss is a secure websocket connection
+  config.web_socket_server_url = "wss://safe-reef-35225.herokuapp.com/cable"
+
+  #HEROKU CONFIGURATION - ActionCable can only accept Web Socket requests from specified origins
+  #Here we pass said origins to the Action Cable's server's config array
+  config.action_cable.allowed_request_origins = ['https://safe-reef-35225.herokuapp.com/']
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
@@ -89,9 +96,3 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 end
-# HEROKU CONFIGURATION - Set the cable server's URI for production...wss is a secure websocket connection
-config.web_socket_server_url = "wss://safe-reef-35225.herokuapp.com/cable"
-
-#HEROKU CONFIGURATION - ActionCable can only accept Web Socket requests from specified origins
-#Here we pass said origins to the Action Cable's server's config array
-config.action_cable.allowed_request_origins = ['https://safe-reef-35225.herokuapp.com/']

@@ -6,17 +6,29 @@ body {
   width: 100%;
 }
 
-.class_sessions_page {
+.class_sessions_page, .create_class_session_page {
   margin-top: 67px;
 }
 
-.sessions_list {
+.sessions_list, .create_class_session_form {
   width: 40%;
   margin: 0 auto;
   background-color: white;
   border-radius: 20px;
   font-size: 1.2em;
   padding: 20px;
+}
+
+.create_class_session_header {
+  font-family: 'Merriweather', serif;
+  font-size: 2em;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.create_class_session_form {
+  text-align: center;
 }
 
 .single_session {

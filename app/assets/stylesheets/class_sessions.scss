@@ -52,7 +52,7 @@ body {
   width: 20%;
   float: left;
   margin-top: 47px;
-  height: 80vh;
+  max-height: 90vh;
   position: relative;
   font-size: 1.2em;
   background-color: lightgrey;
@@ -87,6 +87,7 @@ body {
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 10px;
+  max-height: 75vh;
   overflow: scroll;
   background-color: white;
   border-radius: 15px;
@@ -95,7 +96,7 @@ body {
 .centre_column_wrapper {
   width: 50%;
   float: left;
-  margin-top: 47px;
+  margin-top: 54px;
 }
 
 .survey_column {
@@ -114,7 +115,7 @@ body {
   width: 100%;
   margin: 0 auto;
   overflow: scroll;
-  max-height: 77vh;
+  max-height: 78vh;
 }
 
 .comment {
@@ -133,10 +134,12 @@ body {
   width: 50%;
   position: fixed;
   bottom: 0;
-  background-color: grey;
+  background-color: gray;
   color: white;
   font-size: 1.2em;
   padding-top: 15px;
+  border-top-right-radius: 15px;
+  border-top-left-radius: 15px;
 }
 
 .speak {

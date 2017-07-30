@@ -27,7 +27,7 @@
     <div class="list_of_users">
       <% @users.each do |u| %>
         <ul>
-          <li><%= u.first_name%> <%=u.last_name %></li>
+          <li><%= u.first_name %> <%= u.last_name %></li>
         </ul>
       <% end %>
     </div>
@@ -38,10 +38,10 @@
 <%#===========================================================================%>
 
   <div class="survey_column">
-    <div class="survey_header">
-      Feedback
-    </div>
     <% if @user.role == 'student' %>
+      <div class="survey_header">
+        Feedback Survey
+      </div>
       <%= form_for :survey, url:  user_class_room_class_session_surveys_path(@user, @class_room, @class_session), method: :post do |f| %>
         <div class="survey_help">
           <fieldset>
@@ -75,8 +75,8 @@
 
     <% elsif @user.role == 'instructor' %>
 
-      <div class="result_number">
-        <%= @helpfulness1and2+@helpfulness3+@helpfulness4and5 %> Submitted
+      <div class="survey_header">
+        <%= @helpfulness1and2+@helpfulness3+@helpfulness4and5 %> Submissions:
       </div>
 
       <div class="result_help">
@@ -95,9 +95,10 @@
       </div>
 
       <div class="result_suggestions">
-        Student Suggestions
-
-        <div id="daily suggestions">
+        <div class="suggestions_header">
+          Student Suggestions:
+        </div>
+        <div id="daily_suggestions">
           <% @suggestions.each do |s| %>
             <%= s.suggestions %>
             <hr>
@@ -107,8 +108,6 @@
       </div>
 
     <% end %>
-
-
 
   </div>
 

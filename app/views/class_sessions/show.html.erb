@@ -97,6 +97,14 @@
       <div class="result_suggestions">
         <div class="suggestions_header">
           Student Suggestions:
+
+          <% @body["aggregations"].each do |body| %>
+          <% body["results"].each do |result| %>
+            <p>Lesson sentiment: <%= result['key'] %></p>
+            <p>Analysed surveys: <%= result['matching_results'] %></p>
+              <% end %>
+          <% end %>
+
         </div>
         <div id="daily_suggestions">
           <% @suggestions.each do |s| %>
@@ -150,6 +158,6 @@
       </div>
     <% end %>
 
-      <!-- <%# @body["aggregations"].each do |body| %>
+      <%# @body["aggregations"].each do |body| %>
       <%#= body["results"] %>
-      <%# end %> -->
+      <%# end %>

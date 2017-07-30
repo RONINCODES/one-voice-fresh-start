@@ -89,7 +89,7 @@ body {
   margin-bottom: 10px;
   overflow: scroll;
   background-color: white;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .centre_column_wrapper {
@@ -206,21 +206,25 @@ svg {
 }
 
 .survey_help, .survey_clarity, .survey_pace {
-  width: 80%;
+  width: 75%;
   text-align: center;
-  border-radius: 10px;
-  background-color: white;
+  border-radius: 15px;
+  background-color: lightskyblue;
   margin: 0 auto;
   padding-top: 10px;
+  padding-bottom: 20px;
   margin-top: 10px;
   margin-bottom: 10px;
-  max-height: 150px;
-  overflow: scroll;
+}
+
+legend {
+  padding: 10px;
 }
 
 .suggestion_box {
   font-size: 1em;
-  width: 80%;
+  line-height: 1.5em;
+  width: 90%;
   margin: 0 auto;
   text-align: center;
   font-family: 'Merriweather', serif;

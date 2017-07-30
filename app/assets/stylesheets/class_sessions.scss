@@ -93,29 +93,20 @@ body {
 }
 
 .centre_column_wrapper {
-  width: 60%;
+  width: 50%;
   float: left;
   margin-top: 47px;
 }
 
 .survey_column {
   margin-top: 47px;
-  width: 20%;
+  width: 30%;
   height: auto;
+  max-height: 80vh;
+  overflow: scroll;
   float: right;
   font-size: 1.2em;
   background-color: lightgrey;
-}
-
-.survey_header {
-  width: 100%;
-  color: black;
-  font-family: 'Merriweather', serif;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 10px;
 }
 
 #comments {
@@ -139,7 +130,7 @@ body {
 }
 
 .write_new_comment {
-  width: 60%;
+  width: 50%;
   position: fixed;
   bottom: 0;
   background-color: grey;
@@ -153,6 +144,7 @@ body {
   font-size: 1.2em;
   padding-right: 10px;
 }
+
 .author {
   font-family: 'Merriweather', serif;
   font-size: 1.2em;
@@ -169,25 +161,48 @@ li {
   line-height: 0.8;
 }
 
-.result_number {
+.survey_header, .suggestions_header {
+  width: 100%;
+  color: black;
+  font-family: 'Merriweather', serif;
+  font-size: 1.2em;
+  font-weight: bold;
   text-align: center;
-  padding: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+
 .result_help, .result_clarity, .result_pace {
   width: 80%;
   text-align: center;
-  border-radius: 10px;
-  background-color: white;
+  border-radius: 20px;
+  background-color: lightskyblue;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
   margin: 0 auto;
-  padding-top: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  max-height: 150px;
-  overflow: scroll;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+rect {
+  display: none;
+}
+
+svg {
+  background-color: lightskyblue;
+  margin-bottom: 0;
 }
 
 .result_suggestions {
   text-align: center;
+}
+
+#daily_suggestions {
+  margin: 0 auto;
+  width: 90%;
+  text-align: left;
+  font-size: 1em;
 }
 
 .survey_help, .survey_clarity, .survey_pace {

@@ -206,19 +206,24 @@ svg {
 }
 
 .survey_help, .survey_clarity, .survey_pace {
-  width: 75%;
+  width: 90%;
   text-align: center;
   border-radius: 15px;
   background-color: lightskyblue;
   margin: 0 auto;
-  padding-top: 10px;
-  padding-bottom: 20px;
+  padding-top: 30px;
+  padding-bottom: 40px;
   margin-top: 10px;
   margin-bottom: 10px;
 }
 
+fieldset {
+  font-size: 0.75em;
+}
+
 legend {
-  padding: 10px;
+  font-size: 1.4em;
+  padding-bottom: 20px;
 }
 
 .suggestion_box {

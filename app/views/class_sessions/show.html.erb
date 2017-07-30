@@ -40,7 +40,7 @@
   <div class="survey_column">
     <% if @user.role == 'student' %>
       <div class="survey_header">
-        Feedback
+        Feedback Survey
       </div>
       <%= form_for :survey, url:  user_class_room_class_session_surveys_path(@user, @class_room, @class_session), method: :post do |f| %>
         <div class="survey_help">

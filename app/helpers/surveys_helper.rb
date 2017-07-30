@@ -1,7 +1,7 @@
 module SurveysHelper
 
   def survey_options
-    return [[1,"1 "],[2, "2 "],[3, "3 "],[4, "4 "],[5, "5 "]]
+    return [[1,"Terrible "],[2, "Bad "],[3, "Okay "],[4, "Good "],[5, "Excellent "]]
   end
 
 end

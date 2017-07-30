@@ -1,7 +1,11 @@
 <div class="your_classrooms">
 
   <div id="your_classrooms_header">
-    <p>Your <%= @class_rooms.count %> Classrooms</p>
+    <% if @user.role == 'instructor' %>
+     <p>Your <%= @class_rooms.count %> Classrooms</p>
+    <% elsif @user.role == 'student' %>
+      <p>Your Classrooms</p>
+    <% end %>
   </div>
 
   <div class="close_classrooms"><span id="close_x">X</span></div>
@@ -13,7 +17,6 @@
       <% @class_rooms.reverse.each do |c| %>
 
         <div id="classroom_name">
-          <%#= c.subject %>
           <%= link_to c.subject, user_class_room_class_sessions_path(session[:user_id], c.id) %>
         </div>
 
@@ -35,6 +38,7 @@
       <% @classrooms.reverse.each do |a| %>
         <div id="student_classroom">
           <%= link_to a.subject, user_class_room_class_sessions_path(@user.id, a.id) %>
+          <hr>
         </div>
 
       <% end %>

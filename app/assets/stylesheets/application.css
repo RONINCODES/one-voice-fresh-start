@@ -38,6 +38,10 @@
    color: mediumblue;
  }
 
+ a:active {
+   color: black;
+ }
+
  fieldset {
      border: 0;
      margin: 0;

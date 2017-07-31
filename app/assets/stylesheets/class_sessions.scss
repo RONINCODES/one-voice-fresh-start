@@ -55,14 +55,14 @@ body {
   max-height: 85vh;
   position: relative;
   font-size: 1.2em;
-  background-color: lightgrey;
+  background-color: #DADDD8;
   overflow: hidden;
 }
 
 .live_session_title_bar {
   text-align: center;
   width: 90%;
-  background-color: lightgrey;
+  background-color: #DADDD8;
   padding-bottom: 12px;
   margin: 0 auto;
 }
@@ -108,7 +108,7 @@ body {
   overflow: scroll;
   float: right;
   font-size: 1.2em;
-  background-color: lightgrey;
+  background-color: #DADDD8;
 }
 
 #comments {
@@ -174,7 +174,7 @@ li {
   font-weight: bold;
   text-align: center;
   padding-top: 20px;
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .analysed_num_surveys {
@@ -182,7 +182,11 @@ li {
 }
 
 .lesson_sentiment {
-
+  font-family: 'Merriweather', serif;
+  font-size: 1.2em;
+  text-align: center;
+  padding-bottom: 10px;
+  line-height: 1.6;
 }
 
 .result_help, .result_clarity, .result_pace {
@@ -212,10 +216,15 @@ svg {
 }
 
 #daily_suggestions {
+  background-color: white;
+  padding: 25px;
+  line-height: 1.2;
+  border-radius: 15px;
   margin: 0 auto;
-  width: 90%;
+  width: 80%;
   text-align: left;
   font-size: 1em;
+  margin-top: 10px;
 }
 
 .survey_help, .survey_clarity, .survey_pace {

@@ -24,7 +24,7 @@ class ClassSessionsController < ApplicationController
 
     @helpfulness3 = Survey.where(helpfulness:'3').where(class_session_id: params[:id]).count
     @helpfulness4and5 = Survey.where('helpfulness= ? or helpfulness= ?','4','5' ).where(class_session_id: params[:id]).count
-    
+
     @clarity1and2 = Survey.where('clarity =? or clarity =?', '1', '2' ).where(class_session_id: params[:id]).count
     @clarity3 = Survey.where(clarity:'3').where(class_session_id: params[:id]).count
     @clarity4and5 = Survey.where('helpfulness= ? or helpfulness= ?','4','5' ).where(class_session_id: params[:id]).count

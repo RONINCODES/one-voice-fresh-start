@@ -76,18 +76,9 @@
     <% elsif @user.role == 'instructor' %>
 
       <div class="survey_header">
-
-        <% @body["aggregations"].each do |body| %>
-        <% body["results"].each do |result| %>
-          <div class="analysed_num_surveys">
-            Analysed <%= result['matching_results'] %> Surveys
-          </div>
-          <div class="lesson_sentiment">
-            Lesson sentiment: <%= result['key'].titleize %>
-          </div>
-            <% end %>
-        <% end %>
-
+        <div class="result_number">
+          <%= @helpfulness1and2+@helpfulness3+@helpfulness4and5 %> Surveys Submitted
+        </div>
       </div>
 
       <div class="result_help">
@@ -106,8 +97,13 @@
       </div>
 
       <div class="result_suggestions">
-        <div class="suggestions_header">
-          Student Suggestions:
+        <div class="lesson_sentiment">
+          <% @body["aggregations"].each do |body| %>
+            <% body["results"].each do |result| %>
+              <%= result['matching_results'] %> suggestion(s): <%= result['key'].titleize %>
+              <br />
+            <% end %>
+          <% end %>
         </div>
         <div id="daily_suggestions">
           <% @suggestions.each do |s| %>

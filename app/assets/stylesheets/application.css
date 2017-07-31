@@ -23,7 +23,7 @@
  }
 
  body {
-     background-color: lightgray;
+     background-color: #BFD7EA;
      font-size: 1em;
      font-family: 'Lato', sans-serif;
      display: inline;
@@ -326,4 +326,12 @@ button.access {
 
  .nav_user_role {
    font-weight: normal;
+ }
+
+ #alert {
+   position: absolute;
+   top: 0;
+   margin: 0 auto;
+   width: 100%;
+   height: 10vh;
  }

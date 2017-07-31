@@ -46,11 +46,11 @@ For the versions available, see the one-voice-fresh-start repository on GitHub.
 
 # Authors
 
-Ronen Annason
+Ronen Annason - http://github.com/ronincodes
 
-Mohammed Jaffal
+Mohammed Jaffal - http://github.com/moodiex0
 
-Michael Small
+Michael Small - http://github.com/mikesmall
 
 # Acknowledgments
 Bitmaker instructors who assisted us with patience.

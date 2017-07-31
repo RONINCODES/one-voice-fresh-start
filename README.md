@@ -1,5 +1,3 @@
-# Read Me
-
 # One Voice
 One Voice is a web based application that allows students to provide feedback to their instructors in Real Time. This is done via a few core features:
 

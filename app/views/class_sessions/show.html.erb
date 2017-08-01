@@ -96,15 +96,15 @@
         <%= pie_chart({"Way Too Fast" => @pace1and2, "Could Be Better" => @pace3, "Perfect" => @pace4and5}) %>
       </div>
 
-      <div class="result_suggestions">
+      <!-- <div class="result_suggestions">
         <div class="lesson_sentiment">
-          <% @body["aggregations"].each do |body| %>
-            <% body["results"].each do |result| %>
-              <%= result['matching_results'] %> suggestion(s): <%= result['key'].titleize %>
+          <%# @body["aggregations"].each do |body| %>
+            <%# body["results"].each do |result| %>
+              <%#= result['matching_results'] %> suggestion(s): <%#= result['key'].titleize %>
               <br />
-            <% end %>
-          <% end %>
-        </div>
+            <%# end %>
+          <%# end %>
+        </div> -->
         <div id="daily_suggestions">
           <% @suggestions.each do |s| %>
             <%= s.suggestions %>

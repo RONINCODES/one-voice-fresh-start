@@ -145,14 +145,14 @@
 
     </div>
 
-  <div id="comments">
-    <% @comments.each do |c| %>
+  <!-- <div id="comments">
+    <%# @comments.each do |c| %>
       <div class="comment">
         <b>
-          <%= User.find(c.user_id).first_name%>
+          <%#= User.find(c.user_id).first_name%>
         </b>
-        <pre><%= c.comment %></pre>
+        <pre><%#= c.comment %></pre>
         <hr>
-        <small><%= c.created_at.strftime("%A %B %d %Y") %></small>
+        <small><%#= c.created_at.strftime("%A %B %d %Y") %></small>
       </div>
-    <% end %>
+    <%# end %> -->
